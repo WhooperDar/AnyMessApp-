@@ -41,6 +41,8 @@ namespace AnyMessAppWin
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.firstNameCreate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // createAccBtn
@@ -63,7 +65,7 @@ namespace AnyMessAppWin
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.emailBox.Location = new System.Drawing.Point(36, 241);
+            this.emailBox.Location = new System.Drawing.Point(36, 310);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(411, 29);
             this.emailBox.TabIndex = 31;
@@ -98,7 +100,7 @@ namespace AnyMessAppWin
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.usernameBox.Location = new System.Drawing.Point(36, 168);
+            this.usernameBox.Location = new System.Drawing.Point(36, 237);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(411, 29);
             this.usernameBox.TabIndex = 30;
@@ -111,7 +113,7 @@ namespace AnyMessAppWin
             this.confirmpassBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.confirmpassBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmpassBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.confirmpassBox.Location = new System.Drawing.Point(36, 382);
+            this.confirmpassBox.Location = new System.Drawing.Point(36, 451);
             this.confirmpassBox.Name = "confirmpassBox";
             this.confirmpassBox.Size = new System.Drawing.Size(411, 29);
             this.confirmpassBox.TabIndex = 34;
@@ -124,7 +126,7 @@ namespace AnyMessAppWin
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.passwordBox.Location = new System.Drawing.Point(36, 311);
+            this.passwordBox.Location = new System.Drawing.Point(36, 380);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(411, 29);
             this.passwordBox.TabIndex = 33;
@@ -137,7 +139,7 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(35, 288);
+            this.label3.Location = new System.Drawing.Point(35, 357);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 35;
@@ -148,7 +150,7 @@ namespace AnyMessAppWin
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(35, 361);
+            this.label4.Location = new System.Drawing.Point(35, 430);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 20);
             this.label4.TabIndex = 36;
@@ -159,7 +161,7 @@ namespace AnyMessAppWin
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(32, 217);
+            this.label5.Location = new System.Drawing.Point(32, 286);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 20);
             this.label5.TabIndex = 37;
@@ -170,11 +172,34 @@ namespace AnyMessAppWin
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(35, 145);
+            this.label6.Location = new System.Drawing.Point(35, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 20);
             this.label6.TabIndex = 38;
             this.label6.Text = "Username";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(35, 144);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 20);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Name";
+            // 
+            // firstNameCreate
+            // 
+            this.firstNameCreate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.firstNameCreate.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameCreate.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.firstNameCreate.Location = new System.Drawing.Point(36, 167);
+            this.firstNameCreate.Name = "firstNameCreate";
+            this.firstNameCreate.Size = new System.Drawing.Size(411, 29);
+            this.firstNameCreate.TabIndex = 39;
+            this.firstNameCreate.TabStop = false;
+            this.firstNameCreate.Text = "First Name";
             // 
             // CreateAccount
             // 
@@ -182,6 +207,8 @@ namespace AnyMessAppWin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(486, 626);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.firstNameCreate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -215,5 +242,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox firstNameCreate;
     }
 }

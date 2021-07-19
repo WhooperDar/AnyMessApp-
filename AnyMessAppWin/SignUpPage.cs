@@ -45,12 +45,13 @@ namespace AnyMessAppWin
             Application.Exit();
         }
 
+        private static bool signButtonsClicked; 
+        public static bool SignButtonsClicked { get => signButtonsClicked;  }
         private void agencyBtn_Click(object sender, EventArgs e)
         {
+            signButtonsClicked = true;
             SignUpAgency agencySignUp = new SignUpAgency();
             agencySignUp.ShowDialog();
-
-           /* this.Hide();*/
         }
 
         private void employerBtn_Click(object sender, EventArgs e)
@@ -64,5 +65,45 @@ namespace AnyMessAppWin
             SignUpHousekeeping housekeepingSignup = new SignUpHousekeeping();
             housekeepingSignup.ShowDialog();
         }
+
+        #region Mouse Hover Effects
+        // Mouse Hover Effects (Sign Up As Buttons)
+        private void agencyBtn_MouseEnter(object sender, EventArgs e)
+        {
+            agencyBtn.BackColor = Color.FromArgb(255, 201, 72); 
+            agencyBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void agencyBtn_MouseLeave(object sender, EventArgs e)
+        {
+            agencyBtn.BackColor = Color.FromArgb(5, 62, 189);
+            agencyBtn.ForeColor = Color.White; 
+        }
+
+        private void employerBtn_MouseEnter(object sender, EventArgs e)
+        {
+            employerBtn.BackColor = Color.FromArgb(255, 201, 72);
+            employerBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void employerBtn_MouseLeave(object sender, EventArgs e)
+        {
+            employerBtn.BackColor = Color.FromArgb(5, 62, 189);
+            employerBtn.ForeColor = Color.White;
+        }
+
+        private void housekeperBtn_MouseEnter(object sender, EventArgs e)
+        {
+            housekeperBtn.BackColor = Color.FromArgb(255, 201, 72);
+            housekeperBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void housekeperBtn_MouseLeave(object sender, EventArgs e)
+        {
+            housekeperBtn.BackColor = Color.FromArgb(5, 62, 189);
+            housekeperBtn.ForeColor = Color.White;
+        }
+        #endregion
+
     }
 }

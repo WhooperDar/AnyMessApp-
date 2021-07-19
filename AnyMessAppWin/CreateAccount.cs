@@ -42,15 +42,21 @@ namespace AnyMessAppWin
             BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
         };
 
-        IFirebaseClient clientCreateAccount; 
+        IFirebaseClient clientCreateAccount;
 
         // Saving data to database
+
+        private static bool createBtnClick; 
+        public static bool CreateBtnClick { get => createBtnClick; }
         private async void createAccBtn_Click(object sender, EventArgs e)
         {
+            // User Type Checker
+            createBtnClick = true;
             clientCreateAccount = new FireSharp.FirebaseClient(configCreateAccount);
 
             var dataCreateAccount = new DataCreateAccount
-            {
+            { 
+                FirstName = firstNameCreate.Text,
                 Username = usernameBox.Text,
                 Email = emailBox.Text,
                 Password = passwordBox.Text,
@@ -61,7 +67,7 @@ namespace AnyMessAppWin
 
             MessageBox.Show("Account Created Successfully!");
 
-            this.Hide();
+            this.Close();
         }
         
         // Text Changed to blue

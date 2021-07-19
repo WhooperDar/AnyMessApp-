@@ -158,16 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgencyList.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="AgencyList.Designer.cs">
       <DependentUpon>AgencyList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgencyListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgencyListForm.Designer.cs">
-      <DependentUpon>AgencyListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
@@ -185,11 +179,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HousekeepingListForm.cs">
+    <Compile Include="HomeTab.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HousekeepingListForm.Designer.cs">
-      <DependentUpon>HousekeepingListForm.cs</DependentUpon>
+    <Compile Include="HomeTab.Designer.cs">
+      <DependentUpon>HomeTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>UserControl</SubType>
@@ -203,20 +197,14 @@
     <Compile Include="LoginSignUp.Designer.cs">
       <DependentUpon>LoginSignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="MainFormPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <Compile Include="MainFormPage.Designer.cs">
+      <DependentUpon>MainFormPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
     <Compile Include="SignUpAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,8 +229,8 @@
     <Compile Include="SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AgencyListForm.resx">
-      <DependentUpon>AgencyListForm.cs</DependentUpon>
+    <EmbeddedResource Include="AgencyList.resx">
+      <DependentUpon>AgencyList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
@@ -250,8 +238,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HousekeepingListForm.resx">
-      <DependentUpon>HousekeepingListForm.cs</DependentUpon>
+    <EmbeddedResource Include="HomeTab.resx">
+      <DependentUpon>HomeTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -259,8 +247,8 @@
     <EmbeddedResource Include="LoginSignUp.resx">
       <DependentUpon>LoginSignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.cs</DependentUpon>
+    <EmbeddedResource Include="MainFormPage.resx">
+      <DependentUpon>MainFormPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,10 +258,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SignUpAgency.resx">
       <DependentUpon>SignUpAgency.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +285,99 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\agency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\agency-shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\hklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\hklist-shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\home-shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\notif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\notif-shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\setting-shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\mainlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\mainlogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\mainlogo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\cancel20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\profile_shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\mainlogo3_shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\cancel_shade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\agency-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\hklist-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\home-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\profile-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons45px\setting-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IconArt45px\cleaning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IconArt45px\cooking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IconArt45px\laundry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IconArt45px\sweeping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\plane-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\plane-white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

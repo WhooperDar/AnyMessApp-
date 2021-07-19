@@ -73,6 +73,8 @@ namespace AnyMessAppWin
             this.employerBtn.Text = "Employer";
             this.employerBtn.UseVisualStyleBackColor = false;
             this.employerBtn.Click += new System.EventHandler(this.employerBtn_Click);
+            this.employerBtn.MouseEnter += new System.EventHandler(this.employerBtn_MouseEnter);
+            this.employerBtn.MouseLeave += new System.EventHandler(this.employerBtn_MouseLeave);
             // 
             // agencyBtn
             // 
@@ -88,6 +90,8 @@ namespace AnyMessAppWin
             this.agencyBtn.Text = "Agency";
             this.agencyBtn.UseVisualStyleBackColor = false;
             this.agencyBtn.Click += new System.EventHandler(this.agencyBtn_Click);
+            this.agencyBtn.MouseEnter += new System.EventHandler(this.agencyBtn_MouseEnter);
+            this.agencyBtn.MouseLeave += new System.EventHandler(this.agencyBtn_MouseLeave);
             // 
             // housekeperBtn
             // 
@@ -103,6 +107,8 @@ namespace AnyMessAppWin
             this.housekeperBtn.Text = "Housekeeper";
             this.housekeperBtn.UseVisualStyleBackColor = false;
             this.housekeperBtn.Click += new System.EventHandler(this.housekeperBtn_Click);
+            this.housekeperBtn.MouseEnter += new System.EventHandler(this.housekeperBtn_MouseEnter);
+            this.housekeperBtn.MouseLeave += new System.EventHandler(this.housekeperBtn_MouseLeave);
             // 
             // exitButton
             // 

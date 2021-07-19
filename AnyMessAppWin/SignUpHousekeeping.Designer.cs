@@ -85,6 +85,8 @@ namespace AnyMessAppWin
             this.NextBtnHousekeeping.Text = "Next";
             this.NextBtnHousekeeping.UseVisualStyleBackColor = false;
             this.NextBtnHousekeeping.Click += new System.EventHandler(this.NextBtnHk_Click);
+            this.NextBtnHousekeeping.MouseEnter += new System.EventHandler(this.NextBtnHousekeeping_MouseEnter);
+            this.NextBtnHousekeeping.MouseLeave += new System.EventHandler(this.NextBtnHousekeeping_MouseLeave);
             // 
             // hkContactBox
             // 
@@ -210,11 +212,13 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hkFirstNameBox);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SignUpHousekeeping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up Housekeeping";
+            this.Load += new System.EventHandler(this.SignUpHousekeeping_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

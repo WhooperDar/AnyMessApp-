@@ -28,21 +28,12 @@ namespace AnyMessAppWin
             int nHeightEllipse // height of ellipse
         );
 
-        // Firebase Configuration
-        IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
-            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
-        };
-
-        IFirebaseClient client; 
-
         public Form1()
         {
             InitializeComponent();
             // For Rounded Buttons
             this.FormBorderStyle = FormBorderStyle.None;
-            button1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 30, 30));
+            getStartedBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, getStartedBtn.Width, getStartedBtn.Height, 30, 30));
 
             // Hide Login Page and Sign Up Page 
             loginSignUp1.Hide();
@@ -52,12 +43,6 @@ namespace AnyMessAppWin
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-            // App to firebase connection
-            client = new FireSharp.FirebaseClient(config); 
-            if(client != null)
-            {
-                MessageBox.Show("Firebase connected successfully");
-            }
         }
 
         // Get Started button 
@@ -65,6 +50,7 @@ namespace AnyMessAppWin
         {
             loginSignUp1.Show();
             signUpPage1.Hide();
+            loginMe1.Hide();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -126,23 +112,57 @@ namespace AnyMessAppWin
             LoadImages(); 
         }
 
-
-        private void SignUpNow_Click(object sender, EventArgs e)
-        {
-            signUpPage1.Show();
-            loginSignUp1.Hide();
-            SignUpNow.Hide();
-            loginMe1.Hide();
-        }
-
         // Link to sign up page (sign as)
         private void signUpTimer_Tick(object sender, EventArgs e)
         {
-            if (LoginSignUp.ButtonHasClick) { signUpPage1.Show(); }
-            if (LoginSignUp.LoginButtonClick) { loginMe1.Show(); }
-            if (LoginMe.SignBtnClick) { this.Hide();  }
+            if (LoginSignUp.ButtonHasClick) {
+                signUpPage1.Show();
+                loginSignUp1.Hide();
+                loginMe1.Hide();
+            }
+
+            if (LoginSignUp.LoginButtonClick) {
+                loginMe1.Show();
+                loginSignUp1.Hide();
+                signUpPage1.Hide();
+            }
+
+            if (LoginMe.SignBtnClick)
+            {
+                this.Hide();
+            }
+
+            if (LoginMe.CreateAccountClicked)
+            {
+                signUpPage1.Show();
+                loginMe1.Hide();
+                loginSignUp1.Hide();
+            }
+
+            if (SignUpPage.SignButtonsClicked)
+            {
+                
+            }
+
         }
 
+        private void loginMe1_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        // Mouse Hover Effects
+        private void getStartedBtn_MouseEnter(object sender, EventArgs e)
+        {
+            getStartedBtn.BackColor = Color.FromArgb(255, 201, 72);
+            getStartedBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void getStartedBtn_MouseLeave(object sender, EventArgs e)
+        {
+            getStartedBtn.BackColor = Color.FromArgb(5, 62, 189);
+            getStartedBtn.ForeColor = Color.White;
+        }
     }
 }
+

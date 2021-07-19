@@ -49,8 +49,13 @@ namespace AnyMessAppWin
         IFirebaseClient client;
 
         // Saving data to Database (Firebase) 
+
+        private static string typedata; 
+        public static string TypeDataEmployer { get => typedata;}
         private async void NextBtnEmployer_Click(object sender, EventArgs e)
         {
+            typedata = "Employer";
+            
             client = new FireSharp.FirebaseClient(config); // database connection
 
             // Prepare employer data to insert
@@ -77,9 +82,10 @@ namespace AnyMessAppWin
             CreateAccount createAccount = new CreateAccount();
             createAccount.ShowDialog();
 
-            this.Hide(); // Closing Form
+            this.Close(); // Closing Form
         }
 
+        
         // Text Reset
         public void returnToOldStateEmp()
         {
@@ -103,6 +109,7 @@ namespace AnyMessAppWin
         }
 
 
+        #region Mouse Hover Effects (textBox)
         // Leave Events
         private void employerFirstNameBox_Enter(object sender, EventArgs e)
         {
@@ -165,7 +172,20 @@ namespace AnyMessAppWin
                 employerAddressBox.Text = "";
                 employerAddressBox.ForeColor = Color.FromArgb(5, 62, 189);
             }
+        }
 
+        #endregion
+
+        private void NextBtnEmployer_MouseEnter(object sender, EventArgs e)
+        {
+            NextBtnEmployer.BackColor = Color.FromArgb(255, 201, 72);
+            NextBtnEmployer.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void NextBtnEmployer_MouseLeave(object sender, EventArgs e)
+        {
+            NextBtnEmployer.BackColor = Color.FromArgb(5, 62, 189);
+            NextBtnEmployer.ForeColor = Color.White;
         }
     }
 }

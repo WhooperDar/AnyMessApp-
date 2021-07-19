@@ -36,8 +36,8 @@ namespace AnyMessAppWin
             this.SignUpBotton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,8 @@ namespace AnyMessAppWin
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.MouseEnter += new System.EventHandler(this.loginButton_MouseEnter);
+            this.loginButton.MouseLeave += new System.EventHandler(this.loginButton_MouseLeave);
             // 
             // SignUpBotton
             // 
@@ -92,6 +94,8 @@ namespace AnyMessAppWin
             this.SignUpBotton.Text = "Sign Up";
             this.SignUpBotton.UseVisualStyleBackColor = false;
             this.SignUpBotton.Click += new System.EventHandler(this.SignUpBotton_Click);
+            this.SignUpBotton.MouseEnter += new System.EventHandler(this.SignUpBotton_MouseEnter);
+            this.SignUpBotton.MouseLeave += new System.EventHandler(this.SignUpBotton_MouseLeave);
             // 
             // exitButton
             // 
@@ -114,19 +118,19 @@ namespace AnyMessAppWin
             this.panel1.Size = new System.Drawing.Size(504, 65);
             this.panel1.TabIndex = 12;
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(0, -3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(509, 65);
             this.panel2.TabIndex = 13;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel1;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // LoginSignUp
             // 

@@ -98,9 +98,9 @@ namespace AnyMessAppWin
         };
 
         IFirebaseClient client;
-
         private async void NextBtnAgency_Click(object sender, EventArgs e)
         {
+
             client = new FireSharp.FirebaseClient(config); // database connection
 
             // Prepare data to insert
@@ -122,7 +122,7 @@ namespace AnyMessAppWin
             CreateAccount createAccountAgency = new CreateAccount();
             createAccountAgency.ShowDialog();
 
-            this.Hide();
+            this.Close();
         }
 
         // Reset Text
@@ -188,6 +188,30 @@ namespace AnyMessAppWin
                 agencyCodeBox.Text = "Enter Agency Code";
                 agencyCodeBox.ForeColor = Color.Silver;
             }
+        }
+
+        #region Mouse Hover Effect (Next Button in Agency Form) 
+        private void NextBtnAgency_MouseEnter(object sender, EventArgs e)
+        {
+            NextBtnAgency.BackColor = Color.FromArgb(255, 201, 72);
+            NextBtnAgency.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+        private void NextBtnAgency_MouseLeave(object sender, EventArgs e)
+        {
+            NextBtnAgency.BackColor = Color.FromArgb(5, 62, 189);
+            NextBtnAgency.ForeColor = Color.White;
+        }
+
+        #endregion
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

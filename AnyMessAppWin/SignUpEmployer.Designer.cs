@@ -29,6 +29,7 @@ namespace AnyMessAppWin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpEmployer));
             this.NextBtnEmployer = new System.Windows.Forms.Button();
             this.employerContactBox = new System.Windows.Forms.TextBox();
             this.employerAgeBox = new System.Windows.Forms.TextBox();
@@ -55,6 +56,8 @@ namespace AnyMessAppWin
             this.NextBtnEmployer.Text = "Next";
             this.NextBtnEmployer.UseVisualStyleBackColor = false;
             this.NextBtnEmployer.Click += new System.EventHandler(this.NextBtnEmployer_Click);
+            this.NextBtnEmployer.MouseEnter += new System.EventHandler(this.NextBtnEmployer_MouseEnter);
+            this.NextBtnEmployer.MouseLeave += new System.EventHandler(this.NextBtnEmployer_MouseLeave);
             // 
             // employerContactBox
             // 
@@ -185,6 +188,8 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employerFirstNameBox);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SignUpEmployer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response; 
 
 namespace AnyMessAppWin
 {
@@ -38,16 +41,58 @@ namespace AnyMessAppWin
             Application.Exit();
         }
 
+        IFirebaseConfig configSignIn = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
+        };
 
-        private static bool signBtnClick; 
+        IFirebaseClient clientLogin;
+
+        private static bool signBtnClick;
         public static bool SignBtnClick { get => signBtnClick; }
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            signBtnClick = false;
-            MainPage mainpage = new MainPage();
-            mainpage.ShowDialog();
+            signBtnClick = true;
+            clientLogin = new FireSharp.FirebaseClient(configSignIn);
 
+            // Fetch Data From Firebase
+
+            /*FirebaseResponse responseLogin = await clientLogin.GetTaskAsync("Accounts/" + usernameBox.Text);
+
+            DataCreateAccount fetchedData = responseLogin.ResultAs<DataCreateAccount>();
+            string username = fetchedData.Username;
+            string password = fetchedData.Password; 
+
+            if(username == usernameBox.Text || password == fetchedData.Password)
+            {
+                MessageBox.Show("Welcome to AnyMess");
+            }
             this.Hide();
+*/
+            MainFormPage mainPage = new MainFormPage();
+            mainPage.ShowDialog();
         }
+
+        private static bool createAccountClicked;
+        public static bool CreateAccountClicked { get => createAccountClicked; }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            createAccountClicked = true; 
+        }
+
+        #region Mouse Hover Effects 
+        private void signInBtn_MouseEnter(object sender, EventArgs e)
+        {
+            signInBtn.BackColor = Color.FromArgb(255, 201, 72);
+            signInBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void signInBtn_MouseLeave(object sender, EventArgs e)
+        {
+            signInBtn.BackColor = Color.FromArgb(5, 62, 189);
+            signInBtn.ForeColor = Color.White;
+        }
+        #endregion 
     }
 }

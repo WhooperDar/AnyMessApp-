@@ -59,10 +59,37 @@ namespace AnyMessAppWin
         public static bool ButtonHasClick { get => buttonHasClick; }
         private void SignUpBotton_Click(object sender, EventArgs e)
         {
-            buttonHasClick = true; 
+            buttonHasClick = true;
             this.Hide();
+
             SignUpPage signUpPage = new SignUpPage();
             signUpPage.Show();
         }
+
+        #region Mouse Hover Effects 
+        private void loginButton_MouseEnter(object sender, EventArgs e)
+        {
+            loginButton.BackColor = Color.FromArgb(255, 201, 72);
+            loginButton.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void loginButton_MouseLeave(object sender, EventArgs e)
+        {
+            loginButton.BackColor = Color.FromArgb(5, 62, 189);
+            loginButton.ForeColor = Color.White;
+        }
+
+        private void SignUpBotton_MouseEnter(object sender, EventArgs e)
+        {
+            SignUpBotton.BackColor = Color.FromArgb(255, 201, 72);
+            SignUpBotton.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void SignUpBotton_MouseLeave(object sender, EventArgs e)
+        {
+            SignUpBotton.BackColor = Color.FromArgb(5, 62, 189);
+            SignUpBotton.ForeColor = Color.White;
+        }
+        #endregion
     }
 }

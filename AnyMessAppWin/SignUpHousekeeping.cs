@@ -118,8 +118,11 @@ namespace AnyMessAppWin
 
         IFirebaseClient clientHk;
         // Click Event
+
         private async void NextBtnHk_Click(object sender, EventArgs e)
         {
+           
+
             clientHk = new FireSharp.FirebaseClient(config);
 
             var dataHousekeeper = new DataHousekeeper
@@ -144,7 +147,7 @@ namespace AnyMessAppWin
             CreateAccount createAccountHk = new CreateAccount();
             createAccountHk.ShowDialog();
 
-            this.Hide(); // Closing From
+            this.Close(); // Closing From
         }
 
         // Reset Text
@@ -242,6 +245,22 @@ namespace AnyMessAppWin
                 hkSkillBox.Text = "Enter Skill";
                 hkSkillBox.ForeColor = Color.Silver;
             }
+        }
+
+        private void SignUpHousekeeping_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void NextBtnHousekeeping_MouseEnter(object sender, EventArgs e)
+        {
+            NextBtnHousekeeping.BackColor = Color.FromArgb(255, 201, 72);
+            NextBtnHousekeeping.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void NextBtnHousekeeping_MouseLeave(object sender, EventArgs e)
+        {
+            NextBtnHousekeeping.BackColor = Color.FromArgb(5, 62, 189);
+            NextBtnHousekeeping.ForeColor = Color.White;
         }
     }
 }

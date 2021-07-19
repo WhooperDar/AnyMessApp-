@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AnyMessAppWin
 {
-    public partial class AgencyList : UserControl
+    public partial class AgencyList : Form
     {
         public AgencyList()
         {
