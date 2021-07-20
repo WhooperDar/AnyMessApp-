@@ -145,7 +145,6 @@ namespace AnyMessAppWin
             this.Controls.Add(this.panel1);
             this.Name = "LoginSignUp";
             this.Size = new System.Drawing.Size(504, 673);
-            this.Load += new System.EventHandler(this.LoginSignUp_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

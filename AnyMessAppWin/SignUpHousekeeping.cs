@@ -35,7 +35,7 @@ namespace AnyMessAppWin
             // For Rounded Corners
             NextBtnHousekeeping.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, NextBtnHousekeeping.Width, NextBtnHousekeeping.Height, 30, 30));
         }
-
+        #region Text Hover(Text)
         private void hkFirstNameBox_Enter(object sender, EventArgs e)
         {
             if (hkFirstNameBox.Text == "Enter First Name")
@@ -107,8 +107,11 @@ namespace AnyMessAppWin
                 hkSkillBox.ForeColor = Color.FromArgb(5, 62, 189);
             }
         }
+        #endregion
 
-        
+
+        #region Database Configuration
+
         // Firebase Configuration
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -121,8 +124,6 @@ namespace AnyMessAppWin
 
         private async void NextBtnHk_Click(object sender, EventArgs e)
         {
-           
-
             clientHk = new FireSharp.FirebaseClient(config);
 
             var dataHousekeeper = new DataHousekeeper
@@ -149,6 +150,7 @@ namespace AnyMessAppWin
 
             this.Close(); // Closing From
         }
+        #endregion
 
         // Reset Text
         private void hkFieldToOldState()
@@ -173,7 +175,7 @@ namespace AnyMessAppWin
             hkSkillBox.ForeColor = Color.Silver;
         }
 
-
+        #region Text Hover Effects(Text)
         // Leave Events 
         private void hkFirstNameBox_Leave(object sender, EventArgs e)
         {
@@ -246,10 +248,10 @@ namespace AnyMessAppWin
                 hkSkillBox.ForeColor = Color.Silver;
             }
         }
+        #endregion
 
-        private void SignUpHousekeeping_Load(object sender, EventArgs e)
-        {
-        }
+
+        #region Mouse Hover Effects(Next Button)
 
         private void NextBtnHousekeeping_MouseEnter(object sender, EventArgs e)
         {
@@ -262,5 +264,6 @@ namespace AnyMessAppWin
             NextBtnHousekeeping.BackColor = Color.FromArgb(5, 62, 189);
             NextBtnHousekeeping.ForeColor = Color.White;
         }
+        #endregion
     }
 }

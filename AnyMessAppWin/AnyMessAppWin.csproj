@@ -185,6 +185,12 @@
     <Compile Include="HomeTab.Designer.cs">
       <DependentUpon>HomeTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="HousekeepingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HousekeepingListForm.Designer.cs">
+      <DependentUpon>HousekeepingListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,8 +209,20 @@
     <Compile Include="MainFormPage.Designer.cs">
       <DependentUpon>MainFormPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileSection.Designer.cs">
+      <DependentUpon>ProfileSection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +259,9 @@
     <EmbeddedResource Include="HomeTab.resx">
       <DependentUpon>HomeTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HousekeepingListForm.resx">
+      <DependentUpon>HousekeepingListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormPage.resx">
       <DependentUpon>MainFormPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileSection.resx">
+      <DependentUpon>ProfileSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -260,6 +284,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUpAgency.resx">
       <DependentUpon>SignUpAgency.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +405,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Icons20px\plane-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\arrow-back-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\arrow-back-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\arrow-back-blue40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\arrow-back-blue120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons90px\arrow-back-blue50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons90px\arrow-back-orange50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\account-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\appearance-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\notif-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\questionmark-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\security-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\support-white20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\aboutme-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\appearance-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\notif-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\security-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\supportme-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SettingsIcons\user-blue20px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

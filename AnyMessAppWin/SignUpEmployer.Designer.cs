@@ -194,7 +194,6 @@ namespace AnyMessAppWin
             this.Name = "SignUpEmployer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up Employer";
-            this.Load += new System.EventHandler(this.SignUpEmployer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

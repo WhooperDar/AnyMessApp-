@@ -48,11 +48,6 @@ namespace AnyMessAppWin
             this.Hide();
         }
 
-        private void LoginSignUp_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         // a link from LoginSignUp to SignUpPage 
         // using properties
         public static bool buttonHasClick = false;

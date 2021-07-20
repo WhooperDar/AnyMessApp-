@@ -41,6 +41,7 @@ namespace AnyMessAppWin
             Application.Exit();
         }
 
+        #region Database Configuration
         IFirebaseConfig configSignIn = new FirebaseConfig
         {
             AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
@@ -73,6 +74,7 @@ namespace AnyMessAppWin
             MainFormPage mainPage = new MainFormPage();
             mainPage.ShowDialog();
         }
+        #endregion
 
         private static bool createAccountClicked;
         public static bool CreateAccountClicked { get => createAccountClicked; }

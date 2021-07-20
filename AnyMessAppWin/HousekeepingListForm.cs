@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AnyMessAppWin
 {
-    public partial class AgencyList : Form
+    public partial class HousekeepingListForm : Form
     {
-        public AgencyList()
+        public HousekeepingListForm()
         {
             InitializeComponent();
         }

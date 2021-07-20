@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aboutme_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\aboutme-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="account_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\account-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="agency" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\agency.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +132,18 @@
   </data>
   <data name="agency_shade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\agency-shade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appearance_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\appearance-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="appearance_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\appearance-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_back_blue50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons90px\arrow-back-blue50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_back_orange50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons90px\arrow-back-orange50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +196,14 @@
   <data name="notif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\notif.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="notif_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\notif-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="notif_shade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\notif-shade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notif_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\notif-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plane_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons20px\plane-blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +220,15 @@
   <data name="profile_shade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\profile_shade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="questionmark_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\questionmark-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\security-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="security_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\security-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +238,16 @@
   <data name="setting_shade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\setting-shade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="supportme_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\supportme-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="support_white20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\support-white20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sweeping" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IconArt45px\sweeping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_blue20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SettingsIcons\user-blue20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,7 +28,7 @@ namespace AnyMessAppWin
         }
 
 
-        #region Hover Effects 
+        #region Hover Effects(Main Category)
         private void homeBtn_MouseEnter(object sender, EventArgs e)
         {
             homeBtn.Image = Properties.Resources.home_shade;
@@ -99,26 +99,7 @@ namespace AnyMessAppWin
             exitBtn.Image = Properties.Resources.cancel20;
         }
 
-        private void hkListBtn_Click(object sender, EventArgs e)
-        {
-            hkListBtn.Image = Properties.Resources.hklist_orange;
-        }
-
-        private void agencyListBtn_Click(object sender, EventArgs e)
-        {
-            agencyListBtn.Image = Properties.Resources.agency_orange;
-        }
-
-        private void profileBtn_Click(object sender, EventArgs e)
-        {
-            profileBtn.Image = Properties.Resources.profile_orange;
-        }
-
-        private void settingBtn_Click(object sender, EventArgs e)
-        {
-            settingBtn.Image = Properties.Resources.setting_orange;
-        }
-
+        
         private void homeBtn_MouseClick(object sender, MouseEventArgs e)
         {
             homeBtn.Image = Properties.Resources.home_orange;
@@ -126,16 +107,70 @@ namespace AnyMessAppWin
 
         #endregion
 
+        #region Click Events(Click Buttons)
+        private void hkListBtn_Click(object sender, EventArgs e)
+        {
+            hkListBtn.Image = Properties.Resources.hklist_orange;
+            openChildForm(new HousekeepingListForm());
+        }
+
+        private void agencyListBtn_Click(object sender, EventArgs e)
+        {
+            agencyListBtn.Image = Properties.Resources.agency_orange;
+            openChildForm(new AgencyList());
+        }
+
+        private void profileBtn_Click(object sender, EventArgs e)
+        {
+            profileBtn.Image = Properties.Resources.profile_orange;
+            openChildForm(new ProfileSection()); 
+        }
+
+        private void settingBtn_Click(object sender, EventArgs e)
+        {
+            settingBtn.Image = Properties.Resources.setting_orange;
+            openChildForm(new Settings()); 
+        }
+
         private void homeBtn_Click(object sender, EventArgs e)
         {
             homeBtn.Image = Properties.Resources.home_orange;
-            panelChildHome hometab =  new panelChildHome();
-            hometab.ShowDialog(); 
+            openChildForm(new HomeTabPanel());
         }
 
         private void MainFormPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        #endregion
+
+        // Display Forms 
+        private Form activeForm = null; 
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm; 
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelParent.Controls.Add(childForm);
+            panelParent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void mainBtn_Click(object sender, EventArgs e)
+        {
+            // Class Instances
+            HomeTabPanel maintab = new HomeTabPanel();
+            AgencyList agencytab = new AgencyList();
+
+            // Hide all open forms
+            maintab.Close();
+            agencytab.Close();
         }
     }
 }

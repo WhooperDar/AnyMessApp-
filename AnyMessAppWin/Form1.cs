@@ -141,8 +141,14 @@ namespace AnyMessAppWin
 
             if (SignUpPage.SignButtonsClicked)
             {
-                
+                this.Hide();
             }
+
+            /*if (SignUpAgency.BackAgencyClicked) {
+                this.ShowDialog();
+                signUpPage1.Show();
+                
+            }*/
 
         }
 

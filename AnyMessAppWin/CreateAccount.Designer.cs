@@ -59,6 +59,8 @@ namespace AnyMessAppWin
             this.createAccBtn.Text = "Create Account";
             this.createAccBtn.UseVisualStyleBackColor = false;
             this.createAccBtn.Click += new System.EventHandler(this.createAccBtn_Click);
+            this.createAccBtn.MouseEnter += new System.EventHandler(this.createAccBtn_MouseEnter);
+            this.createAccBtn.MouseLeave += new System.EventHandler(this.createAccBtn_MouseLeave);
             // 
             // emailBox
             // 

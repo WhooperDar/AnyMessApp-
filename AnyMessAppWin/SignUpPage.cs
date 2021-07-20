@@ -52,6 +52,8 @@ namespace AnyMessAppWin
             signButtonsClicked = true;
             SignUpAgency agencySignUp = new SignUpAgency();
             agencySignUp.ShowDialog();
+
+            this.Hide();
         }
 
         private void employerBtn_Click(object sender, EventArgs e)

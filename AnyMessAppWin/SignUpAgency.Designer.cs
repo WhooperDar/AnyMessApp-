@@ -38,6 +38,7 @@ namespace AnyMessAppWin
             this.agencyContactBox = new System.Windows.Forms.TextBox();
             this.agencyCodeBox = new System.Windows.Forms.TextBox();
             this.NextBtnAgency = new System.Windows.Forms.Button();
+            this.backButtonAgency = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -116,11 +117,22 @@ namespace AnyMessAppWin
             this.NextBtnAgency.MouseEnter += new System.EventHandler(this.NextBtnAgency_MouseEnter);
             this.NextBtnAgency.MouseLeave += new System.EventHandler(this.NextBtnAgency_MouseLeave);
             // 
+            // backButtonAgency
+            // 
+            this.backButtonAgency.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.backButtonAgency, "backButtonAgency");
+            this.backButtonAgency.Name = "backButtonAgency";
+            this.backButtonAgency.UseVisualStyleBackColor = true;
+            this.backButtonAgency.Click += new System.EventHandler(this.backButtonAgency_Click);
+            this.backButtonAgency.MouseEnter += new System.EventHandler(this.backButtonAgency_MouseEnter);
+            this.backButtonAgency.MouseLeave += new System.EventHandler(this.backButtonAgency_MouseLeave);
+            // 
             // SignUpAgency
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.backButtonAgency);
             this.Controls.Add(this.NextBtnAgency);
             this.Controls.Add(this.agencyCodeBox);
             this.Controls.Add(this.agencyWebsiteBox);
@@ -148,5 +160,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox agencyContactBox;
         private System.Windows.Forms.TextBox agencyCodeBox;
         private System.Windows.Forms.Button NextBtnAgency;
+        private System.Windows.Forms.Button backButtonAgency;
     }
 }

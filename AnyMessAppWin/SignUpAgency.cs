@@ -119,10 +119,12 @@ namespace AnyMessAppWin
 
             MessageBox.Show("Added " + result.AgencyName + " to firebase");
 
+            this.Hide();
+
             CreateAccount createAccountAgency = new CreateAccount();
             createAccountAgency.ShowDialog();
 
-            this.Close();
+            
         }
 
         // Reset Text
@@ -212,6 +214,28 @@ namespace AnyMessAppWin
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+        #region Mouse Hover Effect(Back Button)
+        private void backButtonAgency_MouseEnter(object sender, EventArgs e)
+        {
+            backButtonAgency.Image = Properties.Resources.arrow_back_orange50px; 
+        }
+
+        private void backButtonAgency_MouseLeave(object sender, EventArgs e)
+        {
+            backButtonAgency.Image = Properties.Resources.arrow_back_blue50px;
+        }
+        #endregion
+
+        /*private static bool backAgencyClicked; 
+        public static bool BackAgencyClicked { get => backAgencyClicked; }*/
+        private void backButtonAgency_Click(object sender, EventArgs e)
+        {
+            /*backAgencyClicked = true;*/
+            this.Close();
+
+            Form1 mainForm = new Form1();
+            mainForm.Show();
         }
     }
 }

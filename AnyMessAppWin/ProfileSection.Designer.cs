@@ -1,7 +1,7 @@
 ﻿
 namespace AnyMessAppWin
 {
-    partial class AgencyList
+    partial class ProfileSection
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace AnyMessAppWin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgencyList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSection));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -37,23 +37,23 @@ namespace AnyMessAppWin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(367, 355);
+            this.label1.Location = new System.Drawing.Point(346, 334);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Agency List";
+            this.label1.Text = "Profile Section";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 55);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "x";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // AgencyList
+            // ProfileSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -63,8 +63,8 @@ namespace AnyMessAppWin
             this.Font = new System.Drawing.Font("Montserrat", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AgencyList";
-            this.Text = "AgencyList";
+            this.Name = "ProfileSection";
+            this.Text = "ProfileSection";
             this.ResumeLayout(false);
             this.PerformLayout();
 

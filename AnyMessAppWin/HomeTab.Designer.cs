@@ -1,7 +1,7 @@
 ﻿
 namespace AnyMessAppWin
 {
-    partial class panelChildHome
+    partial class HomeTabPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -29,67 +29,53 @@ namespace AnyMessAppWin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(panelChildHome));
-            this.homeExitBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeTabPanel));
             this.label1 = new System.Windows.Forms.Label();
-            this.CleaningBtn = new System.Windows.Forms.Button();
-            this.SweepingBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.MarketServiceBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.hkBtnHireMe2 = new System.Windows.Forms.Button();
             this.panelButton2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hkBtnHireMe1 = new System.Windows.Forms.Button();
             this.panelButton1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ContactUs1 = new System.Windows.Forms.Button();
             this.panelButton3 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.ContactUs2 = new System.Windows.Forms.Button();
             this.panelButton4 = new System.Windows.Forms.Button();
-            this.CookingBtn = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LaundryButton = new System.Windows.Forms.Button();
+            this.CookingBtn = new System.Windows.Forms.Button();
+            this.MarketServiceBtn = new System.Windows.Forms.Button();
+            this.homeExitBtn = new System.Windows.Forms.Button();
+            this.SweepingBtn = new System.Windows.Forms.Button();
+            this.CleaningBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // homeExitBtn
-            // 
-            this.homeExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeExitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.homeExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeExitBtn.Image")));
-            this.homeExitBtn.Location = new System.Drawing.Point(35, 14);
-            this.homeExitBtn.Name = "homeExitBtn";
-            this.homeExitBtn.Size = new System.Drawing.Size(112, 36);
-            this.homeExitBtn.TabIndex = 0;
-            this.homeExitBtn.UseVisualStyleBackColor = true;
-            this.homeExitBtn.Click += new System.EventHandler(this.homeExitBtn_Click);
-            this.homeExitBtn.MouseEnter += new System.EventHandler(this.homeExitBtn_MouseEnter);
-            this.homeExitBtn.MouseLeave += new System.EventHandler(this.homeExitBtn_MouseLeave);
             // 
             // label1
             // 
@@ -102,40 +88,6 @@ namespace AnyMessAppWin
             this.label1.TabIndex = 1;
             this.label1.Text = "Category";
             // 
-            // CleaningBtn
-            // 
-            this.CleaningBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.CleaningBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CleaningBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CleaningBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.CleaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("CleaningBtn.Image")));
-            this.CleaningBtn.Location = new System.Drawing.Point(41, 139);
-            this.CleaningBtn.Name = "CleaningBtn";
-            this.CleaningBtn.Size = new System.Drawing.Size(176, 100);
-            this.CleaningBtn.TabIndex = 2;
-            this.CleaningBtn.Text = "Cleaning";
-            this.CleaningBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CleaningBtn.UseVisualStyleBackColor = false;
-            this.CleaningBtn.MouseEnter += new System.EventHandler(this.CleaningBtn_MouseEnter);
-            this.CleaningBtn.MouseLeave += new System.EventHandler(this.CleaningBtn_MouseLeave);
-            // 
-            // SweepingBtn
-            // 
-            this.SweepingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.SweepingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SweepingBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SweepingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.SweepingBtn.Image = ((System.Drawing.Image)(resources.GetObject("SweepingBtn.Image")));
-            this.SweepingBtn.Location = new System.Drawing.Point(587, 139);
-            this.SweepingBtn.Name = "SweepingBtn";
-            this.SweepingBtn.Size = new System.Drawing.Size(176, 100);
-            this.SweepingBtn.TabIndex = 5;
-            this.SweepingBtn.Text = "Sweeping";
-            this.SweepingBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.SweepingBtn.UseVisualStyleBackColor = false;
-            this.SweepingBtn.MouseEnter += new System.EventHandler(this.SweepingBtn_MouseEnter);
-            this.SweepingBtn.MouseLeave += new System.EventHandler(this.SweepingBtn_MouseLeave);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -146,25 +98,6 @@ namespace AnyMessAppWin
             this.label2.Size = new System.Drawing.Size(463, 47);
             this.label2.TabIndex = 10;
             this.label2.Text = "Available Housekeepers";
-            // 
-            // MarketServiceBtn
-            // 
-            this.MarketServiceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.MarketServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.MarketServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MarketServiceBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarketServiceBtn.ForeColor = System.Drawing.Color.White;
-            this.MarketServiceBtn.Image = ((System.Drawing.Image)(resources.GetObject("MarketServiceBtn.Image")));
-            this.MarketServiceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarketServiceBtn.Location = new System.Drawing.Point(661, 8);
-            this.MarketServiceBtn.Name = "MarketServiceBtn";
-            this.MarketServiceBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.MarketServiceBtn.Size = new System.Drawing.Size(173, 42);
-            this.MarketServiceBtn.TabIndex = 11;
-            this.MarketServiceBtn.Text = "    Market Your Service";
-            this.MarketServiceBtn.UseVisualStyleBackColor = false;
-            this.MarketServiceBtn.MouseEnter += new System.EventHandler(this.MarketServiceBtn_MouseEnter);
-            this.MarketServiceBtn.MouseLeave += new System.EventHandler(this.MarketServiceBtn_MouseLeave);
             // 
             // panel1
             // 
@@ -199,16 +132,6 @@ namespace AnyMessAppWin
             this.label6.Size = new System.Drawing.Size(152, 39);
             this.label6.TabIndex = 7;
             this.label6.Text = "Cleaning";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(168, 172);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -283,16 +206,6 @@ namespace AnyMessAppWin
             this.label4.Size = new System.Drawing.Size(117, 39);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tanjiro";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // hkBtnHireMe1
             // 
@@ -374,16 +287,6 @@ namespace AnyMessAppWin
             this.label8.TabIndex = 7;
             this.label8.Text = "Manila";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(166, 173);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -408,6 +311,8 @@ namespace AnyMessAppWin
             this.ContactUs1.TabIndex = 4;
             this.ContactUs1.Text = "Contact Us!";
             this.ContactUs1.UseVisualStyleBackColor = false;
+            this.ContactUs1.MouseEnter += new System.EventHandler(this.ContactUs1_MouseEnter);
+            this.ContactUs1.MouseLeave += new System.EventHandler(this.ContactUs1_MouseLeave);
             // 
             // panelButton3
             // 
@@ -446,16 +351,6 @@ namespace AnyMessAppWin
             this.label10.TabIndex = 7;
             this.label10.Text = "Manila";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(166, 173);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -480,6 +375,8 @@ namespace AnyMessAppWin
             this.ContactUs2.TabIndex = 4;
             this.ContactUs2.Text = "Contact Us!";
             this.ContactUs2.UseVisualStyleBackColor = false;
+            this.ContactUs2.MouseEnter += new System.EventHandler(this.ContactUs2_MouseEnter);
+            this.ContactUs2.MouseLeave += new System.EventHandler(this.ContactUs2_MouseLeave);
             // 
             // panelButton4
             // 
@@ -494,26 +391,50 @@ namespace AnyMessAppWin
             this.panelButton4.MouseEnter += new System.EventHandler(this.panelButton4_MouseEnter);
             this.panelButton4.MouseLeave += new System.EventHandler(this.panelButton4_MouseLeave);
             // 
-            // CookingBtn
+            // pictureBox4
             // 
-            this.CookingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.CookingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CookingBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CookingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.CookingBtn.Image = ((System.Drawing.Image)(resources.GetObject("CookingBtn.Image")));
-            this.CookingBtn.Location = new System.Drawing.Point(223, 139);
-            this.CookingBtn.Name = "CookingBtn";
-            this.CookingBtn.Size = new System.Drawing.Size(176, 100);
-            this.CookingBtn.TabIndex = 12;
-            this.CookingBtn.Text = "Cooking";
-            this.CookingBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CookingBtn.UseVisualStyleBackColor = false;
-            this.CookingBtn.MouseEnter += new System.EventHandler(this.CookingBtn_MouseEnter_1);
-            this.CookingBtn.MouseLeave += new System.EventHandler(this.CookingBtn_MouseLeave);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(166, 173);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(166, 173);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(168, 172);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // LaundryButton
             // 
             this.LaundryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.LaundryButton.FlatAppearance.BorderSize = 2;
             this.LaundryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LaundryButton.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LaundryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
@@ -528,13 +449,100 @@ namespace AnyMessAppWin
             this.LaundryButton.MouseEnter += new System.EventHandler(this.LaundryButton_MouseEnter);
             this.LaundryButton.MouseLeave += new System.EventHandler(this.LaundryButton_MouseLeave);
             // 
-            // panelChildHome
+            // CookingBtn
+            // 
+            this.CookingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.CookingBtn.FlatAppearance.BorderSize = 2;
+            this.CookingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CookingBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CookingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.CookingBtn.Image = ((System.Drawing.Image)(resources.GetObject("CookingBtn.Image")));
+            this.CookingBtn.Location = new System.Drawing.Point(223, 139);
+            this.CookingBtn.Name = "CookingBtn";
+            this.CookingBtn.Size = new System.Drawing.Size(176, 100);
+            this.CookingBtn.TabIndex = 12;
+            this.CookingBtn.Text = "Cooking";
+            this.CookingBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CookingBtn.UseVisualStyleBackColor = false;
+            this.CookingBtn.MouseEnter += new System.EventHandler(this.CookingBtn_MouseEnter_1);
+            this.CookingBtn.MouseLeave += new System.EventHandler(this.CookingBtn_MouseLeave);
+            // 
+            // MarketServiceBtn
+            // 
+            this.MarketServiceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.MarketServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.MarketServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MarketServiceBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarketServiceBtn.ForeColor = System.Drawing.Color.White;
+            this.MarketServiceBtn.Image = ((System.Drawing.Image)(resources.GetObject("MarketServiceBtn.Image")));
+            this.MarketServiceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MarketServiceBtn.Location = new System.Drawing.Point(661, 8);
+            this.MarketServiceBtn.Name = "MarketServiceBtn";
+            this.MarketServiceBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.MarketServiceBtn.Size = new System.Drawing.Size(173, 42);
+            this.MarketServiceBtn.TabIndex = 11;
+            this.MarketServiceBtn.Text = "    Market Your Service";
+            this.MarketServiceBtn.UseVisualStyleBackColor = false;
+            this.MarketServiceBtn.MouseEnter += new System.EventHandler(this.MarketServiceBtn_MouseEnter);
+            this.MarketServiceBtn.MouseLeave += new System.EventHandler(this.MarketServiceBtn_MouseLeave);
+            // 
+            // homeExitBtn
+            // 
+            this.homeExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeExitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.homeExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("homeExitBtn.Image")));
+            this.homeExitBtn.Location = new System.Drawing.Point(35, 14);
+            this.homeExitBtn.Name = "homeExitBtn";
+            this.homeExitBtn.Size = new System.Drawing.Size(112, 36);
+            this.homeExitBtn.TabIndex = 0;
+            this.homeExitBtn.UseVisualStyleBackColor = true;
+            this.homeExitBtn.Click += new System.EventHandler(this.homeExitBtn_Click);
+            this.homeExitBtn.MouseEnter += new System.EventHandler(this.homeExitBtn_MouseEnter);
+            this.homeExitBtn.MouseLeave += new System.EventHandler(this.homeExitBtn_MouseLeave);
+            // 
+            // SweepingBtn
+            // 
+            this.SweepingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.SweepingBtn.FlatAppearance.BorderSize = 2;
+            this.SweepingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SweepingBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SweepingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.SweepingBtn.Image = ((System.Drawing.Image)(resources.GetObject("SweepingBtn.Image")));
+            this.SweepingBtn.Location = new System.Drawing.Point(587, 139);
+            this.SweepingBtn.Name = "SweepingBtn";
+            this.SweepingBtn.Size = new System.Drawing.Size(176, 100);
+            this.SweepingBtn.TabIndex = 5;
+            this.SweepingBtn.Text = "Sweeping";
+            this.SweepingBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SweepingBtn.UseVisualStyleBackColor = false;
+            this.SweepingBtn.MouseEnter += new System.EventHandler(this.SweepingBtn_MouseEnter);
+            this.SweepingBtn.MouseLeave += new System.EventHandler(this.SweepingBtn_MouseLeave);
+            // 
+            // CleaningBtn
+            // 
+            this.CleaningBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.CleaningBtn.FlatAppearance.BorderSize = 2;
+            this.CleaningBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CleaningBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CleaningBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.CleaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("CleaningBtn.Image")));
+            this.CleaningBtn.Location = new System.Drawing.Point(41, 139);
+            this.CleaningBtn.Name = "CleaningBtn";
+            this.CleaningBtn.Size = new System.Drawing.Size(176, 100);
+            this.CleaningBtn.TabIndex = 2;
+            this.CleaningBtn.Text = "Cleaning";
+            this.CleaningBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CleaningBtn.UseVisualStyleBackColor = false;
+            this.CleaningBtn.MouseEnter += new System.EventHandler(this.CleaningBtn_MouseEnter);
+            this.CleaningBtn.MouseLeave += new System.EventHandler(this.CleaningBtn_MouseLeave);
+            // 
+            // HomeTabPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ClientSize = new System.Drawing.Size(846, 858);
+            this.ClientSize = new System.Drawing.Size(846, 784);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label3);
@@ -543,25 +551,25 @@ namespace AnyMessAppWin
             this.Font = new System.Drawing.Font("Montserrat", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "panelChildHome";
+            this.Name = "HomeTabPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeTab";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

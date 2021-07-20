@@ -30,13 +30,12 @@ namespace AnyMessAppWin
         public SignUpEmployer()
         {
             InitializeComponent();
-        }
 
-        private void SignUpEmployer_Load(object sender, EventArgs e)
-        {
+            // For Rounded Corners
             NextBtnEmployer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, NextBtnEmployer.Width, NextBtnEmployer.Height, 30, 30));
         }
 
+        #region Database Configuration
         // --------------------Saviing data to database------------------
 
         // Firebase Configuration
@@ -79,13 +78,13 @@ namespace AnyMessAppWin
 
             returnToOldStateEmp();
 
+            this.Hide(); // Closing Form
+
             CreateAccount createAccount = new CreateAccount();
-            createAccount.ShowDialog();
-
-            this.Close(); // Closing Form
+            createAccount.ShowDialog();          
         }
+        #endregion 
 
-        
         // Text Reset
         public void returnToOldStateEmp()
         {
@@ -109,7 +108,7 @@ namespace AnyMessAppWin
         }
 
 
-        #region Mouse Hover Effects (textBox)
+        #region Text Hover Effects (textBox)
         // Leave Events
         private void employerFirstNameBox_Enter(object sender, EventArgs e)
         {
@@ -176,6 +175,8 @@ namespace AnyMessAppWin
 
         #endregion
 
+
+        #region Mouse Hover Effects(Next Button)
         private void NextBtnEmployer_MouseEnter(object sender, EventArgs e)
         {
             NextBtnEmployer.BackColor = Color.FromArgb(255, 201, 72);
@@ -187,5 +188,6 @@ namespace AnyMessAppWin
             NextBtnEmployer.BackColor = Color.FromArgb(5, 62, 189);
             NextBtnEmployer.ForeColor = Color.White;
         }
+        #endregion 
     }
 }

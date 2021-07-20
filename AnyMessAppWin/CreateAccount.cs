@@ -98,5 +98,17 @@ namespace AnyMessAppWin
         {
             confirmpassBox.ForeColor = Color.FromArgb(5, 62, 189);
         }
+
+        private void createAccBtn_MouseEnter(object sender, EventArgs e)
+        {
+            createAccBtn.BackColor = Color.FromArgb(255, 201, 72);
+            createAccBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void createAccBtn_MouseLeave(object sender, EventArgs e)
+        {
+            createAccBtn.BackColor = Color.FromArgb(5, 62, 189);
+            createAccBtn.ForeColor = Color.White;
+        }
     }
 }

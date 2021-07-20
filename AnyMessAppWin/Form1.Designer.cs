@@ -37,7 +37,6 @@ namespace AnyMessAppWin
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxBottom = new System.Windows.Forms.Label();
             this.textBoxTop = new System.Windows.Forms.Label();
-            this.slidePictureBox = new System.Windows.Forms.PictureBox();
             this.getStarted = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,12 +48,13 @@ namespace AnyMessAppWin
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.signUpTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.slidePictureBox = new System.Windows.Forms.PictureBox();
             this.loginMe1 = new AnyMessAppWin.LoginMe();
             this.signUpPage1 = new AnyMessAppWin.SignUpPage();
             this.loginSignUp1 = new AnyMessAppWin.LoginSignUp();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).BeginInit();
             this.getStarted.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,16 +117,6 @@ namespace AnyMessAppWin
             this.textBoxTop.TabIndex = 2;
             this.textBoxTop.Text = "You don\'t have time for laundry?";
             this.textBoxTop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // slidePictureBox
-            // 
-            this.slidePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("slidePictureBox.Image")));
-            this.slidePictureBox.Location = new System.Drawing.Point(65, 90);
-            this.slidePictureBox.Name = "slidePictureBox";
-            this.slidePictureBox.Size = new System.Drawing.Size(630, 414);
-            this.slidePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.slidePictureBox.TabIndex = 5;
-            this.slidePictureBox.TabStop = false;
             // 
             // getStarted
             // 
@@ -245,10 +235,20 @@ namespace AnyMessAppWin
             this.bunifuDragControl2.TargetControl = null;
             this.bunifuDragControl2.Vertical = true;
             // 
+            // slidePictureBox
+            // 
+            this.slidePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("slidePictureBox.Image")));
+            this.slidePictureBox.Location = new System.Drawing.Point(65, 90);
+            this.slidePictureBox.Name = "slidePictureBox";
+            this.slidePictureBox.Size = new System.Drawing.Size(630, 414);
+            this.slidePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.slidePictureBox.TabIndex = 5;
+            this.slidePictureBox.TabStop = false;
+            // 
             // loginMe1
             // 
             this.loginMe1.BackColor = System.Drawing.Color.White;
-            this.loginMe1.Location = new System.Drawing.Point(-3, 0);
+            this.loginMe1.Location = new System.Drawing.Point(0, 0);
             this.loginMe1.Name = "loginMe1";
             this.loginMe1.Size = new System.Drawing.Size(504, 673);
             this.loginMe1.TabIndex = 8;
@@ -265,7 +265,7 @@ namespace AnyMessAppWin
             // loginSignUp1
             // 
             this.loginSignUp1.BackColor = System.Drawing.Color.White;
-            this.loginSignUp1.Location = new System.Drawing.Point(-3, 0);
+            this.loginSignUp1.Location = new System.Drawing.Point(0, 0);
             this.loginSignUp1.Name = "loginSignUp1";
             this.loginSignUp1.Size = new System.Drawing.Size(504, 673);
             this.loginSignUp1.TabIndex = 6;
@@ -288,9 +288,9 @@ namespace AnyMessAppWin
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).EndInit();
             this.getStarted.ResumeLayout(false);
             this.getStarted.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

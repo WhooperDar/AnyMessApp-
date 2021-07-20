@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnyMessAppWin
 {
-    public partial class panelChildHome : Form
+    public partial class HomeTabPanel : Form
     {
         // For Rounded Corner Buttons
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -28,7 +28,7 @@ namespace AnyMessAppWin
         // Front End
 
         #region Form 
-        public panelChildHome()
+        public HomeTabPanel()
         {
             InitializeComponent();
 
@@ -43,7 +43,6 @@ namespace AnyMessAppWin
 
             // For Rounded Corner Buttons
             ContactUs2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ContactUs2.Width, ContactUs2.Height, 30, 30));
-
         }
         #endregion
 
@@ -219,24 +218,40 @@ namespace AnyMessAppWin
             homeExitBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
             homeExitBtn.BackColor = Color.FromArgb(239, 239, 239);
         }
+
+        private void ContactUs1_MouseEnter(object sender, EventArgs e)
+        {
+            ContactUs1.BackColor = Color.FromArgb(255, 201, 72);
+            ContactUs1.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void ContactUs1_MouseLeave(object sender, EventArgs e)
+        {
+            ContactUs1.BackColor = Color.FromArgb(5, 62, 189);
+            ContactUs1.ForeColor = Color.White;
+        }
+
+        private void ContactUs2_MouseEnter(object sender, EventArgs e)
+        {
+            ContactUs2.BackColor = Color.FromArgb(255, 201, 72);
+            ContactUs2.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void ContactUs2_MouseLeave(object sender, EventArgs e)
+        {
+            ContactUs2.BackColor = Color.FromArgb(5, 62, 189);
+            ContactUs2.ForeColor = Color.White;
+        }
         #endregion
-
-
 
         private void hkBtnHireMe1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void CookingBtn_Click(object sender, EventArgs e)
-        {
-
-        }
         private void homeExitBtn_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
-
-       
     }
 }

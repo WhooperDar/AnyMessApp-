@@ -218,7 +218,6 @@ namespace AnyMessAppWin
             this.Name = "SignUpHousekeeping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up Housekeeping";
-            this.Load += new System.EventHandler(this.SignUpHousekeeping_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
