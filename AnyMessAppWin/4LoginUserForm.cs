@@ -109,5 +109,42 @@ namespace AnyMessAppWin
         }
         #endregion
 
+        #region Utility Functions(Open Child Form, Hide Components)
+        private Form activeForm = null; 
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelSignInParent.Controls.Add(childForm);
+            panelSignInParent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void HideThisContents()
+        {
+            label1.Hide();
+            label2.Hide();
+            label3.Hide();
+            usernameText.Hide();
+            usernameBox.Hide();
+            passwordBox.Hide();
+            label4.Hide();
+            forgetBtn.Hide();
+            signInBtn.Hide();
+            label8.Hide();
+            createAccountLogin.Hide();
+            exitBtnSignIn.Hide();
+        }
+        #endregion
+        private void createAccountLogin_Click(object sender, EventArgs e)
+        {
+            HideThisContents();
+            openChildForm(new _3LoginForm());
+        }
     }
 }

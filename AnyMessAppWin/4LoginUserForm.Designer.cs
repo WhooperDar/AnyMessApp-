@@ -42,6 +42,7 @@ namespace AnyMessAppWin
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.exitBtnSignIn = new System.Windows.Forms.Button();
+            this.panelSignInParent = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // forgetBtn
@@ -76,6 +77,7 @@ namespace AnyMessAppWin
             this.createAccountLogin.Text = "Create Account";
             this.createAccountLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createAccountLogin.UseVisualStyleBackColor = false;
+            this.createAccountLogin.Click += new System.EventHandler(this.createAccountLogin_Click);
             this.createAccountLogin.MouseEnter += new System.EventHandler(this.createAccountLogin_MouseEnter);
             this.createAccountLogin.MouseLeave += new System.EventHandler(this.createAccountLogin_MouseLeave);
             // 
@@ -199,6 +201,14 @@ namespace AnyMessAppWin
             this.exitBtnSignIn.UseVisualStyleBackColor = true;
             this.exitBtnSignIn.Click += new System.EventHandler(this.exitBtnSignIn_Click);
             // 
+            // panelSignInParent
+            // 
+            this.panelSignInParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSignInParent.Location = new System.Drawing.Point(0, 0);
+            this.panelSignInParent.Name = "panelSignInParent";
+            this.panelSignInParent.Size = new System.Drawing.Size(504, 673);
+            this.panelSignInParent.TabIndex = 62;
+            // 
             // LoginUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,6 +226,7 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelSignInParent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginUserForm";
@@ -239,5 +250,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exitBtnSignIn;
+        private System.Windows.Forms.Panel panelSignInParent;
     }
 }
