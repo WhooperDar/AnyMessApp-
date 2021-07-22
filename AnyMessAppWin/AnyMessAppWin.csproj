@@ -157,6 +157,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3LoginPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3LoginPageForm.Designer.cs">
+      <DependentUpon>3LoginPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2SelectionForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2SelectionForms.Designer.cs">
+      <DependentUpon>2SelectionForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3SignUpAsForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3SignUpAsForms.Designer.cs">
+      <DependentUpon>3SignUpAsForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgencyList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,11 +215,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginSignUp.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="4LoginUserForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginSignUp.Designer.cs">
-      <DependentUpon>LoginSignUp.cs</DependentUpon>
+    <Compile Include="4LoginUserForm.Designer.cs">
+      <DependentUpon>4LoginUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFormPage.cs">
       <SubType>Form</SubType>
@@ -247,6 +265,15 @@
     <Compile Include="SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="3LoginPageForm.resx">
+      <DependentUpon>3LoginPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2SelectionForms.resx">
+      <DependentUpon>2SelectionForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3SignUpAsForms.resx">
+      <DependentUpon>3SignUpAsForms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgencyList.resx">
       <DependentUpon>AgencyList.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,8 +292,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginSignUp.resx">
-      <DependentUpon>LoginSignUp.cs</DependentUpon>
+    <EmbeddedResource Include="4LoginUserForm.resx">
+      <DependentUpon>4LoginUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormPage.resx">
       <DependentUpon>MainFormPage.cs</DependentUpon>

@@ -33,29 +33,13 @@ namespace AnyMessAppWin
             InitializeComponent();
             // For Rounded Buttons
             this.FormBorderStyle = FormBorderStyle.None;
-            getStartedBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, getStartedBtn.Width, getStartedBtn.Height, 30, 30));
 
-            // Hide Login Page and Sign Up Page 
-            loginSignUp1.Hide();
-            signUpPage1.Hide();
-            loginMe1.Hide();
+            // For Rounded Corners
+            getStartedBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, getStartedBtn.Width, getStartedBtn.Height, 30, 30));
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
-        }
-
-        // Get Started button 
-        private void getStarted_Click(object sender, EventArgs e)
-        {
-            loginSignUp1.Show();
-            signUpPage1.Hide();
-            loginMe1.Hide();
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         // Carousel (Image Slide Show) 
@@ -112,52 +96,31 @@ namespace AnyMessAppWin
             LoadImages(); 
         }
 
-        // Link to sign up page (sign as)
-        private void signUpTimer_Tick(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-            if (LoginSignUp.ButtonHasClick) {
-                signUpPage1.Show();
-                loginSignUp1.Hide();
-                loginMe1.Hide();
-            }
-
-            if (LoginSignUp.LoginButtonClick) {
-                loginMe1.Show();
-                loginSignUp1.Hide();
-                signUpPage1.Hide();
-            }
-
-            if (LoginMe.SignBtnClick)
-            {
-                this.Hide();
-            }
-
-            if (LoginMe.CreateAccountClicked)
-            {
-                signUpPage1.Show();
-                loginMe1.Hide();
-                loginSignUp1.Hide();
-            }
-
-            if (SignUpPage.SignButtonsClicked)
-            {
-                this.Hide();
-            }
-
-            /*if (SignUpAgency.BackAgencyClicked) {
-                this.ShowDialog();
-                signUpPage1.Show();
-                
-            }*/
-
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            parentPanelLogin.Controls.Add(childForm);
+            parentPanelLogin.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void loginMe1_Load(object sender, EventArgs e)
+        private void getStartedBtn_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new _2SignUpForm()); 
         }
 
-        // Mouse Hover Effects
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void getStartedBtn_MouseEnter(object sender, EventArgs e)
         {
             getStartedBtn.BackColor = Color.FromArgb(255, 201, 72);
@@ -168,6 +131,11 @@ namespace AnyMessAppWin
         {
             getStartedBtn.BackColor = Color.FromArgb(5, 62, 189);
             getStartedBtn.ForeColor = Color.White;
+        }
+
+        private void toForm_Tick(object sender, EventArgs e)
+        {
+            if (LoginUserForm.ToMainForm) { this.Hide(); }
         }
     }
 }

@@ -45,14 +45,9 @@ namespace AnyMessAppWin
         IFirebaseClient clientCreateAccount;
 
         // Saving data to database
-
-        private static bool createBtnClick; 
-        public static bool CreateBtnClick { get => createBtnClick; }
         private async void createAccBtn_Click(object sender, EventArgs e)
         {
-            // User Type Checker
-            createBtnClick = true;
-            clientCreateAccount = new FireSharp.FirebaseClient(configCreateAccount);
+            /*clientCreateAccount = new FireSharp.FirebaseClient(configCreateAccount);
 
             var dataCreateAccount = new DataCreateAccount
             { 
@@ -64,13 +59,26 @@ namespace AnyMessAppWin
             };
 
             SetResponse response = await clientCreateAccount.SetTaskAsync("Accounts/" + usernameBox.Text, dataCreateAccount);
-
+*/
+            openChildForm(new LoginUserForm());
+            HideThisContents();
             MessageBox.Show("Account Created Successfully!");
-
-            this.Close();
         }
-        
+        private void exitBtnCreate_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #region Text Effects(TextBoxes)
         // Text Changed to blue
+        private void firstNameCreate_Enter(object sender, EventArgs e)
+        {
+            if(firstNameCreate.Text == "First Name")
+            {
+                firstNameCreate.Text = ""; 
+                firstNameCreate.ForeColor = Color.FromArgb(5, 62, 189);
+            }
+        }
         private void usernameBox_Enter(object sender, EventArgs e)
         {
             if (usernameBox.Text == "Username")
@@ -99,6 +107,9 @@ namespace AnyMessAppWin
             confirmpassBox.ForeColor = Color.FromArgb(5, 62, 189);
         }
 
+        #endregion
+
+        #region Mouse Hover Effects(Create button)
         private void createAccBtn_MouseEnter(object sender, EventArgs e)
         {
             createAccBtn.BackColor = Color.FromArgb(255, 201, 72);
@@ -110,5 +121,40 @@ namespace AnyMessAppWin
             createAccBtn.BackColor = Color.FromArgb(5, 62, 189);
             createAccBtn.ForeColor = Color.White;
         }
+        #endregion
+
+        #region Utility Functions(OpenChildForm, Hide Components)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelCreateAccParent.Controls.Add(childForm);
+            panelCreateAccParent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        } 
+        
+        private void HideThisContents()
+        {
+            label1.Hide();
+            label2.Hide();
+            nameLabel.Hide();
+            usernameLabel.Hide();
+            emailLabel.Hide();
+            passwordLabel.Hide();
+            conPassLabel.Hide();
+            firstNameCreate.Hide();
+            usernameBox.Hide();
+            emailBox.Hide();
+            passwordBox.Hide();
+            confirmpassBox.Hide();
+            createAccBtn.Hide();
+        }
+        #endregion
     }
 }

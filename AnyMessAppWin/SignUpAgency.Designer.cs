@@ -38,7 +38,8 @@ namespace AnyMessAppWin
             this.agencyContactBox = new System.Windows.Forms.TextBox();
             this.agencyCodeBox = new System.Windows.Forms.TextBox();
             this.NextBtnAgency = new System.Windows.Forms.Button();
-            this.backButtonAgency = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.panelAgencySignUp = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label2
@@ -46,17 +47,16 @@ namespace AnyMessAppWin
             resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // agencyNameBox
             // 
+            this.agencyNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.agencyNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.agencyNameBox, "agencyNameBox");
             this.agencyNameBox.ForeColor = System.Drawing.Color.Silver;
@@ -67,6 +67,7 @@ namespace AnyMessAppWin
             // 
             // agencyAddressBox
             // 
+            this.agencyAddressBox.BackColor = System.Drawing.SystemColors.Control;
             this.agencyAddressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.agencyAddressBox, "agencyAddressBox");
             this.agencyAddressBox.ForeColor = System.Drawing.Color.Silver;
@@ -77,6 +78,7 @@ namespace AnyMessAppWin
             // 
             // agencyWebsiteBox
             // 
+            this.agencyWebsiteBox.BackColor = System.Drawing.SystemColors.Control;
             this.agencyWebsiteBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.agencyWebsiteBox, "agencyWebsiteBox");
             this.agencyWebsiteBox.ForeColor = System.Drawing.Color.Silver;
@@ -87,6 +89,7 @@ namespace AnyMessAppWin
             // 
             // agencyContactBox
             // 
+            this.agencyContactBox.BackColor = System.Drawing.SystemColors.Control;
             this.agencyContactBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.agencyContactBox, "agencyContactBox");
             this.agencyContactBox.ForeColor = System.Drawing.Color.Silver;
@@ -97,6 +100,7 @@ namespace AnyMessAppWin
             // 
             // agencyCodeBox
             // 
+            this.agencyCodeBox.BackColor = System.Drawing.SystemColors.Control;
             this.agencyCodeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.agencyCodeBox, "agencyCodeBox");
             this.agencyCodeBox.ForeColor = System.Drawing.Color.Silver;
@@ -117,22 +121,27 @@ namespace AnyMessAppWin
             this.NextBtnAgency.MouseEnter += new System.EventHandler(this.NextBtnAgency_MouseEnter);
             this.NextBtnAgency.MouseLeave += new System.EventHandler(this.NextBtnAgency_MouseLeave);
             // 
-            // backButtonAgency
+            // backBtn
             // 
-            this.backButtonAgency.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.backButtonAgency, "backButtonAgency");
-            this.backButtonAgency.Name = "backButtonAgency";
-            this.backButtonAgency.UseVisualStyleBackColor = true;
-            this.backButtonAgency.Click += new System.EventHandler(this.backButtonAgency_Click);
-            this.backButtonAgency.MouseEnter += new System.EventHandler(this.backButtonAgency_MouseEnter);
-            this.backButtonAgency.MouseLeave += new System.EventHandler(this.backButtonAgency_MouseLeave);
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.backBtn, "backBtn");
+            this.backBtn.Name = "backBtn";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.MouseEnter += new System.EventHandler(this.backBtn_MouseEnter);
+            this.backBtn.MouseLeave += new System.EventHandler(this.backBtn_MouseLeave);
+            // 
+            // panelAgencySignUp
+            // 
+            resources.ApplyResources(this.panelAgencySignUp, "panelAgencySignUp");
+            this.panelAgencySignUp.Name = "panelAgencySignUp";
             // 
             // SignUpAgency
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.backButtonAgency);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.NextBtnAgency);
             this.Controls.Add(this.agencyCodeBox);
             this.Controls.Add(this.agencyWebsiteBox);
@@ -141,7 +150,10 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.agencyNameBox);
+            this.Controls.Add(this.panelAgencySignUp);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "SignUpAgency";
             this.Load += new System.EventHandler(this.SignUpAgency_Load);
@@ -160,6 +172,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox agencyContactBox;
         private System.Windows.Forms.TextBox agencyCodeBox;
         private System.Windows.Forms.Button NextBtnAgency;
-        private System.Windows.Forms.Button backButtonAgency;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Panel panelAgencySignUp;
     }
 }

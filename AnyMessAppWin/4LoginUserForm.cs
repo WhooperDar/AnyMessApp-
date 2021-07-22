@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FireSharp.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
 using FireSharp.Interfaces;
-using FireSharp.Response; 
+using FireSharp.Response;
 
 namespace AnyMessAppWin
 {
-    public partial class LoginMe : UserControl
+    public partial class LoginUserForm : Form
     {
         // For Rounded Corner Buttons
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -28,7 +28,7 @@ namespace AnyMessAppWin
             int nHeightEllipse // height of ellipse
         );
 
-        public LoginMe()
+        public LoginUserForm()
         {
             InitializeComponent();
 
@@ -36,22 +36,26 @@ namespace AnyMessAppWin
             signInBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, signInBtn.Width, signInBtn.Height, 30, 30));
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void exitBtnSignIn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        #region Database Configuration
         IFirebaseConfig configSignIn = new FirebaseConfig
         {
             AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
             BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
         };
 
-        IFirebaseClient clientLogin;
+        
+        private static bool toMainform;
+        public static bool ToMainForm { get => toMainform; }
+        IFirebaseClient client;
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            clientLogin = new FireSharp.FirebaseClient(configSignIn);
+            toMainform = true;
+
+            client = new FireSharp.FirebaseClient(configSignIn);
 
             // Fetch Data From Firebase
 
@@ -66,20 +70,12 @@ namespace AnyMessAppWin
                 MessageBox.Show("Welcome to AnyMess");
             }
             this.Hide();
-*/
+            */
             MainFormPage mainPage = new MainFormPage();
             mainPage.ShowDialog();
         }
-        #endregion
 
-        private static bool createAccountClicked;
-        public static bool CreateAccountClicked { get => createAccountClicked; }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            createAccountClicked = true; 
-        }
-
-        #region Mouse Hover Effects 
+        #region Mouse Hover Effect(Create Account, Forget Password)
         private void signInBtn_MouseEnter(object sender, EventArgs e)
         {
             signInBtn.BackColor = Color.FromArgb(255, 201, 72);
@@ -91,6 +87,27 @@ namespace AnyMessAppWin
             signInBtn.BackColor = Color.FromArgb(5, 62, 189);
             signInBtn.ForeColor = Color.White;
         }
-        #endregion 
+
+        private void createAccountLogin_MouseEnter(object sender, EventArgs e)
+        {
+            createAccountLogin.ForeColor = Color.FromArgb(255, 201, 72);
+        }
+
+        private void createAccountLogin_MouseLeave(object sender, EventArgs e)
+        {
+            createAccountLogin.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void forgetBtn_MouseEnter(object sender, EventArgs e)
+        {
+            forgetBtn.ForeColor = Color.FromArgb(255, 201, 72);
+        }
+
+        private void forgetBtn_MouseLeave(object sender, EventArgs e)
+        {
+            forgetBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+        #endregion
+
     }
 }

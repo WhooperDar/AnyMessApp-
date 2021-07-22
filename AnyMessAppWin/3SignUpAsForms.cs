@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnyMessAppWin
 {
-    public partial class SignUpPage : UserControl
+    public partial class _3LoginForm : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -24,9 +24,10 @@ namespace AnyMessAppWin
             int nHeightEllipse // height of ellipse
         );
 
-        public SignUpPage()
+        public _3LoginForm()
         {
             InitializeComponent();
+
 
             agencyBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, agencyBtn.Width, agencyBtn.Height, 30, 30));
 
@@ -35,48 +36,74 @@ namespace AnyMessAppWin
             housekeperBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, housekeperBtn.Width, housekeperBtn.Height, 30, 30));
         }
 
-        private void SignUpPage_Load(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelParentSignUpForm.Controls.Add(childForm);
+            panelParentSignUpForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void HideThisContents()
+        {
+            label1.Hide();
+            label2.Hide();
+            agencyBtn.Hide();
+            employerBtn.Hide();
+            housekeperBtn.Hide();
+        }
+        private void ShowThisContents()
+        {
+            label1.Show();
+            label2.Show();
+            agencyBtn.Show();
+            employerBtn.Show();
+            housekeperBtn.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void agencyBtn_Click(object sender, EventArgs e)
         {
-            SignUpAgency agencySignUp = new SignUpAgency();
-            agencySignUp.ShowDialog();
-
-            this.Hide();
+            openChildForm(new SignUpAgency());
+            HideThisContents();
         }
 
         private void employerBtn_Click(object sender, EventArgs e)
         {
-            SignUpEmployer employerSignUp = new SignUpEmployer();
-            employerSignUp.ShowDialog();
+            openChildForm(new SignUpEmployer());
+            HideThisContents();
         }
 
         private void housekeperBtn_Click(object sender, EventArgs e)
         {
-            SignUpHousekeeping housekeepingSignup = new SignUpHousekeeping();
-            housekeepingSignup.ShowDialog();
+            openChildForm(new SignUpHousekeeping());
+            HideThisContents();
         }
+
 
         #region Mouse Hover Effects
         // Mouse Hover Effects (Sign Up As Buttons)
         private void agencyBtn_MouseEnter(object sender, EventArgs e)
         {
-            agencyBtn.BackColor = Color.FromArgb(255, 201, 72); 
+            agencyBtn.BackColor = Color.FromArgb(255, 201, 72);
             agencyBtn.ForeColor = Color.FromArgb(5, 62, 189);
         }
 
         private void agencyBtn_MouseLeave(object sender, EventArgs e)
         {
             agencyBtn.BackColor = Color.FromArgb(5, 62, 189);
-            agencyBtn.ForeColor = Color.White; 
+            agencyBtn.ForeColor = Color.White;
         }
 
         private void employerBtn_MouseEnter(object sender, EventArgs e)
@@ -104,5 +131,20 @@ namespace AnyMessAppWin
         }
         #endregion
 
+        private void backBtn_MouseEnter(object sender, EventArgs e)
+        {
+            backBtn.Image = Properties.Resources.arrow_back_orange50px;
+        }
+
+        private void backBtn_MouseLeave(object sender, EventArgs e)
+        {
+            backBtn.Image = Properties.Resources.arrow_back_blue50px;
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            openChildForm(new _2SignUpForm());
+            HideThisContents();
+        }
     }
 }

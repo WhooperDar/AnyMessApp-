@@ -40,6 +40,8 @@ namespace AnyMessAppWin
             this.employerFirstNameBox = new System.Windows.Forms.TextBox();
             this.employerSexBox = new System.Windows.Forms.TextBox();
             this.employerAddressBox = new System.Windows.Forms.TextBox();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.panelEmployerParent = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // NextBtnEmployer
@@ -49,7 +51,7 @@ namespace AnyMessAppWin
             this.NextBtnEmployer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextBtnEmployer.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBtnEmployer.ForeColor = System.Drawing.Color.White;
-            this.NextBtnEmployer.Location = new System.Drawing.Point(33, 556);
+            this.NextBtnEmployer.Location = new System.Drawing.Point(43, 593);
             this.NextBtnEmployer.Name = "NextBtnEmployer";
             this.NextBtnEmployer.Size = new System.Drawing.Size(411, 48);
             this.NextBtnEmployer.TabIndex = 27;
@@ -61,10 +63,11 @@ namespace AnyMessAppWin
             // 
             // employerContactBox
             // 
+            this.employerContactBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerContactBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerContactBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerContactBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerContactBox.Location = new System.Drawing.Point(33, 379);
+            this.employerContactBox.Location = new System.Drawing.Point(43, 458);
             this.employerContactBox.Name = "employerContactBox";
             this.employerContactBox.Size = new System.Drawing.Size(411, 29);
             this.employerContactBox.TabIndex = 26;
@@ -74,10 +77,11 @@ namespace AnyMessAppWin
             // 
             // employerAgeBox
             // 
+            this.employerAgeBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerAgeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerAgeBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerAgeBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerAgeBox.Location = new System.Drawing.Point(33, 320);
+            this.employerAgeBox.Location = new System.Drawing.Point(43, 404);
             this.employerAgeBox.Name = "employerAgeBox";
             this.employerAgeBox.Size = new System.Drawing.Size(204, 29);
             this.employerAgeBox.TabIndex = 25;
@@ -87,10 +91,11 @@ namespace AnyMessAppWin
             // 
             // employerLastNameBox
             // 
+            this.employerLastNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerLastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerLastNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerLastNameBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerLastNameBox.Location = new System.Drawing.Point(33, 264);
+            this.employerLastNameBox.Location = new System.Drawing.Point(43, 350);
             this.employerLastNameBox.Name = "employerLastNameBox";
             this.employerLastNameBox.Size = new System.Drawing.Size(411, 29);
             this.employerLastNameBox.TabIndex = 24;
@@ -100,10 +105,11 @@ namespace AnyMessAppWin
             // 
             // employerMiddleNameBox
             // 
+            this.employerMiddleNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerMiddleNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerMiddleNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerMiddleNameBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerMiddleNameBox.Location = new System.Drawing.Point(33, 207);
+            this.employerMiddleNameBox.Location = new System.Drawing.Point(43, 296);
             this.employerMiddleNameBox.Name = "employerMiddleNameBox";
             this.employerMiddleNameBox.Size = new System.Drawing.Size(411, 29);
             this.employerMiddleNameBox.TabIndex = 23;
@@ -116,7 +122,7 @@ namespace AnyMessAppWin
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(30, 84);
+            this.label2.Location = new System.Drawing.Point(37, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 30);
             this.label2.TabIndex = 21;
@@ -127,7 +133,7 @@ namespace AnyMessAppWin
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(24, 17);
+            this.label1.Location = new System.Drawing.Point(31, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 65);
             this.label1.TabIndex = 20;
@@ -135,10 +141,11 @@ namespace AnyMessAppWin
             // 
             // employerFirstNameBox
             // 
+            this.employerFirstNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerFirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerFirstNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerFirstNameBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerFirstNameBox.Location = new System.Drawing.Point(33, 149);
+            this.employerFirstNameBox.Location = new System.Drawing.Point(43, 245);
             this.employerFirstNameBox.Name = "employerFirstNameBox";
             this.employerFirstNameBox.Size = new System.Drawing.Size(411, 29);
             this.employerFirstNameBox.TabIndex = 22;
@@ -148,10 +155,11 @@ namespace AnyMessAppWin
             // 
             // employerSexBox
             // 
+            this.employerSexBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerSexBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerSexBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerSexBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerSexBox.Location = new System.Drawing.Point(243, 320);
+            this.employerSexBox.Location = new System.Drawing.Point(253, 404);
             this.employerSexBox.Name = "employerSexBox";
             this.employerSexBox.Size = new System.Drawing.Size(201, 29);
             this.employerSexBox.TabIndex = 28;
@@ -161,10 +169,11 @@ namespace AnyMessAppWin
             // 
             // employerAddressBox
             // 
+            this.employerAddressBox.BackColor = System.Drawing.SystemColors.Control;
             this.employerAddressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerAddressBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerAddressBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerAddressBox.Location = new System.Drawing.Point(33, 439);
+            this.employerAddressBox.Location = new System.Drawing.Point(43, 515);
             this.employerAddressBox.Name = "employerAddressBox";
             this.employerAddressBox.Size = new System.Drawing.Size(411, 29);
             this.employerAddressBox.TabIndex = 29;
@@ -172,12 +181,36 @@ namespace AnyMessAppWin
             this.employerAddressBox.Text = "Enter Address";
             this.employerAddressBox.Enter += new System.EventHandler(this.employerAddressBox_Enter);
             // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backBtn.Location = new System.Drawing.Point(42, 26);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 48);
+            this.backBtn.TabIndex = 30;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.MouseEnter += new System.EventHandler(this.backBtn_MouseEnter);
+            this.backBtn.MouseLeave += new System.EventHandler(this.backBtn_MouseLeave);
+            // 
+            // panelEmployerParent
+            // 
+            this.panelEmployerParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEmployerParent.Location = new System.Drawing.Point(0, 0);
+            this.panelEmployerParent.Name = "panelEmployerParent";
+            this.panelEmployerParent.Size = new System.Drawing.Size(504, 673);
+            this.panelEmployerParent.TabIndex = 31;
+            // 
             // SignUpEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(486, 626);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(504, 673);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.employerAddressBox);
             this.Controls.Add(this.employerSexBox);
             this.Controls.Add(this.NextBtnEmployer);
@@ -188,7 +221,9 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employerFirstNameBox);
+            this.Controls.Add(this.panelEmployerParent);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SignUpEmployer";
@@ -211,5 +246,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox employerFirstNameBox;
         private System.Windows.Forms.TextBox employerSexBox;
         private System.Windows.Forms.TextBox employerAddressBox;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Panel panelEmployerParent;
     }
 }

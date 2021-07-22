@@ -188,6 +188,56 @@ namespace AnyMessAppWin
             NextBtnEmployer.BackColor = Color.FromArgb(5, 62, 189);
             NextBtnEmployer.ForeColor = Color.White;
         }
+        #endregion
+
+        #region Mouse Hover Effects(Back Button) 
+        private void backBtn_MouseEnter(object sender, EventArgs e)
+        {
+            backBtn.Image = Properties.Resources.arrow_back_orange50px;
+        }
+
+        private void backBtn_MouseLeave(object sender, EventArgs e)
+        {
+            backBtn.Image = Properties.Resources.arrow_back_blue50px;
+        }
         #endregion 
+
+        #region Utility Functions(OpenChild and Hide Components)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelEmployerParent.Controls.Add(childForm);
+            panelEmployerParent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void HideThisContents()
+        {
+            backBtn.Hide();
+            label1.Hide();
+            label2.Hide();
+            employerFirstNameBox.Hide();
+            employerMiddleNameBox.Hide();
+            employerLastNameBox.Hide();
+            employerSexBox.Hide();
+            employerAgeBox.Hide();
+            employerAddressBox.Hide();
+            employerContactBox.Hide();
+            NextBtnEmployer.Hide();
+        }
+        #endregion
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            HideThisContents();
+            openChildForm(new _3LoginForm()); 
+        }
     }
 }

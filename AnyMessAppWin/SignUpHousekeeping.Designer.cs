@@ -41,14 +41,17 @@ namespace AnyMessAppWin
             this.label1 = new System.Windows.Forms.Label();
             this.hkFirstNameBox = new System.Windows.Forms.TextBox();
             this.hkSkillBox = new System.Windows.Forms.TextBox();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.panelHkParent = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // hkAddressBox
             // 
+            this.hkAddressBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkAddressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkAddressBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkAddressBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkAddressBox.Location = new System.Drawing.Point(34, 441);
+            this.hkAddressBox.Location = new System.Drawing.Point(42, 488);
             this.hkAddressBox.Name = "hkAddressBox";
             this.hkAddressBox.Size = new System.Drawing.Size(411, 29);
             this.hkAddressBox.TabIndex = 39;
@@ -59,10 +62,11 @@ namespace AnyMessAppWin
             // 
             // hkSexBox
             // 
+            this.hkSexBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkSexBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkSexBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkSexBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkSexBox.Location = new System.Drawing.Point(244, 322);
+            this.hkSexBox.Location = new System.Drawing.Point(252, 392);
             this.hkSexBox.Name = "hkSexBox";
             this.hkSexBox.Size = new System.Drawing.Size(201, 29);
             this.hkSexBox.TabIndex = 38;
@@ -78,7 +82,7 @@ namespace AnyMessAppWin
             this.NextBtnHousekeeping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextBtnHousekeeping.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBtnHousekeeping.ForeColor = System.Drawing.Color.White;
-            this.NextBtnHousekeeping.Location = new System.Drawing.Point(34, 558);
+            this.NextBtnHousekeeping.Location = new System.Drawing.Point(43, 593);
             this.NextBtnHousekeeping.Name = "NextBtnHousekeeping";
             this.NextBtnHousekeeping.Size = new System.Drawing.Size(411, 48);
             this.NextBtnHousekeeping.TabIndex = 37;
@@ -90,10 +94,11 @@ namespace AnyMessAppWin
             // 
             // hkContactBox
             // 
+            this.hkContactBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkContactBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkContactBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkContactBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkContactBox.Location = new System.Drawing.Point(34, 381);
+            this.hkContactBox.Location = new System.Drawing.Point(42, 441);
             this.hkContactBox.Name = "hkContactBox";
             this.hkContactBox.Size = new System.Drawing.Size(411, 29);
             this.hkContactBox.TabIndex = 36;
@@ -104,10 +109,11 @@ namespace AnyMessAppWin
             // 
             // hkAgeBox
             // 
+            this.hkAgeBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkAgeBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkAgeBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkAgeBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkAgeBox.Location = new System.Drawing.Point(34, 322);
+            this.hkAgeBox.Location = new System.Drawing.Point(42, 392);
             this.hkAgeBox.Name = "hkAgeBox";
             this.hkAgeBox.Size = new System.Drawing.Size(204, 29);
             this.hkAgeBox.TabIndex = 35;
@@ -118,10 +124,11 @@ namespace AnyMessAppWin
             // 
             // hkLastNameBox
             // 
+            this.hkLastNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkLastNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkLastNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkLastNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkLastNameBox.Location = new System.Drawing.Point(34, 266);
+            this.hkLastNameBox.Location = new System.Drawing.Point(42, 342);
             this.hkLastNameBox.Name = "hkLastNameBox";
             this.hkLastNameBox.Size = new System.Drawing.Size(411, 29);
             this.hkLastNameBox.TabIndex = 34;
@@ -132,10 +139,11 @@ namespace AnyMessAppWin
             // 
             // hkMiddleNameBox
             // 
+            this.hkMiddleNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkMiddleNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkMiddleNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkMiddleNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkMiddleNameBox.Location = new System.Drawing.Point(34, 209);
+            this.hkMiddleNameBox.Location = new System.Drawing.Point(42, 294);
             this.hkMiddleNameBox.Name = "hkMiddleNameBox";
             this.hkMiddleNameBox.Size = new System.Drawing.Size(411, 29);
             this.hkMiddleNameBox.TabIndex = 33;
@@ -149,7 +157,7 @@ namespace AnyMessAppWin
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(31, 86);
+            this.label2.Location = new System.Drawing.Point(39, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 30);
             this.label2.TabIndex = 31;
@@ -160,7 +168,7 @@ namespace AnyMessAppWin
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Black", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(25, 19);
+            this.label1.Location = new System.Drawing.Point(31, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 65);
             this.label1.TabIndex = 30;
@@ -168,11 +176,11 @@ namespace AnyMessAppWin
             // 
             // hkFirstNameBox
             // 
-            this.hkFirstNameBox.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.hkFirstNameBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkFirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkFirstNameBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkFirstNameBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkFirstNameBox.Location = new System.Drawing.Point(34, 151);
+            this.hkFirstNameBox.Location = new System.Drawing.Point(43, 245);
             this.hkFirstNameBox.Name = "hkFirstNameBox";
             this.hkFirstNameBox.Size = new System.Drawing.Size(411, 29);
             this.hkFirstNameBox.TabIndex = 32;
@@ -183,10 +191,11 @@ namespace AnyMessAppWin
             // 
             // hkSkillBox
             // 
+            this.hkSkillBox.BackColor = System.Drawing.SystemColors.Control;
             this.hkSkillBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hkSkillBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hkSkillBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.hkSkillBox.Location = new System.Drawing.Point(34, 499);
+            this.hkSkillBox.Location = new System.Drawing.Point(42, 535);
             this.hkSkillBox.Name = "hkSkillBox";
             this.hkSkillBox.Size = new System.Drawing.Size(411, 29);
             this.hkSkillBox.TabIndex = 40;
@@ -195,12 +204,36 @@ namespace AnyMessAppWin
             this.hkSkillBox.Enter += new System.EventHandler(this.hkSkillBox_Enter);
             this.hkSkillBox.Leave += new System.EventHandler(this.hkSkillBox_Leave);
             // 
+            // backBtn
+            // 
+            this.backBtn.FlatAppearance.BorderSize = 0;
+            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtn.Image = ((System.Drawing.Image)(resources.GetObject("backBtn.Image")));
+            this.backBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backBtn.Location = new System.Drawing.Point(42, 26);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(50, 48);
+            this.backBtn.TabIndex = 41;
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.MouseEnter += new System.EventHandler(this.backBtn_MouseEnter);
+            this.backBtn.MouseLeave += new System.EventHandler(this.backBtn_MouseLeave);
+            // 
+            // panelHkParent
+            // 
+            this.panelHkParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHkParent.Location = new System.Drawing.Point(0, 0);
+            this.panelHkParent.Name = "panelHkParent";
+            this.panelHkParent.Size = new System.Drawing.Size(504, 673);
+            this.panelHkParent.TabIndex = 42;
+            // 
             // SignUpHousekeeping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(486, 626);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(504, 673);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.hkSkillBox);
             this.Controls.Add(this.hkAddressBox);
             this.Controls.Add(this.hkSexBox);
@@ -212,7 +245,9 @@ namespace AnyMessAppWin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hkFirstNameBox);
+            this.Controls.Add(this.panelHkParent);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SignUpHousekeeping";
@@ -236,5 +271,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox hkFirstNameBox;
         private System.Windows.Forms.TextBox hkSkillBox;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Panel panelHkParent;
     }
 }

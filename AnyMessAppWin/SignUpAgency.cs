@@ -145,7 +145,7 @@ namespace AnyMessAppWin
             agencyCodeBox.ForeColor = Color.Silver;
         }
 
-
+        #region Text Effects
         // Leave Events
         private void agencyNameBox_Leave(object sender, EventArgs e)
         {
@@ -191,7 +191,7 @@ namespace AnyMessAppWin
                 agencyCodeBox.ForeColor = Color.Silver;
             }
         }
-
+        #endregion
         #region Mouse Hover Effect (Next Button in Agency Form) 
         private void NextBtnAgency_MouseEnter(object sender, EventArgs e)
         {
@@ -204,38 +204,52 @@ namespace AnyMessAppWin
             NextBtnAgency.ForeColor = Color.White;
         }
 
+
         #endregion
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
         #region Mouse Hover Effect(Back Button)
-        private void backButtonAgency_MouseEnter(object sender, EventArgs e)
+        private void backBtn_MouseEnter(object sender, EventArgs e)
         {
-            backButtonAgency.Image = Properties.Resources.arrow_back_orange50px; 
+            backBtn.Image = Properties.Resources.arrow_back_orange50px;
         }
 
-        private void backButtonAgency_MouseLeave(object sender, EventArgs e)
+        private void backBtn_MouseLeave(object sender, EventArgs e)
         {
-            backButtonAgency.Image = Properties.Resources.arrow_back_blue50px;
+            backBtn.Image = Properties.Resources.arrow_back_blue50px;
         }
         #endregion
 
-        /*private static bool backAgencyClicked; 
-        public static bool BackAgencyClicked { get => backAgencyClicked; }*/
-        private void backButtonAgency_Click(object sender, EventArgs e)
+        private void HideThisContents()
         {
-            /*backAgencyClicked = true;*/
-            this.Close();
+            backBtn.Hide();
+            label1.Hide();
+            label2.Hide();
+            agencyNameBox.Hide();
+            agencyAddressBox.Hide();
+            agencyContactBox.Hide();
+            agencyWebsiteBox.Hide();
+            agencyCodeBox.Hide();
+            NextBtnAgency.Hide();
+        }
 
-            Form1 mainForm = new Form1();
-            mainForm.Show();
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelAgencySignUp.Controls.Add(childForm);
+            panelAgencySignUp.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            HideThisContents();
+            openChildForm(new _3LoginForm());
         }
     }
 }
