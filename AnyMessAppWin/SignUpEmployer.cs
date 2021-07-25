@@ -36,52 +36,28 @@ namespace AnyMessAppWin
         }
 
         #region Database Configuration
-        // --------------------Saviing data to database------------------
 
-        // Firebase Configuration
-        IFirebaseConfig config = new FirebaseConfig
+        public static bool EmployerClicked { get; set; } 
+        private void NextBtnEmployer_Click(object sender, EventArgs e)
         {
-            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
-            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
-        };
+            EmployerClicked = true; 
 
-        IFirebaseClient client;
-
-        // Saving data to Database (Firebase) 
-
-        private static string typedata; 
-        public static string TypeDataEmployer { get => typedata;}
-        private async void NextBtnEmployer_Click(object sender, EventArgs e)
-        {
-            typedata = "Employer";
-            
-            client = new FireSharp.FirebaseClient(config); // database connection
-
-            // Prepare employer data to insert
-            var dataEmployer = new DataEmployer
+            if(employerAddressBox.Text != "Enter Address" && employerContactBox.Text != "Enter Contact Number" && employerFirstNameBox.Text != "Enter First Name" && employerMiddleNameBox.Text != "Enter Middle Name" && employerLastNameBox.Text != "Enter Last Name" && employerSexBox.Text != "Enter Sex" && employerAgeBox.Text != "Enter Age")
             {
-                EmployerName = employerFirstNameBox.Text,
-                EmployerMiddleName = employerMiddleNameBox.Text,
-                EmployerLastName = employerLastNameBox.Text,
-                EmployerAge = employerAgeBox.Text,
-                EmployerSex = employerSexBox.Text,
-                EmployerContactNumber = employerContactBox.Text,
-                EmployerAddress = employerAddressBox.Text
-            };
+                Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-            // send data to firebase
-            SetResponse response = await client.SetTaskAsync("Employer Information/" + employerFirstNameBox.Text, dataEmployer);
-            DataEmployer resultEmployer = response.ResultAs<DataEmployer>();
+                databaseObj.SavaDataEmployer(employerFirstNameBox.Text, employerMiddleNameBox.Text, employerLastNameBox.Text, employerAddressBox.Text, employerContactBox.Text, employerAgeBox.Text, employerSexBox.Text);
 
-            // get the response
-            MessageBox.Show(resultEmployer.EmployerName + "added to database");
+                returnToOldStateEmp();
 
-            returnToOldStateEmp();
-
-            this.Hide(); // Closing Form
-
-            CreateAccount createAccount = new CreateAccount();
-            createAccount.ShowDialog();          
+                HideThisContents();
+                openChildForm(new CreateAccount());
+            }
+            else
+            {
+                MessageBox.Show("Please fill up this form!");
+            }
+            
         }
         #endregion 
 

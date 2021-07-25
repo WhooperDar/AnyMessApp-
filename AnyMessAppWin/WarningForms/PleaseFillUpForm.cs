@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AnyMessAppWin
+namespace AnyMessAppWin.WarningForms
 {
-    public partial class HousekeepingListForm : Form
+    public partial class PleaseFillUpForm : Form
     {
-        public HousekeepingListForm()
+        public PleaseFillUpForm()
         {
             InitializeComponent();
-        }
-
-        private void housekeepingExitBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

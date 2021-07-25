@@ -10,5 +10,6 @@
         public string HousekeeperContact { get; set; }
         public string HousekeeperAddress { get; set; }
         public string HousekeeperSkill { get; internal set; }
+        public string TypeOfUser { get; set; }
     }
 }

@@ -15,11 +15,32 @@ namespace AnyMessAppWin
         public ProfileSection()
         {
             InitializeComponent();
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homeExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelProfileParent.Controls.Add(childForm);
+            panelProfileParent.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void ProfileSection_Load(object sender, EventArgs e)
+        {
+            openChildForm(new ProfileEmployer()); 
         }
     }
 }

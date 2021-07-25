@@ -9,5 +9,6 @@
         public string EmployerSex { get; set; }
         public string EmployerContactNumber { get; set; }
         public string EmployerAddress { get; set; }
+        public string TypeOfUser { get; set; }
     }
 }

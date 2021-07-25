@@ -35,13 +35,18 @@ namespace AnyMessAppWin
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelParentSettings = new System.Windows.Forms.Panel();
             this.settingAccount = new System.Windows.Forms.Button();
-            this.exitSettingBtn = new System.Windows.Forms.Button();
             this.settingAboutUs = new System.Windows.Forms.Button();
+            this.exitSettingBtn = new System.Windows.Forms.Button();
             this.settingNotif = new System.Windows.Forms.Button();
             this.settingSupport = new System.Windows.Forms.Button();
             this.settingAppearance = new System.Windows.Forms.Button();
             this.settingSecurity = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +63,7 @@ namespace AnyMessAppWin
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel1.Controls.Add(this.panel7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(329, 0);
             this.panel1.Name = "panel1";
@@ -108,20 +114,6 @@ namespace AnyMessAppWin
             this.settingAccount.MouseEnter += new System.EventHandler(this.settingAccount_MouseEnter);
             this.settingAccount.MouseLeave += new System.EventHandler(this.settingAccount_MouseLeave);
             // 
-            // exitSettingBtn
-            // 
-            this.exitSettingBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.exitSettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitSettingBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitSettingBtn.Image")));
-            this.exitSettingBtn.Location = new System.Drawing.Point(35, 14);
-            this.exitSettingBtn.Name = "exitSettingBtn";
-            this.exitSettingBtn.Size = new System.Drawing.Size(112, 36);
-            this.exitSettingBtn.TabIndex = 1;
-            this.exitSettingBtn.UseVisualStyleBackColor = true;
-            this.exitSettingBtn.Click += new System.EventHandler(this.exitSettingBtn_Click);
-            this.exitSettingBtn.MouseEnter += new System.EventHandler(this.exitSettingBtn_MouseEnter);
-            this.exitSettingBtn.MouseLeave += new System.EventHandler(this.exitSettingBtn_MouseLeave);
-            // 
             // settingAboutUs
             // 
             this.settingAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
@@ -140,6 +132,20 @@ namespace AnyMessAppWin
             this.settingAboutUs.UseVisualStyleBackColor = false;
             this.settingAboutUs.MouseEnter += new System.EventHandler(this.settingAboutUs_MouseEnter);
             this.settingAboutUs.MouseLeave += new System.EventHandler(this.settingAboutUs_MouseLeave);
+            // 
+            // exitSettingBtn
+            // 
+            this.exitSettingBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.exitSettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitSettingBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitSettingBtn.Image")));
+            this.exitSettingBtn.Location = new System.Drawing.Point(35, 14);
+            this.exitSettingBtn.Name = "exitSettingBtn";
+            this.exitSettingBtn.Size = new System.Drawing.Size(112, 36);
+            this.exitSettingBtn.TabIndex = 1;
+            this.exitSettingBtn.UseVisualStyleBackColor = true;
+            this.exitSettingBtn.Click += new System.EventHandler(this.exitSettingBtn_Click);
+            this.exitSettingBtn.MouseEnter += new System.EventHandler(this.exitSettingBtn_MouseEnter);
+            this.exitSettingBtn.MouseLeave += new System.EventHandler(this.exitSettingBtn_MouseLeave);
             // 
             // settingNotif
             // 
@@ -218,6 +224,25 @@ namespace AnyMessAppWin
             this.settingSecurity.MouseEnter += new System.EventHandler(this.settingSecurity_MouseEnter);
             this.settingSecurity.MouseLeave += new System.EventHandler(this.settingSecurity_MouseLeave);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.panel7.Controls.Add(this.pictureBox5);
+            this.panel7.Location = new System.Drawing.Point(405, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(76, 82);
+            this.panel7.TabIndex = 16;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -233,8 +258,11 @@ namespace AnyMessAppWin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
             this.Text = "Settings";
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,5 +280,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelParentSettings;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

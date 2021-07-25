@@ -40,10 +40,11 @@ namespace AnyMessAppWin
         {
         }
 
+        #region Text Effects
         //------------Text Color Changed------------------
         private void agencyNameBox_Enter(object sender, EventArgs e)
         {
-            if(agencyNameBox.Text == "Enter Agency Name")
+            if (agencyNameBox.Text == "Enter Agency Name")
             {
                 agencyNameBox.Text = "";
                 agencyNameBox.ForeColor = Color.FromArgb(5, 62, 189);
@@ -85,45 +86,37 @@ namespace AnyMessAppWin
                 agencyCodeBox.ForeColor = Color.FromArgb(5, 62, 189);
             }
         }
-        //------------Text Color Changed------------------
+        #endregion
 
-
-        // --------------------Saviing data to database------------------
-
-        // Firebase Configuration
-        IFirebaseConfig config = new FirebaseConfig
+        public static bool AgencyClicked { get; set; }
+        private void NextBtnAgency_Click(object sender, EventArgs e)
         {
-            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
-            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
-        };
+            AgencyClicked = true;
 
-        IFirebaseClient client;
-        private async void NextBtnAgency_Click(object sender, EventArgs e)
-        {
+            Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-            client = new FireSharp.FirebaseClient(config); // database connection
 
-            // Prepare data to insert
-            var data = new Data
+            if (agencyAddressBox.Text != "Enter Address" && agencyCodeBox.Text != "Enter Agency Code" && agencyWebsiteBox.Text != "Enter Website" && agencyNameBox.Text != "Enter Agency Name")
             {
-                AgencyName = agencyNameBox.Text,
-                AgencyAddress = agencyAddressBox.Text,
-                AgencyContactNumber = agencyContactBox.Text,
-                AgencyWebsite = agencyWebsiteBox.Text,
-                AgencyCode = agencyCodeBox.Text
-            };
+                try
+                {
+                    databaseObj.SaveDataAgency(agencyNameBox.Text, agencyAddressBox.Text, agencyContactBox.Text, agencyWebsiteBox.Text, agencyCodeBox.Text);
 
-            // Insert Data to firebase
-            SetResponse response = await client.SetTaskAsync("Agency Information/"+agencyNameBox.Text, data); // 
-            Data result = response.ResultAs<Data>();
+                    MessageBox.Show("Added to firebase");
 
-            MessageBox.Show("Added " + result.AgencyName + " to firebase");
+                    HideThisContents();
+                    openChildForm(new CreateAccount());
 
-            this.Hide();
-
-            CreateAccount createAccountAgency = new CreateAccount();
-            createAccountAgency.ShowDialog();
-
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please Try Again");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill up the form");
+            }
             
         }
 
@@ -192,6 +185,7 @@ namespace AnyMessAppWin
             }
         }
         #endregion
+
         #region Mouse Hover Effect (Next Button in Agency Form) 
         private void NextBtnAgency_MouseEnter(object sender, EventArgs e)
         {
@@ -206,6 +200,7 @@ namespace AnyMessAppWin
 
 
         #endregion
+
         #region Mouse Hover Effect(Back Button)
         private void backBtn_MouseEnter(object sender, EventArgs e)
         {
@@ -218,6 +213,7 @@ namespace AnyMessAppWin
         }
         #endregion
 
+        #region Utility Fucntions
         private void HideThisContents()
         {
             backBtn.Hide();
@@ -245,6 +241,7 @@ namespace AnyMessAppWin
             childForm.BringToFront();
             childForm.Show();
         }
+        #endregion
 
         private void backBtn_Click(object sender, EventArgs e)
         {

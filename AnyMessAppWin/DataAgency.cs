@@ -7,5 +7,6 @@
         public string AgencyContactNumber { get; set; }
         public string AgencyWebsite { get; set; }
         public string AgencyCode { get; set; }
+        public string TypeOfUser { get; set; }
     }
 }

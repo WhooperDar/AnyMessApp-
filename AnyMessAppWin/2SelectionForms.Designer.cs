@@ -46,7 +46,7 @@ namespace AnyMessAppWin
             this.SignUpBotton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpBotton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpBotton.ForeColor = System.Drawing.Color.White;
-            this.SignUpBotton.Location = new System.Drawing.Point(106, 474);
+            this.SignUpBotton.Location = new System.Drawing.Point(107, 474);
             this.SignUpBotton.Name = "SignUpBotton";
             this.SignUpBotton.Size = new System.Drawing.Size(291, 48);
             this.SignUpBotton.TabIndex = 14;
@@ -63,7 +63,7 @@ namespace AnyMessAppWin
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(105, 406);
+            this.loginButton.Location = new System.Drawing.Point(107, 406);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(291, 48);
             this.loginButton.TabIndex = 13;
@@ -78,7 +78,7 @@ namespace AnyMessAppWin
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(103, 231);
+            this.label2.Location = new System.Drawing.Point(112, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(279, 33);
             this.label2.TabIndex = 12;
@@ -89,7 +89,7 @@ namespace AnyMessAppWin
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(87, 150);
+            this.label1.Location = new System.Drawing.Point(92, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(327, 83);
             this.label1.TabIndex = 11;
@@ -118,8 +118,8 @@ namespace AnyMessAppWin
             // 
             // _2SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(501, 673);
             this.Controls.Add(this.SignUpBotton);
             this.Controls.Add(this.loginButton);

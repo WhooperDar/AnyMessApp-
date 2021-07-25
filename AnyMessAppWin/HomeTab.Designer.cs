@@ -55,6 +55,7 @@ namespace AnyMessAppWin
             this.label11 = new System.Windows.Forms.Label();
             this.ContactUs2 = new System.Windows.Forms.Button();
             this.panelButton4 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,16 +66,19 @@ namespace AnyMessAppWin
             this.homeExitBtn = new System.Windows.Forms.Button();
             this.SweepingBtn = new System.Windows.Forms.Button();
             this.CleaningBtn = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -240,6 +244,7 @@ namespace AnyMessAppWin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.LaundryButton);
             this.panel2.Controls.Add(this.CookingBtn);
             this.panel2.Controls.Add(this.MarketServiceBtn);
@@ -391,6 +396,15 @@ namespace AnyMessAppWin
             this.panelButton4.MouseEnter += new System.EventHandler(this.panelButton4_MouseEnter);
             this.panelButton4.MouseLeave += new System.EventHandler(this.panelButton4_MouseLeave);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.panel7.Controls.Add(this.pictureBox5);
+            this.panel7.Location = new System.Drawing.Point(741, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(76, 82);
+            this.panel7.TabIndex = 14;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -476,7 +490,7 @@ namespace AnyMessAppWin
             this.MarketServiceBtn.ForeColor = System.Drawing.Color.White;
             this.MarketServiceBtn.Image = ((System.Drawing.Image)(resources.GetObject("MarketServiceBtn.Image")));
             this.MarketServiceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarketServiceBtn.Location = new System.Drawing.Point(661, 8);
+            this.MarketServiceBtn.Location = new System.Drawing.Point(524, 40);
             this.MarketServiceBtn.Name = "MarketServiceBtn";
             this.MarketServiceBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.MarketServiceBtn.Size = new System.Drawing.Size(173, 42);
@@ -536,10 +550,20 @@ namespace AnyMessAppWin
             this.CleaningBtn.MouseEnter += new System.EventHandler(this.CleaningBtn_MouseEnter);
             this.CleaningBtn.MouseLeave += new System.EventHandler(this.CleaningBtn_MouseLeave);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::AnyMessAppWin.Properties.Resources.home_orage;
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
             // HomeTabPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.ClientSize = new System.Drawing.Size(846, 784);
@@ -566,10 +590,12 @@ namespace AnyMessAppWin
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +639,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Button panelButton4;
         private System.Windows.Forms.Button LaundryButton;
         private System.Windows.Forms.Button CookingBtn;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

@@ -111,44 +111,29 @@ namespace AnyMessAppWin
 
 
         #region Database Configuration
-
-        // Firebase Configuration
-        IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
-            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
-        };
-
-        IFirebaseClient clientHk;
         // Click Event
 
-        private async void NextBtnHk_Click(object sender, EventArgs e)
+        public static bool HousekeepingClicked { get; set; }
+        private void NextBtnHk_Click(object sender, EventArgs e)
         {
-            clientHk = new FireSharp.FirebaseClient(config);
+            HousekeepingClicked = true;
 
-            var dataHousekeeper = new DataHousekeeper
+            if(hkFirstNameBox.Text != "Enter First Name" && hkMiddleNameBox.Text != "Enter Middle Name" && hkLastNameBox.Text != "Enter Last Name" && hkAgeBox.Text != "Enter Age" && hkSexBox.Text != "Enter Sex" && hkContactBox.Text != "Enter Contact Number" && hkAddressBox.Text != "Enter Address" && hkSkillBox.Text != "Enter Skill")
             {
-                HousekeeperName = hkFirstNameBox.Text,
-                HouserkeeperMiddleName = hkMiddleNameBox.Text,
-                HousekeeperLastName = hkLastNameBox.Text,
-                HousekeeperAge = hkAgeBox.Text,
-                HousekeeperSex = hkSexBox.Text,
-                HousekeeperContact = hkContactBox.Text,
-                HousekeeperAddress = hkAddressBox.Text,
-                HousekeeperSkill = hkSkillBox.Text
-            };
+                Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-            SetResponse responseHk = await clientHk.SetTaskAsync("Housekeeper Information/" + hkFirstNameBox.Text, dataHousekeeper);
+                databaseObj.SavaDataHousekeeper(hkFirstNameBox.Text, hkMiddleNameBox.Text, hkLastNameBox.Text, hkAddressBox.Text, hkAgeBox.Text, hkSexBox.Text, hkContactBox.Text, hkSkillBox.Text);
 
-            DataHousekeeper resultHk = responseHk.ResultAs<DataHousekeeper>();
-            MessageBox.Show(resultHk.HousekeeperName + " added to firebase");
+                hkFieldToOldState();
 
-            hkFieldToOldState();
-
-            CreateAccount createAccountHk = new CreateAccount();
-            createAccountHk.ShowDialog();
-
-            this.Close(); // Closing From
+                HideThisContents();
+                openChildForm(new CreateAccount());
+            } 
+            else
+            {
+                MessageBox.Show("Please fill up the form!");
+            }
+            
         }
         #endregion
 

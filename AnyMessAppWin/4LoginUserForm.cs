@@ -50,29 +50,46 @@ namespace AnyMessAppWin
         
         private static bool toMainform;
         public static bool ToMainForm { get => toMainform; }
-        IFirebaseClient client;
-        private void signInBtn_Click(object sender, EventArgs e)
-        {
-            toMainform = true;
 
+        IFirebaseClient client;
+        private async void signInBtn_Click(object sender, EventArgs e)
+        {
             client = new FireSharp.FirebaseClient(configSignIn);
 
-            // Fetch Data From Firebase
-
-            /*FirebaseResponse responseLogin = await clientLogin.GetTaskAsync("Accounts/" + usernameBox.Text);
-
-            DataCreateAccount fetchedData = responseLogin.ResultAs<DataCreateAccount>();
-            string username = fetchedData.Username;
-            string password = fetchedData.Password; 
-
-            if(username == usernameBox.Text || password == fetchedData.Password)
+            if (usernameBox.Text != "" && passwordBox.Text != "")
             {
-                MessageBox.Show("Welcome to AnyMess");
+                try
+                {
+                    FirebaseResponse response = await client.GetTaskAsync("Login Accounts/" + usernameBox.Text);
+
+                    var result = response.ResultAs<DataCreateAccount>();
+
+                    if (usernameBox.Text == result.Username && passwordBox.Text == result.Password)
+                    {
+                        MessageBox.Show("Login Successfully");
+                        this.Hide();
+
+                        toMainform = true;
+
+                        MainFormPage mainPage = new MainFormPage();
+                        mainPage.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show(usernameBox.Text + " is not registered! Please register now!");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Input is invalid");
+                }
+                
             }
-            this.Hide();
-            */
-            MainFormPage mainPage = new MainFormPage();
-            mainPage.ShowDialog();
+            else
+            {
+                MessageBox.Show("Please fill up form!");
+            }
+            
         }
 
         #region Mouse Hover Effect(Create Account, Forget Password)

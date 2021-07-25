@@ -193,9 +193,9 @@ namespace AnyMessAppWin
             this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.nameLabel.Location = new System.Drawing.Point(44, 186);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(56, 20);
+            this.nameLabel.Size = new System.Drawing.Size(202, 20);
             this.nameLabel.TabIndex = 40;
-            this.nameLabel.Text = "Name";
+            this.nameLabel.Text = "Name (Real First Name)";
             // 
             // firstNameCreate
             // 
@@ -233,8 +233,8 @@ namespace AnyMessAppWin
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(504, 673);
             this.Controls.Add(this.exitBtnCreate);

@@ -202,7 +202,7 @@ namespace AnyMessAppWin
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(41)))), ((int)(((byte)(126)))));
             this.label1.Font = new System.Drawing.Font("Montserrat Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.label1.Location = new System.Drawing.Point(366, 3);
+            this.label1.Location = new System.Drawing.Point(352, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 33);
             this.label1.TabIndex = 2;
@@ -254,7 +254,7 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 28F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(149, 383);
+            this.label3.Location = new System.Drawing.Point(131, 408);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(598, 65);
@@ -267,7 +267,7 @@ namespace AnyMessAppWin
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Black", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label2.Location = new System.Drawing.Point(245, 301);
+            this.label2.Location = new System.Drawing.Point(227, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(409, 103);
             this.label2.TabIndex = 7;

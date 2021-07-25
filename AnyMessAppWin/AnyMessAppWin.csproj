@@ -181,16 +181,40 @@
     <Compile Include="AgencyList.Designer.cs">
       <DependentUpon>AgencyList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend Services\DatabaseConfiguration.cs" />
+    <Compile Include="Backend Services\ImageProcessor.cs" />
+    <Compile Include="Backend Services\LoginChecker.cs" />
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
+    <Compile Include="DataAgency.cs" />
     <Compile Include="DataCreateAccount.cs" />
     <Compile Include="DataEmployer.cs" />
     <Compile Include="DataHousekeeper.cs" />
+    <Compile Include="DataModels\EditProfileAgencyModel.cs" />
+    <Compile Include="DataModels\EditProfileEmployerModel.cs" />
+    <Compile Include="DataModels\EditProfileHkModel.cs" />
+    <Compile Include="EdiProfileHousekeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdiProfileHousekeeper.Designer.cs">
+      <DependentUpon>EdiProfileHousekeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfileAgency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfileAgency.Designer.cs">
+      <DependentUpon>EditProfileAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfileEmployer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfileEmployer.Designer.cs">
+      <DependentUpon>EditProfileEmployer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,12 +233,6 @@
     <Compile Include="HousekeepingListForm.Designer.cs">
       <DependentUpon>HousekeepingListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="4LoginUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +244,24 @@
     </Compile>
     <Compile Include="MainFormPage.Designer.cs">
       <DependentUpon>MainFormPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileAgencyChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileAgencyChildForm.Designer.cs">
+      <DependentUpon>ProfileAgencyChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileEmployer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileEmployer.Designer.cs">
+      <DependentUpon>ProfileEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileHousekeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileHousekeeper.Designer.cs">
+      <DependentUpon>ProfileHousekeeper.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileSection.cs">
       <SubType>Form</SubType>
@@ -265,6 +301,12 @@
     <Compile Include="SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="WarningForms\PleaseFillUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarningForms\PleaseFillUpForm.Designer.cs">
+      <DependentUpon>PleaseFillUpForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="3LoginPageForm.resx">
       <DependentUpon>3LoginPageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +322,15 @@
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EdiProfileHousekeeper.resx">
+      <DependentUpon>EdiProfileHousekeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfileAgency.resx">
+      <DependentUpon>EditProfileAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfileEmployer.resx">
+      <DependentUpon>EditProfileEmployer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,14 +340,20 @@
     <EmbeddedResource Include="HousekeepingListForm.resx">
       <DependentUpon>HousekeepingListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="4LoginUserForm.resx">
       <DependentUpon>4LoginUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormPage.resx">
       <DependentUpon>MainFormPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileAgencyChildForm.resx">
+      <DependentUpon>ProfileAgencyChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileEmployer.resx">
+      <DependentUpon>ProfileEmployer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileHousekeeper.resx">
+      <DependentUpon>ProfileHousekeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileSection.resx">
       <DependentUpon>ProfileSection.cs</DependentUpon>
@@ -325,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUpPage.resx">
       <DependentUpon>SignUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarningForms\PleaseFillUpForm.resx">
+      <DependentUpon>PleaseFillUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -486,6 +546,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\SettingsIcons\user-blue20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Faces\defaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\camera-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons20px\camera-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Warning Icons\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\agency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\hk-list-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\home-orage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\profile-orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\setting-orange.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -42,28 +42,47 @@ namespace AnyMessAppWin
             BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
         };
 
-        IFirebaseClient clientCreateAccount;
-
         // Saving data to database
-        private async void createAccBtn_Click(object sender, EventArgs e)
+        private void createAccBtn_Click(object sender, EventArgs e)
         {
-            /*clientCreateAccount = new FireSharp.FirebaseClient(configCreateAccount);
+            if(usernameBox.Text != "Username" && firstNameCreate.Text != "First Name" && emailBox.Text != "Email" && passwordBox.Text != null && confirmpassBox.Text != null)
+            {
+                try
+                {
+                    if (string.Equals(passwordBox.Text, confirmpassBox.Text))
+                    {
+                        Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-            var dataCreateAccount = new DataCreateAccount
-            { 
-                FirstName = firstNameCreate.Text,
-                Username = usernameBox.Text,
-                Email = emailBox.Text,
-                Password = passwordBox.Text,
-                ConfirmPassWord = confirmpassBox.Text
-            };
+                        databaseObj.SavaDataCreateAccount(usernameBox.Text, firstNameCreate.Text, emailBox.Text, passwordBox.Text, confirmpassBox.Text);
 
-            SetResponse response = await clientCreateAccount.SetTaskAsync("Accounts/" + usernameBox.Text, dataCreateAccount);
-*/
-            openChildForm(new LoginUserForm());
-            HideThisContents();
-            MessageBox.Show("Account Created Successfully!");
+                        openChildForm(new LoginUserForm());
+                        HideThisContents();
+                        MessageBox.Show("Account Created Successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password and confirm password does not match!");
+                        if(!string.IsNullOrEmpty(passwordBox.Text) && !string.IsNullOrEmpty(confirmpassBox.Text))
+                        {
+                            passwordBox.Text = "";
+                            confirmpassBox.Text = "";
+                        }
+                    }
+                    
+                } 
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Please fill up the form!"); 
+            }
+            
         }
+
         private void exitBtnCreate_Click(object sender, EventArgs e)
         {
             Application.Exit();
