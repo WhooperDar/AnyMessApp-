@@ -36,11 +36,6 @@ namespace AnyMessAppWin
             signInBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, signInBtn.Width, signInBtn.Height, 30, 30));
         }
 
-        private void exitBtnSignIn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         IFirebaseConfig configSignIn = new FirebaseConfig
         {
             AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  

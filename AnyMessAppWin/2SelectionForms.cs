@@ -70,11 +70,6 @@ namespace AnyMessAppWin
             HideThisContents();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         #region Mouse Hover Effects
         private void loginButton_MouseEnter(object sender, EventArgs e)
         {
