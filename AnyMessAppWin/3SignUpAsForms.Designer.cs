@@ -30,7 +30,6 @@ namespace AnyMessAppWin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_3LoginForm));
-            this.button2 = new System.Windows.Forms.Button();
             this.housekeperBtn = new System.Windows.Forms.Button();
             this.employerBtn = new System.Windows.Forms.Button();
             this.agencyBtn = new System.Windows.Forms.Button();
@@ -40,18 +39,6 @@ namespace AnyMessAppWin
             this.backBtn = new System.Windows.Forms.Button();
             this.panelParentSignUpForm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(445, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 29);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // housekeperBtn
             // 
@@ -129,7 +116,6 @@ namespace AnyMessAppWin
             // panelParentSignUpForm
             // 
             this.panelParentSignUpForm.Controls.Add(this.backBtn);
-            this.panelParentSignUpForm.Controls.Add(this.button2);
             this.panelParentSignUpForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParentSignUpForm.Location = new System.Drawing.Point(0, 0);
             this.panelParentSignUpForm.Name = "panelParentSignUpForm";
@@ -173,7 +159,6 @@ namespace AnyMessAppWin
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button housekeperBtn;
         private System.Windows.Forms.Button employerBtn;
         private System.Windows.Forms.Button agencyBtn;

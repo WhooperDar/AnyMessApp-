@@ -41,7 +41,6 @@ namespace AnyMessAppWin
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.exitBtnSignIn = new System.Windows.Forms.Button();
             this.panelSignInParent = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -189,18 +188,6 @@ namespace AnyMessAppWin
             this.label1.TabIndex = 49;
             this.label1.Text = "Welcome";
             // 
-            // exitBtnSignIn
-            // 
-            this.exitBtnSignIn.FlatAppearance.BorderSize = 0;
-            this.exitBtnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtnSignIn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtnSignIn.Image")));
-            this.exitBtnSignIn.Location = new System.Drawing.Point(445, 1);
-            this.exitBtnSignIn.Name = "exitBtnSignIn";
-            this.exitBtnSignIn.Size = new System.Drawing.Size(55, 29);
-            this.exitBtnSignIn.TabIndex = 61;
-            this.exitBtnSignIn.UseVisualStyleBackColor = true;
-            this.exitBtnSignIn.Click += new System.EventHandler(this.exitBtnSignIn_Click);
-            // 
             // panelSignInParent
             // 
             this.panelSignInParent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -214,7 +201,6 @@ namespace AnyMessAppWin
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(504, 673);
-            this.Controls.Add(this.exitBtnSignIn);
             this.Controls.Add(this.forgetBtn);
             this.Controls.Add(this.createAccountLogin);
             this.Controls.Add(this.label8);
@@ -249,7 +235,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button exitBtnSignIn;
         private System.Windows.Forms.Panel panelSignInParent;
     }
 }

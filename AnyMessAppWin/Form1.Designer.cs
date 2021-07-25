@@ -38,10 +38,7 @@ namespace AnyMessAppWin
             this.textBoxTop = new System.Windows.Forms.Label();
             this.slidePictureBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.parentPanelLogin = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -122,23 +119,8 @@ namespace AnyMessAppWin
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel2;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = null;
-            this.bunifuDragControl2.Vertical = true;
-            // 
             // parentPanelLogin
             // 
-            this.parentPanelLogin.Controls.Add(this.button1);
             this.parentPanelLogin.Controls.Add(this.label4);
             this.parentPanelLogin.Controls.Add(this.label1);
             this.parentPanelLogin.Controls.Add(this.label3);
@@ -149,18 +131,6 @@ namespace AnyMessAppWin
             this.parentPanelLogin.Name = "parentPanelLogin";
             this.parentPanelLogin.Size = new System.Drawing.Size(501, 673);
             this.parentPanelLogin.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(445, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 29);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -237,8 +207,9 @@ namespace AnyMessAppWin
             this.Controls.Add(this.parentPanelLogin);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnyMess";
@@ -261,16 +232,13 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label textBoxTop;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.Panel parentPanelLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button getStartedBtn;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer toForm;
     }
 }

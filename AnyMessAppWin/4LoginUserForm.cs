@@ -81,6 +81,8 @@ namespace AnyMessAppWin
                 }
                 catch (Exception)
                 {
+                    usernameBox.Text = "";
+                    passwordBox.Text = "";
                     MessageBox.Show("Input is invalid");
                 }
                 
@@ -155,7 +157,6 @@ namespace AnyMessAppWin
             signInBtn.Hide();
             label8.Hide();
             createAccountLogin.Hide();
-            exitBtnSignIn.Hide();
         }
         #endregion
         private void createAccountLogin_Click(object sender, EventArgs e)

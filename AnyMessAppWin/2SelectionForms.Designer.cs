@@ -35,8 +35,6 @@ namespace AnyMessAppWin
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parentPanelSignUp = new System.Windows.Forms.Panel();
-            this.exitBtnThis = new System.Windows.Forms.Button();
-            this.parentPanelSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
             // SignUpBotton
@@ -97,24 +95,11 @@ namespace AnyMessAppWin
             // 
             // parentPanelSignUp
             // 
-            this.parentPanelSignUp.Controls.Add(this.exitBtnThis);
             this.parentPanelSignUp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.parentPanelSignUp.Location = new System.Drawing.Point(0, 0);
             this.parentPanelSignUp.Name = "parentPanelSignUp";
             this.parentPanelSignUp.Size = new System.Drawing.Size(501, 673);
             this.parentPanelSignUp.TabIndex = 15;
-            // 
-            // exitBtnThis
-            // 
-            this.exitBtnThis.FlatAppearance.BorderSize = 0;
-            this.exitBtnThis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtnThis.Image = ((System.Drawing.Image)(resources.GetObject("exitBtnThis.Image")));
-            this.exitBtnThis.Location = new System.Drawing.Point(445, 1);
-            this.exitBtnThis.Name = "exitBtnThis";
-            this.exitBtnThis.Size = new System.Drawing.Size(55, 29);
-            this.exitBtnThis.TabIndex = 20;
-            this.exitBtnThis.UseVisualStyleBackColor = true;
-            this.exitBtnThis.Click += new System.EventHandler(this.button2_Click);
             // 
             // _2SignUpForm
             // 
@@ -130,7 +115,6 @@ namespace AnyMessAppWin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "_2SignUpForm";
             this.Text = "_2SignUpForm";
-            this.parentPanelSignUp.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +126,5 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel parentPanelSignUp;
-        private System.Windows.Forms.Button exitBtnThis;
     }
 }

@@ -32,7 +32,7 @@ namespace AnyMessAppWin
         {
             InitializeComponent();
             // For Rounded Buttons
-            this.FormBorderStyle = FormBorderStyle.None;
+           
 
             // For Rounded Corners
             getStartedBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, getStartedBtn.Width, getStartedBtn.Height, 30, 30));
