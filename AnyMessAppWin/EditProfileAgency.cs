@@ -145,7 +145,7 @@ namespace AnyMessAppWin
 
         private bool CheckTextBoxState()
         {
-            return (tbAddress.Text == null || tbAgency.Text == null || tbWebsite == null);
+            return (tbAddress.Text == null && tbAboutUs.Text == null && tbWebsite == null && tbContact.Text == null && tbLookingFor.Text == null);
         }
     }
 }

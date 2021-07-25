@@ -1,6 +1,6 @@
 ﻿namespace AnyMessAppWin
 {
-    internal class DataHousekeeper
+    public class DataHousekeeper
     {
         public string HousekeeperName { get; set; }
         public string HouserkeeperMiddleName { get; set; }

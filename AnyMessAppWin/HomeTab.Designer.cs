@@ -35,50 +35,50 @@ namespace AnyMessAppWin
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.hkBtnHireMe2 = new System.Windows.Forms.Button();
             this.panelButton2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hkBtnHireMe1 = new System.Windows.Forms.Button();
             this.panelButton1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ContactUs1 = new System.Windows.Forms.Button();
-            this.panelButton3 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ContactUs2 = new System.Windows.Forms.Button();
-            this.panelButton4 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.LaundryButton = new System.Windows.Forms.Button();
             this.CookingBtn = new System.Windows.Forms.Button();
             this.MarketServiceBtn = new System.Windows.Forms.Button();
             this.homeExitBtn = new System.Windows.Forms.Button();
             this.SweepingBtn = new System.Windows.Forms.Button();
             this.CleaningBtn = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ContactUs1 = new System.Windows.Forms.Button();
+            this.panelButton3 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ContactUs2 = new System.Windows.Forms.Button();
+            this.panelButton4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,6 +136,16 @@ namespace AnyMessAppWin
             this.label6.Size = new System.Drawing.Size(152, 39);
             this.label6.TabIndex = 7;
             this.label6.Text = "Cleaning";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(168, 172);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -211,6 +221,16 @@ namespace AnyMessAppWin
             this.label4.TabIndex = 2;
             this.label4.Text = "Tanjiro";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // hkBtnHireMe1
             // 
             this.hkBtnHireMe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
@@ -258,144 +278,6 @@ namespace AnyMessAppWin
             this.panel2.Size = new System.Drawing.Size(846, 261);
             this.panel2.TabIndex = 13;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(28, 523);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(340, 47);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Available Agency";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.ContactUs1);
-            this.panel5.Controls.Add(this.panelButton3);
-            this.panel5.Location = new System.Drawing.Point(36, 590);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(355, 170);
-            this.panel5.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat SemiBold", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label8.Location = new System.Drawing.Point(182, 67);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 30);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Manila";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label9.Location = new System.Drawing.Point(183, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 24);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "MainProvider.ph";
-            // 
-            // ContactUs1
-            // 
-            this.ContactUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.ContactUs1.FlatAppearance.BorderSize = 0;
-            this.ContactUs1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ContactUs1.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactUs1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ContactUs1.Location = new System.Drawing.Point(187, 119);
-            this.ContactUs1.Name = "ContactUs1";
-            this.ContactUs1.Size = new System.Drawing.Size(144, 39);
-            this.ContactUs1.TabIndex = 4;
-            this.ContactUs1.Text = "Contact Us!";
-            this.ContactUs1.UseVisualStyleBackColor = false;
-            this.ContactUs1.MouseEnter += new System.EventHandler(this.ContactUs1_MouseEnter);
-            this.ContactUs1.MouseLeave += new System.EventHandler(this.ContactUs1_MouseLeave);
-            // 
-            // panelButton3
-            // 
-            this.panelButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
-            this.panelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.panelButton3.Location = new System.Drawing.Point(0, 0);
-            this.panelButton3.Name = "panelButton3";
-            this.panelButton3.Size = new System.Drawing.Size(355, 170);
-            this.panelButton3.TabIndex = 8;
-            this.panelButton3.UseVisualStyleBackColor = true;
-            this.panelButton3.MouseEnter += new System.EventHandler(this.panelButton3_MouseEnter);
-            this.panelButton3.MouseLeave += new System.EventHandler(this.panelButton3_MouseLeave);
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.ContactUs2);
-            this.panel6.Controls.Add(this.panelButton4);
-            this.panel6.Location = new System.Drawing.Point(424, 591);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(355, 171);
-            this.panel6.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat SemiBold", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label10.Location = new System.Drawing.Point(182, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 30);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Manila";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label11.Location = new System.Drawing.Point(183, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 24);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "ManPower";
-            // 
-            // ContactUs2
-            // 
-            this.ContactUs2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.ContactUs2.FlatAppearance.BorderSize = 0;
-            this.ContactUs2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ContactUs2.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactUs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.ContactUs2.Location = new System.Drawing.Point(187, 119);
-            this.ContactUs2.Name = "ContactUs2";
-            this.ContactUs2.Size = new System.Drawing.Size(144, 39);
-            this.ContactUs2.TabIndex = 4;
-            this.ContactUs2.Text = "Contact Us!";
-            this.ContactUs2.UseVisualStyleBackColor = false;
-            this.ContactUs2.MouseEnter += new System.EventHandler(this.ContactUs2_MouseEnter);
-            this.ContactUs2.MouseLeave += new System.EventHandler(this.ContactUs2_MouseLeave);
-            // 
-            // panelButton4
-            // 
-            this.panelButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
-            this.panelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.panelButton4.Location = new System.Drawing.Point(0, 0);
-            this.panelButton4.Name = "panelButton4";
-            this.panelButton4.Size = new System.Drawing.Size(355, 171);
-            this.panelButton4.TabIndex = 8;
-            this.panelButton4.UseVisualStyleBackColor = true;
-            this.panelButton4.MouseEnter += new System.EventHandler(this.panelButton4_MouseEnter);
-            this.panelButton4.MouseLeave += new System.EventHandler(this.panelButton4_MouseLeave);
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
@@ -405,45 +287,15 @@ namespace AnyMessAppWin
             this.panel7.Size = new System.Drawing.Size(76, 82);
             this.panel7.TabIndex = 14;
             // 
-            // pictureBox4
+            // pictureBox5
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(166, 173);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(166, 173);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(168, 172);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 170);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox5.Image = global::AnyMessAppWin.Properties.Resources.home_orage;
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // LaundryButton
             // 
@@ -550,15 +402,163 @@ namespace AnyMessAppWin
             this.CleaningBtn.MouseEnter += new System.EventHandler(this.CleaningBtn_MouseEnter);
             this.CleaningBtn.MouseLeave += new System.EventHandler(this.CleaningBtn_MouseLeave);
             // 
-            // pictureBox5
+            // label3
             // 
-            this.pictureBox5.Image = global::AnyMessAppWin.Properties.Resources.home_orage;
-            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label3.Location = new System.Drawing.Point(28, 528);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(340, 47);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Available Agency";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.ContactUs1);
+            this.panel5.Controls.Add(this.panelButton3);
+            this.panel5.Location = new System.Drawing.Point(36, 590);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(355, 170);
+            this.panel5.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat SemiBold", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label8.Location = new System.Drawing.Point(182, 67);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 30);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Manila";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(166, 173);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label9.Location = new System.Drawing.Point(183, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 24);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "MainProvider.ph";
+            // 
+            // ContactUs1
+            // 
+            this.ContactUs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.ContactUs1.FlatAppearance.BorderSize = 0;
+            this.ContactUs1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContactUs1.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactUs1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.ContactUs1.Location = new System.Drawing.Point(187, 119);
+            this.ContactUs1.Name = "ContactUs1";
+            this.ContactUs1.Size = new System.Drawing.Size(144, 39);
+            this.ContactUs1.TabIndex = 4;
+            this.ContactUs1.Text = "Contact Us!";
+            this.ContactUs1.UseVisualStyleBackColor = false;
+            this.ContactUs1.MouseEnter += new System.EventHandler(this.ContactUs1_MouseEnter);
+            this.ContactUs1.MouseLeave += new System.EventHandler(this.ContactUs1_MouseLeave);
+            // 
+            // panelButton3
+            // 
+            this.panelButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
+            this.panelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.panelButton3.Location = new System.Drawing.Point(0, 0);
+            this.panelButton3.Name = "panelButton3";
+            this.panelButton3.Size = new System.Drawing.Size(355, 170);
+            this.panelButton3.TabIndex = 8;
+            this.panelButton3.UseVisualStyleBackColor = true;
+            this.panelButton3.MouseEnter += new System.EventHandler(this.panelButton3_MouseEnter);
+            this.panelButton3.MouseLeave += new System.EventHandler(this.panelButton3_MouseLeave);
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.ContactUs2);
+            this.panel6.Controls.Add(this.panelButton4);
+            this.panel6.Location = new System.Drawing.Point(424, 591);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(355, 171);
+            this.panel6.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Montserrat SemiBold", 13.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label10.Location = new System.Drawing.Point(182, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 30);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Manila";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(166, 173);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Montserrat Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label11.Location = new System.Drawing.Point(183, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 24);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "ManPower";
+            // 
+            // ContactUs2
+            // 
+            this.ContactUs2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.ContactUs2.FlatAppearance.BorderSize = 0;
+            this.ContactUs2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContactUs2.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactUs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.ContactUs2.Location = new System.Drawing.Point(187, 119);
+            this.ContactUs2.Name = "ContactUs2";
+            this.ContactUs2.Size = new System.Drawing.Size(144, 39);
+            this.ContactUs2.TabIndex = 4;
+            this.ContactUs2.Text = "Contact Us!";
+            this.ContactUs2.UseVisualStyleBackColor = false;
+            this.ContactUs2.MouseEnter += new System.EventHandler(this.ContactUs2_MouseEnter);
+            this.ContactUs2.MouseLeave += new System.EventHandler(this.ContactUs2_MouseLeave);
+            // 
+            // panelButton4
+            // 
+            this.panelButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
+            this.panelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.panelButton4.Location = new System.Drawing.Point(0, 0);
+            this.panelButton4.Name = "panelButton4";
+            this.panelButton4.Size = new System.Drawing.Size(355, 171);
+            this.panelButton4.TabIndex = 8;
+            this.panelButton4.UseVisualStyleBackColor = true;
+            this.panelButton4.MouseEnter += new System.EventHandler(this.panelButton4_MouseEnter);
+            this.panelButton4.MouseLeave += new System.EventHandler(this.panelButton4_MouseLeave);
             // 
             // HomeTabPanel
             // 
@@ -582,20 +582,20 @@ namespace AnyMessAppWin
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

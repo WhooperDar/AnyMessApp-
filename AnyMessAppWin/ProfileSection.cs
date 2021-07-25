@@ -40,7 +40,14 @@ namespace AnyMessAppWin
 
         private void ProfileSection_Load(object sender, EventArgs e)
         {
-            openChildForm(new ProfileEmployer()); 
+            if (LoginUserForm.TypeOfDataUser == "Agency")
+                openChildForm(new ProfileAgencyChildForm());
+
+            if (LoginUserForm.TypeOfDataUser == "Employer")
+                openChildForm(new ProfileEmployer());
+
+            if (LoginUserForm.TypeOfDataUser == "Housekeeping")
+                openChildForm(new ProfileHousekeeper());
         }
     }
 }

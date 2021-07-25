@@ -19,8 +19,17 @@ namespace AnyMessAppWin
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+
+            displayFromLogin();
         }
 
+        private void displayFromLogin()
+        {
+
+            MessageBox.Show($"Type of user: {LoginUserForm.TypeOfDataUser} and Name: {LoginUserForm.FirstNameUser}"); 
+
+
+        }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {

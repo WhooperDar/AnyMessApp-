@@ -172,6 +172,9 @@
   <data name="defaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Faces\defaultImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="experience" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\experience.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\hklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,6 +201,9 @@
   </data>
   <data name="laundry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IconArt45px\laundry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loc_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\loc-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mainlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons45px\mainlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

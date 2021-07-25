@@ -50,6 +50,8 @@ namespace AnyMessAppWin
             this.RemoveImage = new System.Windows.Forms.Button();
             this.browseBtn = new System.Windows.Forms.Button();
             this.pbProfileHk = new System.Windows.Forms.PictureBox();
+            this.tbOtherSkills = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfileHk)).BeginInit();
@@ -57,6 +59,8 @@ namespace AnyMessAppWin
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tbOtherSkills);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.tbAboutMe);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.tbEmail);
@@ -81,10 +85,10 @@ namespace AnyMessAppWin
             // tbAboutMe
             // 
             this.tbAboutMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbAboutMe.Location = new System.Drawing.Point(38, 308);
+            this.tbAboutMe.Location = new System.Drawing.Point(38, 127);
             this.tbAboutMe.Multiline = true;
             this.tbAboutMe.Name = "tbAboutMe";
-            this.tbAboutMe.Size = new System.Drawing.Size(487, 51);
+            this.tbAboutMe.Size = new System.Drawing.Size(233, 51);
             this.tbAboutMe.TabIndex = 14;
             // 
             // label7
@@ -92,7 +96,7 @@ namespace AnyMessAppWin
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label7.Location = new System.Drawing.Point(38, 284);
+            this.label7.Location = new System.Drawing.Point(38, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 13;
@@ -101,7 +105,7 @@ namespace AnyMessAppWin
             // tbEmail
             // 
             this.tbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbEmail.Location = new System.Drawing.Point(292, 127);
+            this.tbEmail.Location = new System.Drawing.Point(292, 308);
             this.tbEmail.Multiline = true;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(233, 51);
@@ -112,7 +116,7 @@ namespace AnyMessAppWin
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label6.Location = new System.Drawing.Point(292, 103);
+            this.label6.Location = new System.Drawing.Point(292, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 21);
             this.label6.TabIndex = 11;
@@ -121,11 +125,11 @@ namespace AnyMessAppWin
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.cancelBtn.Location = new System.Drawing.Point(305, 398);
+            this.cancelBtn.Location = new System.Drawing.Point(292, 399);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(226, 42);
@@ -197,7 +201,7 @@ namespace AnyMessAppWin
             // tbRate
             // 
             this.tbRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbRate.Location = new System.Drawing.Point(42, 127);
+            this.tbRate.Location = new System.Drawing.Point(42, 308);
             this.tbRate.Multiline = true;
             this.tbRate.Name = "tbRate";
             this.tbRate.Size = new System.Drawing.Size(229, 51);
@@ -208,7 +212,7 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(39, 103);
+            this.label3.Location = new System.Drawing.Point(39, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 21);
             this.label3.TabIndex = 5;
@@ -230,9 +234,9 @@ namespace AnyMessAppWin
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.label2.Location = new System.Drawing.Point(36, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 39);
+            this.label2.Size = new System.Drawing.Size(240, 39);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Change Details";
+            this.label2.Text = "Update Details";
             // 
             // panel1
             // 
@@ -305,6 +309,26 @@ namespace AnyMessAppWin
             this.pbProfileHk.TabIndex = 0;
             this.pbProfileHk.TabStop = false;
             // 
+            // tbOtherSkills
+            // 
+            this.tbOtherSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbOtherSkills.Location = new System.Drawing.Point(292, 127);
+            this.tbOtherSkills.Multiline = true;
+            this.tbOtherSkills.Name = "tbOtherSkills";
+            this.tbOtherSkills.Size = new System.Drawing.Size(233, 51);
+            this.tbOtherSkills.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label8.Location = new System.Drawing.Point(292, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 21);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Other Skills";
+            // 
             // EdiProfileHousekeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,5 +371,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbAboutMe;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbOtherSkills;
+        private System.Windows.Forms.Label label8;
     }
 }

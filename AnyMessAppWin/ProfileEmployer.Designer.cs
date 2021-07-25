@@ -29,99 +29,212 @@ namespace AnyMessAppWin
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileEmployer));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbLookingFor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.detailsPanel = new System.Windows.Forms.Panel();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labelContact = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tbAboutUs = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.editProfileAgency = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.editProfileEmployer = new System.Windows.Forms.Button();
+            this.labelPlace = new System.Windows.Forms.Label();
+            this.labelEmployerName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxAboutUs = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChildAgency = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelChildAgency.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.detailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelChildAgency.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // pictureBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Medium", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(277, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contact Number";
+            this.pictureBox1.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel5.Controls.Add(this.textBoxAddress);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(260, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(266, 423);
-            this.panel5.TabIndex = 3;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.detailsPanel);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 272);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(774, 423);
+            this.panel3.TabIndex = 1;
             // 
-            // textBoxAddress
+            // label9
             // 
-            this.textBoxAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBoxAddress.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBoxAddress.Location = new System.Drawing.Point(37, 132);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(207, 254);
-            this.textBoxAddress.TabIndex = 1;
-            this.textBoxAddress.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(429, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(161, 32);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Looking for ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.tbLookingFor);
+            this.panel1.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(435, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(312, 189);
+            this.panel1.TabIndex = 1;
+            // 
+            // tbLookingFor
+            // 
+            this.tbLookingFor.BackColor = System.Drawing.SystemColors.Control;
+            this.tbLookingFor.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLookingFor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.tbLookingFor.Location = new System.Drawing.Point(20, 23);
+            this.tbLookingFor.Multiline = true;
+            this.tbLookingFor.Name = "tbLookingFor";
+            this.tbLookingFor.Size = new System.Drawing.Size(270, 142);
+            this.tbLookingFor.TabIndex = 8;
+            this.tbLookingFor.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
     "cididunt ut labore et dolore magna aliqua.";
-            this.textBoxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel7
+            // label3
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 423);
-            this.panel7.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(24, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(202, 32);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Contact Details";
             // 
-            // label4
+            // detailsPanel
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(69, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Address";
+            this.detailsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.detailsPanel.Controls.Add(this.labelAddress);
+            this.detailsPanel.Controls.Add(this.pictureBox5);
+            this.detailsPanel.Controls.Add(this.labelEmail);
+            this.detailsPanel.Controls.Add(this.pictureBox4);
+            this.detailsPanel.Controls.Add(this.labelContact);
+            this.detailsPanel.Controls.Add(this.pictureBox3);
+            this.detailsPanel.ForeColor = System.Drawing.SystemColors.Control;
+            this.detailsPanel.Location = new System.Drawing.Point(30, 60);
+            this.detailsPanel.Name = "detailsPanel";
+            this.detailsPanel.Size = new System.Drawing.Size(334, 189);
+            this.detailsPanel.TabIndex = 0;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelAddress.Location = new System.Drawing.Point(66, 131);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(93, 26);
+            this.labelAddress.TabIndex = 12;
+            this.labelAddress.Text = "Address";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(22, 129);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelEmail.Location = new System.Drawing.Point(66, 77);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(155, 26);
+            this.labelEmail.TabIndex = 10;
+            this.labelEmail.Text = "Email Address";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(22, 75);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // labelContact
+            // 
+            this.labelContact.AutoSize = true;
+            this.labelContact.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelContact.Location = new System.Drawing.Point(66, 24);
+            this.labelContact.Name = "labelContact";
+            this.labelContact.Size = new System.Drawing.Size(176, 26);
+            this.labelContact.TabIndex = 8;
+            this.labelContact.Text = "Contact Number";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(22, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // tbAboutUs
+            // 
+            this.tbAboutUs.BackColor = System.Drawing.SystemColors.Control;
+            this.tbAboutUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.tbAboutUs.Location = new System.Drawing.Point(310, 152);
+            this.tbAboutUs.Multiline = true;
+            this.tbAboutUs.Name = "tbAboutUs";
+            this.tbAboutUs.Size = new System.Drawing.Size(319, 103);
+            this.tbAboutUs.TabIndex = 7;
+            this.tbAboutUs.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(764, 10);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 262);
+            this.panel11.TabIndex = 5;
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(0, 10);
             this.panel10.Name = "panel10";
@@ -130,167 +243,83 @@ namespace AnyMessAppWin
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(774, 10);
             this.panel9.TabIndex = 3;
             // 
-            // editProfileAgency
+            // editProfileEmployer
             // 
-            this.editProfileAgency.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
-            this.editProfileAgency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editProfileAgency.ForeColor = System.Drawing.Color.Gray;
-            this.editProfileAgency.Location = new System.Drawing.Point(600, 213);
-            this.editProfileAgency.Name = "editProfileAgency";
-            this.editProfileAgency.Size = new System.Drawing.Size(148, 38);
-            this.editProfileAgency.TabIndex = 0;
-            this.editProfileAgency.Text = "Edit Profile";
-            this.editProfileAgency.UseVisualStyleBackColor = true;
-            this.editProfileAgency.Click += new System.EventHandler(this.editProfileAgency_Click);
+            this.editProfileEmployer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.editProfileEmployer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
+            this.editProfileEmployer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editProfileEmployer.ForeColor = System.Drawing.SystemColors.Control;
+            this.editProfileEmployer.Location = new System.Drawing.Point(622, 47);
+            this.editProfileEmployer.Name = "editProfileEmployer";
+            this.editProfileEmployer.Size = new System.Drawing.Size(125, 38);
+            this.editProfileEmployer.TabIndex = 0;
+            this.editProfileEmployer.Text = "Edit Profile";
+            this.editProfileEmployer.UseVisualStyleBackColor = false;
+            this.editProfileEmployer.Click += new System.EventHandler(this.editProfileEmployer_Click);
+            this.editProfileEmployer.MouseEnter += new System.EventHandler(this.editProfileEmployer_MouseEnter);
+            this.editProfileEmployer.MouseLeave += new System.EventHandler(this.editProfileEmployer_MouseLeave);
             // 
-            // panel4
+            // labelPlace
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel4.Controls.Add(this.textBoxEmail);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(526, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 423);
-            this.panel4.TabIndex = 2;
+            this.labelPlace.AutoSize = true;
+            this.labelPlace.Font = new System.Drawing.Font("Montserrat Medium", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.labelPlace.Location = new System.Drawing.Point(348, 98);
+            this.labelPlace.Name = "labelPlace";
+            this.labelPlace.Size = new System.Drawing.Size(74, 27);
+            this.labelPlace.TabIndex = 2;
+            this.labelPlace.Text = "Place";
             // 
-            // textBoxEmail
+            // labelEmployerName
             // 
-            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBoxEmail.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBoxEmail.Location = new System.Drawing.Point(29, 132);
-            this.textBoxEmail.Multiline = true;
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(207, 254);
-            this.textBoxEmail.TabIndex = 3;
-            this.textBoxEmail.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.";
-            this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 423);
-            this.panel8.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(84, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 37);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Email";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(764, 10);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 262);
-            this.panel11.TabIndex = 5;
+            this.labelEmployerName.AutoSize = true;
+            this.labelEmployerName.Font = new System.Drawing.Font("Montserrat Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmployerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.labelEmployerName.Location = new System.Drawing.Point(306, 47);
+            this.labelEmployerName.Name = "labelEmployerName";
+            this.labelEmployerName.Size = new System.Drawing.Size(276, 41);
+            this.labelEmployerName.TabIndex = 1;
+            this.labelEmployerName.Text = "Employer Name";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tbAboutUs);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.editProfileAgency);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.editProfileEmployer);
+            this.panel2.Controls.Add(this.labelPlace);
+            this.panel2.Controls.Add(this.labelEmployerName);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(774, 272);
             this.panel2.TabIndex = 0;
             // 
-            // label1
+            // pictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(277, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Employer Name";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(53, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "About Us";
-            // 
-            // textBoxAboutUs
-            // 
-            this.textBoxAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBoxAboutUs.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAboutUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBoxAboutUs.Location = new System.Drawing.Point(1, 6);
-            this.textBoxAboutUs.Multiline = true;
-            this.textBoxAboutUs.Name = "textBoxAboutUs";
-            this.textBoxAboutUs.Size = new System.Drawing.Size(207, 254);
-            this.textBoxAboutUs.TabIndex = 0;
-            this.textBoxAboutUs.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.";
-            this.textBoxAboutUs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 423);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.textBoxAboutUs);
-            this.panel6.Location = new System.Drawing.Point(23, 132);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(210, 260);
-            this.panel6.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 272);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(774, 423);
-            this.panel3.TabIndex = 1;
+            this.pictureBox2.Image = global::AnyMessAppWin.Properties.Resources.loc_gray;
+            this.pictureBox2.Location = new System.Drawing.Point(310, 97);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // panelChildAgency
             // 
+            this.panelChildAgency.BackColor = System.Drawing.SystemColors.Control;
             this.panelChildAgency.Controls.Add(this.panel3);
             this.panelChildAgency.Controls.Add(this.panel2);
             this.panelChildAgency.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -298,16 +327,6 @@ namespace AnyMessAppWin
             this.panelChildAgency.Name = "panelChildAgency";
             this.panelChildAgency.Size = new System.Drawing.Size(774, 695);
             this.panelChildAgency.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ProfileEmployer
             // 
@@ -319,46 +338,49 @@ namespace AnyMessAppWin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfileEmployer";
             this.Text = "ProfileEmployer";
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.ProfileEmployer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.detailsPanel.ResumeLayout(false);
+            this.detailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelChildAgency.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbLookingFor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel detailsPanel;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labelContact;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox tbAboutUs;
+        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button editProfileAgency;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button editProfileEmployer;
+        private System.Windows.Forms.Label labelPlace;
+        private System.Windows.Forms.Label labelEmployerName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxAboutUs;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelChildAgency;
     }
 }

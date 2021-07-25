@@ -171,7 +171,7 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Edit Profile to Database (Agency)
-        private async void SavaEditProfileAgency(string agencyName, string imageAgencyData, string aboutUs, string addressData, string websiteData)
+        private async void SavaEditProfileAgency(string agencyName, string imageAgencyData, string aboutUs, string addressData, string websiteData, string agencyContact, string agencyLookingfor)
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -183,7 +183,9 @@ namespace AnyMessAppWin.Backend_Services
                     AboutUs = aboutUs,
                     AddressData = addressData,
                     ImageAgencyData = imageAgencyData,
-                    WebsiteData = websiteData
+                    WebsiteData = websiteData,
+                    AgencyContact = agencyContact, 
+                    AgencyLookingFor = agencyLookingfor
                 };
 
                 try
@@ -200,7 +202,7 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Edit Profile to Database (Employer)
-        private async void SaveEditProfileEmployer(string employerName, string imageAgencyData, string aboutMe, string addressData, string emailData)
+        private async void SaveEditProfileEmployer(string employerName, string imageAgencyData, string aboutMe, string addressData, string emailData, string contactNumber, string lookingFor)
         {
             client = new FireSharp.FirebaseClient(config);
             if (employerName != null && imageAgencyData != null && aboutMe != null && addressData != null && emailData != null)
@@ -209,9 +211,11 @@ namespace AnyMessAppWin.Backend_Services
                 {
                     FirstName = employerName,
                     ImageEmployerData = imageAgencyData,
-                    AboutMeEmployer = aboutMe,
-                    AddressEmployer = addressData,
-                    EmailEmployer = emailData
+                    employerAboutMe = aboutMe,
+                    employerAddress = addressData,
+                    employerEmail = emailData,
+                    employerContact = contactNumber,
+                    employerLookingFor = lookingFor
                 };
 
                 try
@@ -248,7 +252,7 @@ namespace AnyMessAppWin.Backend_Services
                     AddressHk = addressHk,
                     ContactNumberHk = contactNumber,
                     EmailHk = emailHk,
-                    Skill = skill
+                    OtherSkills = skill
                 };
 
                 try
@@ -267,7 +271,135 @@ namespace AnyMessAppWin.Backend_Services
             {
                 MessageBox.Show("Invalid Input!");
             }
-              
+        }
+
+
+        /* public string AgencyName { get; set; }
+         public string ImageAgencyData { get; set; }
+         public string AboutUs { get; set; }
+         public string AddressData { get; set; }
+         public string WebsiteData { get; set; }
+         public string AgencyContact { get; set; }
+         public string AgencyLookingFor { get; set; }*/
+
+        // Agency
+        FirebaseResponse response;
+        static Data dataAgencyResult;
+        public async void fetchAgencyDataDB(string name)
+        {
+            client = new FireSharp.FirebaseClient(config);   
+
+            if(name != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Agency Information/" + name);
+                    dataAgencyResult = response.ResultAs<Data>();
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show($"{name} does not found!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+            }
+            
+        }
+
+        public static Data GetDataProfileAgency()
+        {
+            return dataAgencyResult;
+        }
+
+        // Employer
+        static DataEmployer dataEmployerResult; 
+        public async void fetchEmployerDataDB(string name)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            if(name != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Employer Information/" + name);
+                    dataEmployerResult = response.ResultAs<DataEmployer>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"{name} does not found!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+            }
+        }
+
+        public static DataEmployer GetDataProfileEmployer()
+        {
+            return dataEmployerResult; 
+        }
+
+
+
+        // Housekeeping 
+        static DataHousekeeper dataHousekeeperResult;
+        public async void fetchHousekeepingAccount(string name)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            if(name != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Housekeeper Information/"+name);
+                    dataHousekeeperResult = response.ResultAs<DataHousekeeper>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"{name} does not found!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name!");
+            }
+        }
+
+        public static DataHousekeeper GetDataProfileHk()
+        {
+            return dataHousekeeperResult; 
+        }
+
+        // Create Account
+        static DataCreateAccount createAccountResult; 
+        public async void fetchCreateAccountData(string username)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            if(username != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Login Accounts/" + username);
+                    createAccountResult = response.ResultAs<DataCreateAccount>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"{username} does not found!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+            }
+        }
+
+        public static DataCreateAccount GetDataCreateAccount()
+        {
+            return createAccountResult; 
         }
     }
 }

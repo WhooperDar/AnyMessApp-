@@ -243,6 +243,16 @@ namespace AnyMessAppWin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap experience {
+            get {
+                object obj = ResourceManager.GetObject("experience", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hk_list_orange {
             get {
                 object obj = ResourceManager.GetObject("hk_list_orange", resourceCulture);
@@ -326,6 +336,16 @@ namespace AnyMessAppWin.Properties {
         internal static System.Drawing.Bitmap laundry {
             get {
                 object obj = ResourceManager.GetObject("laundry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loc_gray {
+            get {
+                object obj = ResourceManager.GetObject("loc_gray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

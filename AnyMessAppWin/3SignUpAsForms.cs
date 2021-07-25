@@ -68,11 +68,6 @@ namespace AnyMessAppWin
             housekeperBtn.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void agencyBtn_Click(object sender, EventArgs e)
         {
             openChildForm(new SignUpAgency());

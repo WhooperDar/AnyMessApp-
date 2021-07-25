@@ -15,6 +15,7 @@ namespace AnyMessAppWin.DataModels
         public string AddressHk { get; set; }
         public string EmailHk { get; set; }
         public string ContactNumberHk { get; set;  }
-        public string Skill { get; set; }
+        public string OtherSkills { get; set; }
+
     }
 }

@@ -574,5 +574,11 @@
   <ItemGroup>
     <None Include="bin\Debug\Icons\setting-orange.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\loc-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\experience.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

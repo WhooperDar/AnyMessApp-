@@ -10,8 +10,10 @@ namespace AnyMessAppWin.DataModels
     {
         public string FirstName { get; set; }
         public string ImageEmployerData { get; set; }
-        public string AboutMeEmployer { get; set;}
-        public string AddressEmployer { get; set; }
-        public string EmailEmployer { get; set; }
+        public string employerAboutMe { get; set;}
+        public string employerAddress { get; set; }
+        public string employerEmail { get; set; }
+        public string employerLookingFor { get; set; }
+        public string employerContact { get; set; }
     }
 }

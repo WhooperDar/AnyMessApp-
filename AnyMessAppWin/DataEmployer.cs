@@ -1,6 +1,6 @@
 ﻿namespace AnyMessAppWin
 {
-    internal class DataEmployer
+    public class DataEmployer
     {
         public string EmployerName { get; set; }
         public string EmployerMiddleName { get; set; }

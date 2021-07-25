@@ -32,17 +32,17 @@ namespace AnyMessAppWin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileSection));
             this.panelProfileParent = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.homeExitBtn = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.homeExitBtn = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panelProfileParent
             // 
-            this.panelProfileParent.Location = new System.Drawing.Point(35, 99);
+            this.panelProfileParent.Location = new System.Drawing.Point(25, 88);
             this.panelProfileParent.Name = "panelProfileParent";
-            this.panelProfileParent.Size = new System.Drawing.Size(774, 747);
+            this.panelProfileParent.Size = new System.Drawing.Size(792, 747);
             this.panelProfileParent.TabIndex = 2;
             // 
             // panel7
@@ -53,6 +53,16 @@ namespace AnyMessAppWin
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(76, 82);
             this.panel7.TabIndex = 15;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
             // 
             // homeExitBtn
             // 
@@ -66,20 +76,10 @@ namespace AnyMessAppWin
             this.homeExitBtn.UseVisualStyleBackColor = true;
             this.homeExitBtn.Click += new System.EventHandler(this.homeExitBtn_Click);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
-            // 
             // ProfileSection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(846, 858);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.homeExitBtn);

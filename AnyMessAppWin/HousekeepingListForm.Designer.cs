@@ -33,16 +33,16 @@ namespace AnyMessAppWin
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.MarketServiceBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.cookingBtn = new System.Windows.Forms.Button();
+            this.cleaningBtn = new System.Windows.Forms.Button();
+            this.laundryBtn = new System.Windows.Forms.Button();
+            this.sweepingBtn = new System.Windows.Forms.Button();
             this.housekeepingExitBtn = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,16 @@ namespace AnyMessAppWin
             this.panel1.Size = new System.Drawing.Size(76, 82);
             this.panel1.TabIndex = 4;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
+            // 
             // MarketServiceBtn
             // 
             this.MarketServiceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -93,11 +103,14 @@ namespace AnyMessAppWin
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(268, 162);
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.textBox1.Location = new System.Drawing.Point(35, 180);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 32);
+            this.textBox1.Size = new System.Drawing.Size(525, 32);
             this.textBox1.TabIndex = 13;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button1
             // 
@@ -106,7 +119,7 @@ namespace AnyMessAppWin
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.button1.Location = new System.Drawing.Point(566, 162);
+            this.button1.Location = new System.Drawing.Point(566, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 32);
             this.button1.TabIndex = 14;
@@ -120,48 +133,64 @@ namespace AnyMessAppWin
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.button2.Location = new System.Drawing.Point(695, 162);
+            this.button2.Location = new System.Drawing.Point(695, 180);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 32);
             this.button2.TabIndex = 15;
             this.button2.Text = "Refresh ";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // cookingBtn
             // 
-            this.button3.Location = new System.Drawing.Point(243, 215);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 37);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Cooking";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cookingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cookingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.cookingBtn.Location = new System.Drawing.Point(35, 225);
+            this.cookingBtn.Name = "cookingBtn";
+            this.cookingBtn.Size = new System.Drawing.Size(193, 37);
+            this.cookingBtn.TabIndex = 17;
+            this.cookingBtn.Text = "Cooking";
+            this.cookingBtn.UseVisualStyleBackColor = true;
+            this.cookingBtn.MouseEnter += new System.EventHandler(this.cleaningCatBtn_MouseEnter);
+            this.cookingBtn.MouseLeave += new System.EventHandler(this.cleaningCatBtn_MouseLeave);
             // 
-            // button4
+            // cleaningBtn
             // 
-            this.button4.Location = new System.Drawing.Point(388, 215);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 37);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Cleaning";
-            this.button4.UseVisualStyleBackColor = true;
+            this.cleaningBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cleaningBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.cleaningBtn.Location = new System.Drawing.Point(226, 225);
+            this.cleaningBtn.Name = "cleaningBtn";
+            this.cleaningBtn.Size = new System.Drawing.Size(193, 37);
+            this.cleaningBtn.TabIndex = 18;
+            this.cleaningBtn.Text = "Cleaning";
+            this.cleaningBtn.UseVisualStyleBackColor = true;
+            this.cleaningBtn.MouseEnter += new System.EventHandler(this.cleaningBtn_MouseEnter);
+            this.cleaningBtn.MouseLeave += new System.EventHandler(this.cleaningBtn_MouseLeave);
             // 
-            // button5
+            // laundryBtn
             // 
-            this.button5.Location = new System.Drawing.Point(533, 215);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 37);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Laundry";
-            this.button5.UseVisualStyleBackColor = true;
+            this.laundryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.laundryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.laundryBtn.Location = new System.Drawing.Point(415, 225);
+            this.laundryBtn.Name = "laundryBtn";
+            this.laundryBtn.Size = new System.Drawing.Size(203, 37);
+            this.laundryBtn.TabIndex = 19;
+            this.laundryBtn.Text = "Laundry";
+            this.laundryBtn.UseVisualStyleBackColor = true;
+            this.laundryBtn.MouseEnter += new System.EventHandler(this.laundryBtn_MouseEnter);
+            this.laundryBtn.MouseLeave += new System.EventHandler(this.laundryBtn_MouseLeave);
             // 
-            // button6
+            // sweepingBtn
             // 
-            this.button6.Location = new System.Drawing.Point(678, 215);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 37);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Sweeping";
-            this.button6.UseVisualStyleBackColor = true;
+            this.sweepingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sweepingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.sweepingBtn.Location = new System.Drawing.Point(614, 225);
+            this.sweepingBtn.Name = "sweepingBtn";
+            this.sweepingBtn.Size = new System.Drawing.Size(203, 37);
+            this.sweepingBtn.TabIndex = 20;
+            this.sweepingBtn.Text = "Sweeping";
+            this.sweepingBtn.UseVisualStyleBackColor = true;
+            this.sweepingBtn.MouseEnter += new System.EventHandler(this.sweepingBtn_MouseEnter);
+            this.sweepingBtn.MouseLeave += new System.EventHandler(this.sweepingBtn_MouseLeave);
             // 
             // housekeepingExitBtn
             // 
@@ -175,26 +204,16 @@ namespace AnyMessAppWin
             this.housekeepingExitBtn.UseVisualStyleBackColor = true;
             this.housekeepingExitBtn.Click += new System.EventHandler(this.housekeepingExitBtn_Click);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 21;
-            this.pictureBox5.TabStop = false;
-            // 
             // HousekeepingListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 858);
             this.Controls.Add(this.MarketServiceBtn);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.sweepingBtn);
+            this.Controls.Add(this.laundryBtn);
+            this.Controls.Add(this.cleaningBtn);
+            this.Controls.Add(this.cookingBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -223,10 +242,10 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button cookingBtn;
+        private System.Windows.Forms.Button cleaningBtn;
+        private System.Windows.Forms.Button laundryBtn;
+        private System.Windows.Forms.Button sweepingBtn;
         private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

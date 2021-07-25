@@ -32,38 +32,48 @@ namespace AnyMessAppWin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileAgencyChildForm));
             this.panelChildAgency = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelWebsite = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBoxAboutUs = new System.Windows.Forms.TextBox();
+            this.tbLooking = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.detailsPanel = new System.Windows.Forms.Panel();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelContact = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbAboutUs = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.editProfileAgency = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelAddressName = new System.Windows.Forms.Label();
+            this.labelAgencyName = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildAgency.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.detailsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChildAgency
             // 
+            this.panelChildAgency.BackColor = System.Drawing.SystemColors.Control;
             this.panelChildAgency.Controls.Add(this.panel3);
             this.panelChildAgency.Controls.Add(this.panel2);
             this.panelChildAgency.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,172 +85,177 @@ namespace AnyMessAppWin
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.detailsPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 272);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(774, 423);
             this.panel3.TabIndex = 1;
             // 
-            // panel5
+            // label9
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel5.Controls.Add(this.textBoxAddress);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(260, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(266, 423);
-            this.panel5.TabIndex = 3;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(429, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(161, 32);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Looking for ";
             // 
-            // textBoxAddress
+            // label7
             // 
-            this.textBoxAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBoxAddress.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBoxAddress.Location = new System.Drawing.Point(37, 132);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(207, 254);
-            this.textBoxAddress.TabIndex = 1;
-            this.textBoxAddress.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.";
-            this.textBoxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 423);
-            this.panel7.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(69, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Address";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(23, 275);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 32);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Website";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(526, 0);
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.labelWebsite);
+            this.panel4.Controls.Add(this.pictureBox6);
+            this.panel4.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel4.Location = new System.Drawing.Point(30, 310);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 423);
+            this.panel4.Size = new System.Drawing.Size(371, 74);
             this.panel4.TabIndex = 2;
             // 
-            // textBox2
+            // labelWebsite
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBox2.Location = new System.Drawing.Point(29, 132);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 254);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua.";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 423);
-            this.panel8.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(67, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 37);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Website";
+            this.labelWebsite.AutoSize = true;
+            this.labelWebsite.Font = new System.Drawing.Font("Montserrat Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWebsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.labelWebsite.Location = new System.Drawing.Point(66, 18);
+            this.labelWebsite.Name = "labelWebsite";
+            this.labelWebsite.Size = new System.Drawing.Size(125, 33);
+            this.labelWebsite.TabIndex = 14;
+            this.labelWebsite.Text = "Website";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.tbLooking);
+            this.panel1.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(435, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 423);
+            this.panel1.Size = new System.Drawing.Size(312, 189);
             this.panel1.TabIndex = 1;
             // 
-            // panel6
+            // tbLooking
             // 
-            this.panel6.Controls.Add(this.textBoxAboutUs);
-            this.panel6.Location = new System.Drawing.Point(23, 132);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(210, 260);
-            this.panel6.TabIndex = 1;
-            // 
-            // textBoxAboutUs
-            // 
-            this.textBoxAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBoxAboutUs.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAboutUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.textBoxAboutUs.Location = new System.Drawing.Point(1, 6);
-            this.textBoxAboutUs.Multiline = true;
-            this.textBoxAboutUs.Name = "textBoxAboutUs";
-            this.textBoxAboutUs.Size = new System.Drawing.Size(207, 254);
-            this.textBoxAboutUs.TabIndex = 0;
-            this.textBoxAboutUs.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+            this.tbLooking.BackColor = System.Drawing.SystemColors.Control;
+            this.tbLooking.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.tbLooking.Location = new System.Drawing.Point(20, 23);
+            this.tbLooking.Multiline = true;
+            this.tbLooking.Name = "tbLooking";
+            this.tbLooking.Size = new System.Drawing.Size(270, 142);
+            this.tbLooking.TabIndex = 8;
+            this.tbLooking.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
     "cididunt ut labore et dolore magna aliqua.";
-            this.textBoxAboutUs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(53, 59);
+            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(24, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "About Us";
+            this.label3.Size = new System.Drawing.Size(202, 32);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Contact Details";
+            // 
+            // detailsPanel
+            // 
+            this.detailsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.detailsPanel.Controls.Add(this.labelAddress);
+            this.detailsPanel.Controls.Add(this.pictureBox5);
+            this.detailsPanel.Controls.Add(this.labelEmail);
+            this.detailsPanel.Controls.Add(this.pictureBox4);
+            this.detailsPanel.Controls.Add(this.labelContact);
+            this.detailsPanel.Controls.Add(this.pictureBox3);
+            this.detailsPanel.ForeColor = System.Drawing.SystemColors.Control;
+            this.detailsPanel.Location = new System.Drawing.Point(30, 60);
+            this.detailsPanel.Name = "detailsPanel";
+            this.detailsPanel.Size = new System.Drawing.Size(371, 189);
+            this.detailsPanel.TabIndex = 0;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelAddress.Location = new System.Drawing.Point(66, 130);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(93, 26);
+            this.labelAddress.TabIndex = 12;
+            this.labelAddress.Text = "Address";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelEmail.Location = new System.Drawing.Point(66, 76);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(155, 26);
+            this.labelEmail.TabIndex = 10;
+            this.labelEmail.Text = "Email Address";
+            // 
+            // labelContact
+            // 
+            this.labelContact.AutoSize = true;
+            this.labelContact.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelContact.Location = new System.Drawing.Point(66, 24);
+            this.labelContact.Name = "labelContact";
+            this.labelContact.Size = new System.Drawing.Size(176, 26);
+            this.labelContact.TabIndex = 8;
+            this.labelContact.Text = "Contact Number";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.tbAboutUs);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.editProfileAgency);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelAddressName);
+            this.panel2.Controls.Add(this.labelAgencyName);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(774, 272);
             this.panel2.TabIndex = 0;
             // 
+            // tbAboutUs
+            // 
+            this.tbAboutUs.BackColor = System.Drawing.SystemColors.Control;
+            this.tbAboutUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.tbAboutUs.Location = new System.Drawing.Point(310, 152);
+            this.tbAboutUs.Multiline = true;
+            this.tbAboutUs.Name = "tbAboutUs";
+            this.tbAboutUs.Size = new System.Drawing.Size(319, 103);
+            this.tbAboutUs.TabIndex = 7;
+            this.tbAboutUs.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua.";
+            // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel11.Location = new System.Drawing.Point(764, 10);
             this.panel11.Name = "panel11";
@@ -249,7 +264,7 @@ namespace AnyMessAppWin
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(0, 10);
             this.panel10.Name = "panel10";
@@ -258,7 +273,7 @@ namespace AnyMessAppWin
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
@@ -267,47 +282,98 @@ namespace AnyMessAppWin
             // 
             // editProfileAgency
             // 
+            this.editProfileAgency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.editProfileAgency.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(177)))), ((int)(((byte)(182)))));
             this.editProfileAgency.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editProfileAgency.ForeColor = System.Drawing.Color.Gray;
-            this.editProfileAgency.Location = new System.Drawing.Point(600, 213);
+            this.editProfileAgency.ForeColor = System.Drawing.SystemColors.Control;
+            this.editProfileAgency.Location = new System.Drawing.Point(622, 47);
             this.editProfileAgency.Name = "editProfileAgency";
-            this.editProfileAgency.Size = new System.Drawing.Size(148, 38);
+            this.editProfileAgency.Size = new System.Drawing.Size(125, 38);
             this.editProfileAgency.TabIndex = 0;
             this.editProfileAgency.Text = "Edit Profile";
-            this.editProfileAgency.UseVisualStyleBackColor = true;
+            this.editProfileAgency.UseVisualStyleBackColor = false;
             this.editProfileAgency.Click += new System.EventHandler(this.editProfileAgency_Click);
             this.editProfileAgency.MouseEnter += new System.EventHandler(this.editProfileAgency_MouseEnter);
             this.editProfileAgency.MouseLeave += new System.EventHandler(this.editProfileAgency_MouseLeave);
             // 
-            // label2
+            // labelAddressName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Medium", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(277, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Place";
+            this.labelAddressName.AutoSize = true;
+            this.labelAddressName.Font = new System.Drawing.Font("Montserrat Medium", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddressName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.labelAddressName.Location = new System.Drawing.Point(348, 98);
+            this.labelAddressName.Name = "labelAddressName";
+            this.labelAddressName.Size = new System.Drawing.Size(74, 27);
+            this.labelAddressName.TabIndex = 2;
+            this.labelAddressName.Text = "Place";
             // 
-            // label1
+            // labelAgencyName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label1.Location = new System.Drawing.Point(277, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Agency Name";
+            this.labelAgencyName.AutoSize = true;
+            this.labelAgencyName.Font = new System.Drawing.Font("Montserrat Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgencyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.labelAgencyName.Location = new System.Drawing.Point(306, 47);
+            this.labelAgencyName.Name = "labelAgencyName";
+            this.labelAgencyName.Size = new System.Drawing.Size(244, 41);
+            this.labelAgencyName.TabIndex = 1;
+            this.labelAgencyName.Text = "Agency Name";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 34);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(22, 129);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(22, 75);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(22, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AnyMessAppWin.Properties.Resources.loc_gray;
+            this.pictureBox2.Location = new System.Drawing.Point(310, 97);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 208);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -324,18 +390,23 @@ namespace AnyMessAppWin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProfileAgencyChildForm";
             this.Text = "ProfileAgencyChildForm";
+            this.Load += new System.EventHandler(this.ProfileAgencyChildForm_Load);
             this.panelChildAgency.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.detailsPanel.ResumeLayout(false);
+            this.detailsPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -344,26 +415,31 @@ namespace AnyMessAppWin
         #endregion
 
         private System.Windows.Forms.Panel panelChildAgency;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAddressName;
+        private System.Windows.Forms.Label labelAgencyName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button editProfileAgency;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBoxAboutUs;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox tbAboutUs;
+        private System.Windows.Forms.Panel detailsPanel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labelContact;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label labelWebsite;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbLooking;
     }
 }

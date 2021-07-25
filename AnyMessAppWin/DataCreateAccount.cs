@@ -1,6 +1,6 @@
 ﻿namespace AnyMessAppWin
 {
-    internal class DataCreateAccount
+    public class DataCreateAccount
     {
         public string Username { get; set; }
         public string Email { get; set; }

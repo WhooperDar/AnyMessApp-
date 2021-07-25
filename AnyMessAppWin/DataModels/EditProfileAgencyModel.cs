@@ -11,7 +11,9 @@ namespace AnyMessAppWin.DataModels
         public string AgencyName { get; set; }
         public string ImageAgencyData { get; set; } 
         public string AboutUs { get; set;  }
-        public string AddressData { get; set;  }
+        public string AddressData { get; set; }
         public string WebsiteData { get; set; }
+        public string AgencyContact { get; set; }
+        public string AgencyLookingFor { get; set; }
     }
 }

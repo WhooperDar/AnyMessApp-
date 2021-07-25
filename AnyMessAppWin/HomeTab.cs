@@ -43,7 +43,11 @@ namespace AnyMessAppWin
 
             // For Rounded Corner Buttons
             ContactUs2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ContactUs2.Width, ContactUs2.Height, 30, 30));
+
+            MessageBox.Show($"{LoginUserForm.TypeOfDataUser} {LoginUserForm.FirstNameUser}");
+        
         }
+
         #endregion
 
         #region Hover Effects Button Panels

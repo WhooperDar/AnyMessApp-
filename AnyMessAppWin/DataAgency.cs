@@ -1,6 +1,6 @@
 ﻿namespace AnyMessAppWin
 {
-    internal class Data
+    public class Data
     {
         public string AgencyName { get; set; }
         public string AgencyAddress { get; set; }

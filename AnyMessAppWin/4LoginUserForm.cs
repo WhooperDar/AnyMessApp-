@@ -42,11 +42,16 @@ namespace AnyMessAppWin
             BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
         };
 
-        
+
         private static bool toMainform;
         public static bool ToMainForm { get => toMainform; }
 
         IFirebaseClient client;
+
+        public static string TypeOfDataUser { get; set; }
+        public static string FirstNameUser { get; set; }
+        public static string UserNameUser { get; set; }
+
         private async void signInBtn_Click(object sender, EventArgs e)
         {
             client = new FireSharp.FirebaseClient(configSignIn);
@@ -61,6 +66,10 @@ namespace AnyMessAppWin
 
                     if (usernameBox.Text == result.Username && passwordBox.Text == result.Password)
                     {
+                        TypeOfDataUser = result.TypeOfUser;
+                        FirstNameUser = result.FirstName;
+                        UserNameUser = result.Username;
+
                         MessageBox.Show("Login Successfully");
                         this.Hide();
 
