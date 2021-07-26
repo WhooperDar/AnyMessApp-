@@ -197,6 +197,18 @@
     <Compile Include="DataModels\EditProfileAgencyModel.cs" />
     <Compile Include="DataModels\EditProfileEmployerModel.cs" />
     <Compile Include="DataModels\EditProfileHkModel.cs" />
+    <Compile Include="Dynamic User Controls\AgencyTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dynamic User Controls\AgencyTab.Designer.cs">
+      <DependentUpon>AgencyTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic User Controls\HousekeeperTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dynamic User Controls\HousekeeperTab.Designer.cs">
+      <DependentUpon>HousekeeperTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="EdiProfileHousekeeper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic User Controls\AgencyTab.resx">
+      <DependentUpon>AgencyTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic User Controls\HousekeeperTab.resx">
+      <DependentUpon>HousekeeperTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EdiProfileHousekeeper.resx">
       <DependentUpon>EdiProfileHousekeeper.cs</DependentUpon>

@@ -57,7 +57,7 @@ namespace AnyMessAppWin
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbHk = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.detailsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,7 +69,7 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).BeginInit();
             this.SuspendLayout();
             // 
             // tbAboutMe
@@ -140,7 +140,7 @@ namespace AnyMessAppWin
             this.panel2.Controls.Add(this.editProfileHk);
             this.panel2.Controls.Add(this.labelHkPlace);
             this.panel2.Controls.Add(this.labelHkName);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbHk);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -378,15 +378,15 @@ namespace AnyMessAppWin
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // pbHk
             // 
-            this.pictureBox1.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 208);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbHk.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
+            this.pbHk.Location = new System.Drawing.Point(34, 47);
+            this.pbHk.Name = "pbHk";
+            this.pbHk.Size = new System.Drawing.Size(254, 208);
+            this.pbHk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbHk.TabIndex = 0;
+            this.pbHk.TabStop = false;
             // 
             // ProfileHousekeeper
             // 
@@ -414,7 +414,7 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +427,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button editProfileHk;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbHk;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelHkPlace;
         private System.Windows.Forms.Label labelHkName;

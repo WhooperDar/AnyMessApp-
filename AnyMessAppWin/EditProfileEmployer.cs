@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -104,7 +106,7 @@ namespace AnyMessAppWin
         {
             OpenFileDialog imageDialog = new OpenFileDialog();
             imageDialog.Title = "Select Image";
-            imageDialog.Filter = "Image Files(*.jpg) | *.jpg | Image Files(*.png) | *.png"; 
+            imageDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png;"; 
 
             if(imageDialog.ShowDialog() == DialogResult.OK)
             {
@@ -113,11 +115,30 @@ namespace AnyMessAppWin
             }
         }
 
+        public static bool SaveEmployerBtnClicked { get; set;  }
         private void saveBtnAgency_Click(object sender, EventArgs e)
         {
             if (CheckStateTextBox())
             {
+                string stringImg = BitmapToString(pbImageBoxEmployer.Image);
 
+                Backend_Services.DatabaseConfiguration saveEditData = new Backend_Services.DatabaseConfiguration();
+
+                saveEditData.SaveEditProfileEmployer(LoginUserForm.FirstNameUser,
+                                                     stringImg,
+                                                     tbAboutMe.Text,
+                                                     tbAddress.Text,
+                                                     tbEmail.Text,
+                                                     tbContactNumber.Text,
+                                                     tbLooking.Text);
+
+                MessageBox.Show("Data has been saved!");
+
+                ReturnOldState();
+
+                SaveEmployerBtnClicked = true;
+
+                this.Close();
             }
             else
             {
@@ -126,9 +147,38 @@ namespace AnyMessAppWin
             }
         }
 
+        // Utility Functions 
+
+        private void ReturnOldState()
+        {
+            if (CheckStateTextBox())
+            {
+                tbAboutMe.Text = "";
+                tbAddress.Text = "";
+                tbContactNumber.Text = "";
+                tbEmail.Text = "";
+                tbLooking.Text = "";
+
+                pbImageBoxEmployer.Image = null; 
+            }
+        }
+        private string BitmapToString(Image img)
+        {
+            MemoryStream memorystream = new MemoryStream();
+
+            img.Save(memorystream, ImageFormat.Jpeg);
+
+            byte[] byteImg = memorystream.GetBuffer();
+
+            string stringImg = Convert.ToBase64String(byteImg);
+
+            return stringImg;
+        }
+
+
         private bool CheckStateTextBox()
         {
-            return (tbAboutMe.Text == null || tbAddress.Text == null || tbEmail.Text == null);
+            return (tbAboutMe.Text != "" && tbAddress.Text != "" && tbEmail.Text != "" && tbLooking.Text != "" && tbContactNumber.Text != "");
         }
     }
 }

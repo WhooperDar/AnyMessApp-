@@ -36,6 +36,10 @@ namespace AnyMessAppWin
             this.browseBtn = new System.Windows.Forms.Button();
             this.pbImageBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbLookingFor = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbContact = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtnAgency = new System.Windows.Forms.Button();
             this.tbWebsite = new System.Windows.Forms.TextBox();
@@ -46,10 +50,6 @@ namespace AnyMessAppWin
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbContact = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbLookingFor = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -147,6 +147,48 @@ namespace AnyMessAppWin
             this.panel2.Size = new System.Drawing.Size(570, 456);
             this.panel2.TabIndex = 1;
             // 
+            // tbLookingFor
+            // 
+            this.tbLookingFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbLookingFor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.tbLookingFor.Location = new System.Drawing.Point(305, 207);
+            this.tbLookingFor.Multiline = true;
+            this.tbLookingFor.Name = "tbLookingFor";
+            this.tbLookingFor.Size = new System.Drawing.Size(231, 68);
+            this.tbLookingFor.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.label7.Location = new System.Drawing.Point(303, 183);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 21);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Looking for";
+            // 
+            // tbContact
+            // 
+            this.tbContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.tbContact.Location = new System.Drawing.Point(304, 306);
+            this.tbContact.Multiline = true;
+            this.tbContact.Name = "tbContact";
+            this.tbContact.Size = new System.Drawing.Size(231, 62);
+            this.tbContact.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.label6.Location = new System.Drawing.Point(301, 282);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 21);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Contact Number";
+            // 
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
@@ -184,6 +226,7 @@ namespace AnyMessAppWin
             // tbWebsite
             // 
             this.tbWebsite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbWebsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbWebsite.Location = new System.Drawing.Point(41, 306);
             this.tbWebsite.Multiline = true;
             this.tbWebsite.Name = "tbWebsite";
@@ -194,7 +237,7 @@ namespace AnyMessAppWin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label5.Location = new System.Drawing.Point(38, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
@@ -204,6 +247,7 @@ namespace AnyMessAppWin
             // tbAddress
             // 
             this.tbAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbAddress.Location = new System.Drawing.Point(42, 207);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
@@ -214,7 +258,7 @@ namespace AnyMessAppWin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label4.Location = new System.Drawing.Point(39, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 21);
@@ -224,6 +268,7 @@ namespace AnyMessAppWin
             // tbAboutUs
             // 
             this.tbAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbAboutUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbAboutUs.Location = new System.Drawing.Point(42, 99);
             this.tbAboutUs.Multiline = true;
             this.tbAboutUs.Name = "tbAboutUs";
@@ -234,7 +279,7 @@ namespace AnyMessAppWin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label3.Location = new System.Drawing.Point(37, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 21);
@@ -260,46 +305,6 @@ namespace AnyMessAppWin
             this.label2.Size = new System.Drawing.Size(240, 39);
             this.label2.TabIndex = 3;
             this.label2.Text = "Update Details";
-            // 
-            // tbContact
-            // 
-            this.tbContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbContact.Location = new System.Drawing.Point(304, 306);
-            this.tbContact.Multiline = true;
-            this.tbContact.Name = "tbContact";
-            this.tbContact.Size = new System.Drawing.Size(231, 62);
-            this.tbContact.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label6.Location = new System.Drawing.Point(301, 282);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 21);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Contact Number";
-            // 
-            // tbLookingFor
-            // 
-            this.tbLookingFor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbLookingFor.Location = new System.Drawing.Point(305, 207);
-            this.tbLookingFor.Multiline = true;
-            this.tbLookingFor.Name = "tbLookingFor";
-            this.tbLookingFor.Size = new System.Drawing.Size(231, 68);
-            this.tbLookingFor.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label7.Location = new System.Drawing.Point(303, 183);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 21);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Looking for";
             // 
             // EditProfileAgency
             // 

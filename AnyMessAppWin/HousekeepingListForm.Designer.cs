@@ -43,6 +43,7 @@ namespace AnyMessAppWin
             this.laundryBtn = new System.Windows.Forms.Button();
             this.sweepingBtn = new System.Windows.Forms.Button();
             this.housekeepingExitBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -204,11 +205,23 @@ namespace AnyMessAppWin
             this.housekeepingExitBtn.UseVisualStyleBackColor = true;
             this.housekeepingExitBtn.Click += new System.EventHandler(this.housekeepingExitBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat Black", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label3.Location = new System.Drawing.Point(26, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(473, 51);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Housekeeping Section";
+            // 
             // HousekeepingListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 858);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.MarketServiceBtn);
             this.Controls.Add(this.sweepingBtn);
             this.Controls.Add(this.laundryBtn);
@@ -222,6 +235,7 @@ namespace AnyMessAppWin
             this.Controls.Add(this.housekeepingExitBtn);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Montserrat", 7.8F);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HousekeepingListForm";
@@ -247,5 +261,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Button laundryBtn;
         private System.Windows.Forms.Button sweepingBtn;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -32,11 +32,38 @@ namespace AnyMessAppWin
             initComponents();
 
             displayProfile();
+
+            UpdateProfile();
         }
 
         private void ProfileEmployer_Load(object sender, EventArgs e)
         {
             displayProfile();
+
+            UpdateProfile();
+        }
+
+        private void UpdateProfile()
+        {
+            try
+            {
+                Backend_Services.DatabaseConfiguration retrieveData = new Backend_Services.DatabaseConfiguration();
+                retrieveData?.RetrieveEmployerEditData(LoginUserForm.FirstNameUser);
+
+                DataModels.EditProfileEmployerModel dataEmployerResult =  retrieveData?.getEditDataEmployer();
+
+                labelAddress.Text = dataEmployerResult.employerAddress;
+                labelContact.Text = dataEmployerResult.employerContact;
+                labelEmail.Text = dataEmployerResult.employerEmail;
+                tbAboutUs.Text = dataEmployerResult.employerAboutMe;
+                tbLookingFor.Text = dataEmployerResult.employerLookingFor;
+
+                pbEmployer.Image = Backend_Services.ImageProcessor.StringToBitmap(dataEmployerResult.ImageEmployerData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void displayProfile()
@@ -64,8 +91,8 @@ namespace AnyMessAppWin
             Backend_Services.DatabaseConfiguration fetchEmployerData = new Backend_Services.DatabaseConfiguration();
 
                 
-                fetchEmployerData.fetchEmployerDataDB(LoginUserForm.FirstNameUser);
-                fetchEmployerData.fetchCreateAccountData(LoginUserForm.UserNameUser);
+                fetchEmployerData?.fetchEmployerDataDB(LoginUserForm.FirstNameUser);
+                fetchEmployerData?.fetchCreateAccountData(LoginUserForm.UserNameUser);
 
                 DataEmployer dataEmployer = Backend_Services.DatabaseConfiguration.GetDataProfileEmployer();
                 DataCreateAccount dataCreateAccount = Backend_Services.DatabaseConfiguration.GetDataCreateAccount();

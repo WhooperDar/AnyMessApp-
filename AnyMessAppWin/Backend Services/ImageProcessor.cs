@@ -18,6 +18,7 @@ namespace AnyMessAppWin.Backend_Services
             ms.Write(a, 0, Convert.ToInt32(a.Length));
 
             Bitmap imageBitmap =  new Bitmap(ms, false);
+            ms.Dispose();
 
             return imageBitmap;
         }

@@ -49,9 +49,9 @@ namespace AnyMessAppWin
             this.label1 = new System.Windows.Forms.Label();
             this.RemoveImage = new System.Windows.Forms.Button();
             this.browseBtn = new System.Windows.Forms.Button();
-            this.pbProfileHk = new System.Windows.Forms.PictureBox();
             this.tbOtherSkills = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pbProfileHk = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfileHk)).BeginInit();
@@ -76,6 +76,8 @@ namespace AnyMessAppWin
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel2.Location = new System.Drawing.Point(0, 273);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
@@ -85,6 +87,8 @@ namespace AnyMessAppWin
             // tbAboutMe
             // 
             this.tbAboutMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbAboutMe.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAboutMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbAboutMe.Location = new System.Drawing.Point(38, 127);
             this.tbAboutMe.Multiline = true;
             this.tbAboutMe.Name = "tbAboutMe";
@@ -95,7 +99,7 @@ namespace AnyMessAppWin
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label7.Location = new System.Drawing.Point(38, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
@@ -105,6 +109,8 @@ namespace AnyMessAppWin
             // tbEmail
             // 
             this.tbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbEmail.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbEmail.Location = new System.Drawing.Point(292, 308);
             this.tbEmail.Multiline = true;
             this.tbEmail.Name = "tbEmail";
@@ -115,7 +121,7 @@ namespace AnyMessAppWin
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label6.Location = new System.Drawing.Point(292, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 21);
@@ -161,6 +167,8 @@ namespace AnyMessAppWin
             // tbContactNumber
             // 
             this.tbContactNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbContactNumber.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContactNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbContactNumber.Location = new System.Drawing.Point(292, 215);
             this.tbContactNumber.Multiline = true;
             this.tbContactNumber.Name = "tbContactNumber";
@@ -171,7 +179,7 @@ namespace AnyMessAppWin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label5.Location = new System.Drawing.Point(292, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 21);
@@ -181,6 +189,8 @@ namespace AnyMessAppWin
             // tbAddress
             // 
             this.tbAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbAddress.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbAddress.Location = new System.Drawing.Point(42, 215);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
@@ -191,7 +201,7 @@ namespace AnyMessAppWin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label4.Location = new System.Drawing.Point(39, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 21);
@@ -201,6 +211,8 @@ namespace AnyMessAppWin
             // tbRate
             // 
             this.tbRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbRate.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.tbRate.Location = new System.Drawing.Point(42, 308);
             this.tbRate.Multiline = true;
             this.tbRate.Name = "tbRate";
@@ -211,7 +223,7 @@ namespace AnyMessAppWin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.label3.Location = new System.Drawing.Point(39, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 21);
@@ -298,6 +310,28 @@ namespace AnyMessAppWin
             this.browseBtn.MouseEnter += new System.EventHandler(this.browseBtn_MouseEnter);
             this.browseBtn.MouseLeave += new System.EventHandler(this.browseBtn_MouseLeave);
             // 
+            // tbOtherSkills
+            // 
+            this.tbOtherSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.tbOtherSkills.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOtherSkills.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.tbOtherSkills.Location = new System.Drawing.Point(292, 127);
+            this.tbOtherSkills.Multiline = true;
+            this.tbOtherSkills.Name = "tbOtherSkills";
+            this.tbOtherSkills.Size = new System.Drawing.Size(233, 51);
+            this.tbOtherSkills.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
+            this.label8.Location = new System.Drawing.Point(292, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 21);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Other Skills";
+            // 
             // pbProfileHk
             // 
             this.pbProfileHk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(72)))));
@@ -309,26 +343,6 @@ namespace AnyMessAppWin
             this.pbProfileHk.TabIndex = 0;
             this.pbProfileHk.TabStop = false;
             // 
-            // tbOtherSkills
-            // 
-            this.tbOtherSkills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.tbOtherSkills.Location = new System.Drawing.Point(292, 127);
-            this.tbOtherSkills.Multiline = true;
-            this.tbOtherSkills.Name = "tbOtherSkills";
-            this.tbOtherSkills.Size = new System.Drawing.Size(233, 51);
-            this.tbOtherSkills.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label8.Location = new System.Drawing.Point(292, 103);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Other Skills";
-            // 
             // EdiProfileHousekeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -337,6 +351,7 @@ namespace AnyMessAppWin
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "EdiProfileHousekeeper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Profile (Housekeeper)";

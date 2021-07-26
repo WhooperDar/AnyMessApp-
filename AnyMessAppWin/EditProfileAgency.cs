@@ -107,7 +107,7 @@ namespace AnyMessAppWin
         {
             OpenFileDialog imageDialog = new OpenFileDialog();
             imageDialog.Title = "Select Image";
-            imageDialog.Filter = "Image Files(*.jpg) | *.jpg | Image Files(*.png) | *.png";
+            imageDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png;";
 
             if(imageDialog.ShowDialog() == DialogResult.OK)
             {
@@ -116,11 +116,36 @@ namespace AnyMessAppWin
             }
         }
 
+        public static bool SaveAgencyBtnClicked { get; set; }
         private void saveBtnAgency_Click(object sender, EventArgs e)
         {
-           if (CheckTextBoxState())
+            if (CheckTextBoxState())
             {
+                if (pbImageBox.Image != null)
+                {
+                    string stringImg = BitmapToString(pbImageBox.Image);
 
+                    Backend_Services.DatabaseConfiguration saveEditData = new Backend_Services.DatabaseConfiguration();
+
+                    saveEditData.SavaEditProfileAgency(LoginUserForm.FirstNameUser,
+                                                       stringImg, 
+                                                       tbAboutUs.Text,
+                                                       tbAddress.Text, 
+                                                       tbWebsite.Text,
+                                                       tbContact.Text,
+                                                       tbLookingFor.Text);
+                                                        
+                    MessageBox.Show("Data has been saved!");
+                    ReturnToOldState();
+
+                    SaveAgencyBtnClicked = true;
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please Insert Image!"); 
+                }
             }
            else
             {
@@ -131,10 +156,23 @@ namespace AnyMessAppWin
 
         // Utility Functions 
 
-        private string BitmapToString()
+        private void ReturnToOldState()
+        {
+            if (CheckTextBoxState())
+            {
+                tbAddress.Text = "";
+                tbAboutUs.Text = "";
+                tbContact.Text = "";
+                tbLookingFor.Text = "";
+                tbWebsite.Text = "";
+
+                pbImageBox.Image = null;
+            }
+        }
+        private string BitmapToString(Image img)
         {
             MemoryStream memorystream = new MemoryStream();
-            pbImageBox.Image.Save(memorystream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            img.Save(memorystream, System.Drawing.Imaging.ImageFormat.Jpeg);
 
             byte[] byteData = memorystream.GetBuffer();
 
@@ -145,7 +183,7 @@ namespace AnyMessAppWin
 
         private bool CheckTextBoxState()
         {
-            return (tbAddress.Text == null && tbAboutUs.Text == null && tbWebsite == null && tbContact.Text == null && tbLookingFor.Text == null);
+            return (tbAddress.Text != "" && tbAboutUs.Text != "" && tbWebsite.Text != "" && tbContact.Text != "" && tbLookingFor.Text != "");
         }
     }
 }

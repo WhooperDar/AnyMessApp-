@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -94,15 +96,18 @@ namespace AnyMessAppWin
 
 
         // Browse Image
+
+        public static string ImageFileName { get; set; }
         private void browseBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog imageFileDialog = new OpenFileDialog();
             imageFileDialog.Title = "Select Image";
-            imageFileDialog.Filter = "Image Files(*.jpg) | *.jpg | Image Files(*.png) | *.png";
+            imageFileDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png;"; // img filters
 
             if (imageFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // 243, 173
+
                 Image img = new Bitmap(imageFileDialog.FileName);
                 pbProfileHk.Image = img.GetThumbnailImage(243, 173, null, new IntPtr());
             }
@@ -111,13 +116,41 @@ namespace AnyMessAppWin
         private void RemoveImage_Click(object sender, EventArgs e)
         {
             pbProfileHk.Image = null;
+            
         }
 
+        public static bool SaveHkBtnClicked { get; set; }
         private void saveBtnHousekeeper_Click(object sender, EventArgs e)
         {
             if (CheckStateTextBox())
             {
+                if(pbProfileHk.Image != null)
+                {
+                    string stringImg = BitmapToString(pbProfileHk.Image);
 
+                    Backend_Services.DatabaseConfiguration saveEditData = new Backend_Services.DatabaseConfiguration();
+
+                    saveEditData.SaveEditProfileHousekeeper(LoginUserForm.FirstNameUser, 
+                                                            tbRate.Text,
+                                                            stringImg, 
+                                                            tbAboutMe.Text,
+                                                            tbAddress.Text, 
+                                                            tbContactNumber.Text,
+                                                            tbEmail.Text,
+                                                            tbOtherSkills.Text);
+
+                    MessageBox.Show("Data has been saved!");
+                    ReturnToOldState();
+
+                    SaveHkBtnClicked = true;
+                    this.Close();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Please Insert Image!");
+                }
+                    
             } 
             else
             {
@@ -127,10 +160,36 @@ namespace AnyMessAppWin
         }
 
         // Utility Functions 
+        private string BitmapToString(Image img)
+        {
+            MemoryStream memorystream = new MemoryStream();
+
+            img.Save(memorystream, ImageFormat.Jpeg);
+
+            byte[] byteImg = memorystream.GetBuffer();
+
+            string stringImg = Convert.ToBase64String(byteImg);
+
+            return stringImg;
+        }
+        private void ReturnToOldState()
+        {
+            if (!string.IsNullOrEmpty(tbAboutMe.Text) && !string.IsNullOrEmpty(tbAddress.Text) && !string.IsNullOrEmpty(tbContactNumber.Text) && !string.IsNullOrEmpty(tbEmail.Text) && !string.IsNullOrEmpty(tbRate.Text) && !string.IsNullOrEmpty(tbOtherSkills.Text)) 
+            {
+                tbAboutMe.Text = "";
+                tbAddress.Text = "";
+                tbContactNumber.Text = "";
+                tbEmail.Text = "";
+                tbRate.Text = "";
+                tbOtherSkills.Text = "";
+
+                pbProfileHk.Image = null;
+            }
+        }
         private bool CheckStateTextBox()
         {
-            return (tbAboutMe.Text == null || tbAddress.Text == null || tbContactNumber.Text == null || tbEmail.Text == null
-               || tbRate.Text == null);
+            return (tbAboutMe.Text != "" && tbAddress.Text != "" && tbContactNumber.Text != "" && tbEmail.Text != ""
+               && tbRate.Text != "");
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

@@ -32,8 +32,35 @@ namespace AnyMessAppWin
             initComponents();
 
             displayProfile();
+
+            UpdateProfile();
         }
 
+        private void UpdateProfile()
+        {
+            try
+            {
+                Backend_Services.DatabaseConfiguration dataEditHk = new Backend_Services.DatabaseConfiguration();
+                dataEditHk?.RetrieveHousekeeperEditData(LoginUserForm.FirstNameUser);
+
+                DataModels.EditProfileHkModel resultHkEditData = dataEditHk?.getEditDataHk();
+
+                labelAddress.Text = resultHkEditData.AddressHk;
+                labelContact.Text = resultHkEditData.ContactNumberHk;
+                labelEmail.Text = resultHkEditData.EmailHk;
+                labelHkPlace.Text = resultHkEditData.AddressHk;
+                labelSkill.Text = resultHkEditData.OtherSkills;
+                tbAboutMe.Text = resultHkEditData.AboutMeHk;
+                tbOtherSkill.Text = resultHkEditData.OtherSkills;
+
+                pbHk.Image = Backend_Services.ImageProcessor.StringToBitmap(resultHkEditData.ImageHkData);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Profile is loading...");
+            }
+
+        }
         private void ProfileHousekeeper_Load(object sender, EventArgs e)
         {
             displayProfile();
@@ -84,7 +111,9 @@ namespace AnyMessAppWin
             tbOtherSkill.ReadOnly = true;
             tbAboutMe.ReadOnly = true;
         }
+        
 
+        #region Mouse Hover Effects
         private void editProfileHk_Click_1(object sender, EventArgs e)
         {
             EdiProfileHousekeeper editProfile = new EdiProfileHousekeeper();
@@ -102,7 +131,6 @@ namespace AnyMessAppWin
             editProfileHk.BackColor = Color.FromArgb(5, 62, 189);
             editProfileHk.ForeColor = Color.White;
         }
-
-        
+        #endregion
     }
 }

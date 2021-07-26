@@ -34,15 +34,16 @@ namespace AnyMessAppWin
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.homeExitBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panelProfileParent
             // 
-            this.panelProfileParent.Location = new System.Drawing.Point(25, 88);
+            this.panelProfileParent.Location = new System.Drawing.Point(25, 136);
             this.panelProfileParent.Name = "panelProfileParent";
-            this.panelProfileParent.Size = new System.Drawing.Size(792, 747);
+            this.panelProfileParent.Size = new System.Drawing.Size(792, 699);
             this.panelProfileParent.TabIndex = 2;
             // 
             // panel7
@@ -76,11 +77,23 @@ namespace AnyMessAppWin
             this.homeExitBtn.UseVisualStyleBackColor = true;
             this.homeExitBtn.Click += new System.EventHandler(this.homeExitBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat Black", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.label3.Location = new System.Drawing.Point(26, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(320, 51);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Profile Section";
+            // 
             // ProfileSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(846, 858);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.homeExitBtn);
             this.Controls.Add(this.panelProfileParent);
@@ -93,6 +106,7 @@ namespace AnyMessAppWin
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -101,5 +115,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Panel panelProfileParent;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
     }
 }

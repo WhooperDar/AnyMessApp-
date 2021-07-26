@@ -56,7 +56,7 @@ namespace AnyMessAppWin
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbAgency = new System.Windows.Forms.PictureBox();
             this.panelChildAgency.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -68,7 +68,7 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).BeginInit();
             this.SuspendLayout();
             // 
             // panelChildAgency
@@ -233,7 +233,7 @@ namespace AnyMessAppWin
             this.panel2.Controls.Add(this.editProfileAgency);
             this.panel2.Controls.Add(this.labelAddressName);
             this.panel2.Controls.Add(this.labelAgencyName);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbAgency);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -368,15 +368,15 @@ namespace AnyMessAppWin
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // pbAgency
             // 
-            this.pictureBox1.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 208);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbAgency.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
+            this.pbAgency.Location = new System.Drawing.Point(34, 47);
+            this.pbAgency.Name = "pbAgency";
+            this.pbAgency.Size = new System.Drawing.Size(254, 208);
+            this.pbAgency.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAgency.TabIndex = 0;
+            this.pbAgency.TabStop = false;
             // 
             // ProfileAgencyChildForm
             // 
@@ -407,7 +407,7 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,7 +418,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelAddressName;
         private System.Windows.Forms.Label labelAgencyName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbAgency;
         private System.Windows.Forms.Button editProfileAgency;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;

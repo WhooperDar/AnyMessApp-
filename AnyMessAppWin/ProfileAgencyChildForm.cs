@@ -31,11 +31,37 @@ namespace AnyMessAppWin
             initTextComponents();
 
             displayProfile();
+
+            UpdateDataProfile();
         }
 
         private void ProfileAgencyChildForm_Load(object sender, EventArgs e)
         {
             displayProfile();
+            UpdateDataProfile();
+        }
+
+        private void UpdateDataProfile()
+        {
+            try
+            {
+                Backend_Services.DatabaseConfiguration agencyDB = new Backend_Services.DatabaseConfiguration();
+                agencyDB?.RetrieveAgencyEditData(LoginUserForm.FirstNameUser);
+
+                var dataAgencyProfile = agencyDB?.getEditDataAgency();
+
+                labelAddress.Text = dataAgencyProfile.AddressData.ToString();
+                labelAddressName.Text = dataAgencyProfile.AddressData.ToString();
+                labelContact.Text = dataAgencyProfile.AgencyContact.ToString();
+                labelWebsite.Text = dataAgencyProfile.WebsiteData.ToString();
+
+                pbAgency.Image = Backend_Services.ImageProcessor.StringToBitmap(dataAgencyProfile.ImageAgencyData);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         #region DisplayProfileAgencies
@@ -58,34 +84,32 @@ namespace AnyMessAppWin
                 MessageBox.Show("Profile cannot load");
             }
         }
+
         // Agency Profile Display 
+
+
         private void displayProfileAgency()
         {
-           /* try
-            {*/
-                Backend_Services.DatabaseConfiguration fetchData = new Backend_Services.DatabaseConfiguration();
-                fetchData.fetchAgencyDataDB(LoginUserForm.FirstNameUser);
-                fetchData.fetchCreateAccountData(LoginUserForm.UserNameUser);
 
-                DataCreateAccount dataCreateAccount = Backend_Services.DatabaseConfiguration.GetDataCreateAccount();
-                Data dataAgency = Backend_Services.DatabaseConfiguration.GetDataProfileAgency();
+            Backend_Services.DatabaseConfiguration fetchData = new Backend_Services.DatabaseConfiguration();
+            fetchData?.fetchAgencyDataDB(LoginUserForm.FirstNameUser);
+            fetchData?.fetchCreateAccountData(LoginUserForm.UserNameUser);
 
-                labelAgencyName.Text = (dataAgency.AgencyName).ToString();
-                labelAddressName.Text = (dataAgency.AgencyAddress).ToString();
-                labelContact.Text = (dataAgency.AgencyContactNumber).ToString();
-                labelAddress.Text = (dataAgency.AgencyAddress).ToString();
-                labelWebsite.Text = (dataAgency.AgencyWebsite).ToString();
-                labelEmail.Text = (dataCreateAccount.Email).ToString();
+            DataCreateAccount dataCreateAccount = Backend_Services.DatabaseConfiguration.GetDataCreateAccount();
+            Data dataAgency = Backend_Services.DatabaseConfiguration.GetDataProfileAgency();
 
-           /* }
-            catch(Exception)
-            {
-                MessageBox.Show("Error Internet Connection");
-            }          */
+
+            labelAgencyName.Text = (dataAgency.AgencyName).ToString();
+            labelAddressName.Text = (dataAgency.AgencyAddress).ToString();
+            labelContact.Text = (dataAgency.AgencyContactNumber).ToString();
+            labelAddress.Text = (dataAgency.AgencyAddress).ToString();
+            labelWebsite.Text = (dataAgency.AgencyWebsite).ToString();
+            labelEmail.Text = (dataCreateAccount.Email).ToString();
         }
         #endregion
 
         #region Utility Functions
+
         private void initTextComponents()
         {
             // For Rounded Corners

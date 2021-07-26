@@ -171,7 +171,7 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Edit Profile to Database (Agency)
-        private async void SavaEditProfileAgency(string agencyName, string imageAgencyData, string aboutUs, string addressData, string websiteData, string agencyContact, string agencyLookingfor)
+        public async void SavaEditProfileAgency(string agencyName, string imageAgencyData, string aboutUs, string addressData, string websiteData, string agencyContact, string agencyLookingfor)
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -202,7 +202,7 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Edit Profile to Database (Employer)
-        private async void SaveEditProfileEmployer(string employerName, string imageAgencyData, string aboutMe, string addressData, string emailData, string contactNumber, string lookingFor)
+        public async void SaveEditProfileEmployer(string employerName, string imageAgencyData, string aboutMe, string addressData, string emailData, string contactNumber, string lookingFor)
         {
             client = new FireSharp.FirebaseClient(config);
             if (employerName != null && imageAgencyData != null && aboutMe != null && addressData != null && emailData != null)
@@ -237,7 +237,7 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Edit Profile to DB (Housekeeper)
-        private async void SaveEditProfileHousekeeper(string firstName, string rateHk, string imageHkData, string aboutMeHk, string addressHk, string contactNumber, string emailHk, string skill)
+        public async void SaveEditProfileHousekeeper(string firstName, string rateHk, string imageHkData, string aboutMeHk, string addressHk, string contactNumber, string emailHk, string skill)
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -272,15 +272,6 @@ namespace AnyMessAppWin.Backend_Services
                 MessageBox.Show("Invalid Input!");
             }
         }
-
-
-        /* public string AgencyName { get; set; }
-         public string ImageAgencyData { get; set; }
-         public string AboutUs { get; set; }
-         public string AddressData { get; set; }
-         public string WebsiteData { get; set; }
-         public string AgencyContact { get; set; }
-         public string AgencyLookingFor { get; set; }*/
 
         // Agency
         FirebaseResponse response;
@@ -400,6 +391,95 @@ namespace AnyMessAppWin.Backend_Services
         public static DataCreateAccount GetDataCreateAccount()
         {
             return createAccountResult; 
+        }
+
+
+        // Retrieve Edit Profile Data
+        static DataModels.EditProfileAgencyModel dataEditResultAgency; 
+        public async void RetrieveAgencyEditData(string firstname)
+        {
+            client = new FireSharp.FirebaseClient(config);
+            
+            if(firstname != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Edit Profile Agency/" + firstname);
+                    dataEditResultAgency = response.ResultAs<DataModels.EditProfileAgencyModel>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Name does not exist!"); 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name"); 
+            }
+        }
+
+        public DataModels.EditProfileAgencyModel getEditDataAgency()
+        {
+            return dataEditResultAgency; 
+        }
+
+        // Retrieve Edit Profile Data
+        static DataModels.EditProfileEmployerModel dataEditResultEmployer; 
+        public async void RetrieveEmployerEditData(string firstname)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            if(firstname != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Edit Profile Employer/"+ firstname);
+                    dataEditResultEmployer = response.ResultAs<DataModels.EditProfileEmployerModel>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Name does not exist");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+            }
+        }
+
+        public DataModels.EditProfileEmployerModel getEditDataEmployer()
+        {
+            return dataEditResultEmployer; 
+        }
+
+
+        // Retrieve Housekeeper Edit Data
+        static DataModels.EditProfileHkModel dataEditResultHk; 
+        public async void RetrieveHousekeeperEditData(string firstname)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            if(firstname != null)
+            {
+                try
+                {
+                    response = await client.GetTaskAsync("Edit Profile Housekeeper/" + firstname);
+                    dataEditResultHk = response.ResultAs<DataModels.EditProfileHkModel>();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Name does not exist");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Name");
+            }
+        }
+
+        public DataModels.EditProfileHkModel getEditDataHk()
+        {
+            return dataEditResultHk;
         }
     }
 }
