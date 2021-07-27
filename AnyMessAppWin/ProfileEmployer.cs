@@ -48,9 +48,9 @@ namespace AnyMessAppWin
             try
             {
                 Backend_Services.DatabaseConfiguration retrieveData = new Backend_Services.DatabaseConfiguration();
-                retrieveData?.RetrieveEmployerEditData(LoginUserForm.FirstNameUser);
+                retrieveData.RetrieveEmployerEditData(LoginUserForm.FirstNameUser);
 
-                DataModels.EditProfileEmployerModel dataEmployerResult =  retrieveData?.getEditDataEmployer();
+                DataModels.EditProfileEmployerModel dataEmployerResult =  retrieveData.getEditDataEmployer();
 
                 labelAddress.Text = dataEmployerResult.employerAddress;
                 labelContact.Text = dataEmployerResult.employerContact;
@@ -60,10 +60,7 @@ namespace AnyMessAppWin
 
                 pbEmployer.Image = Backend_Services.ImageProcessor.StringToBitmap(dataEmployerResult.ImageEmployerData);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception) { MessageBox.Show("Profile loading..."); }
         }
 
         private void displayProfile()
@@ -74,10 +71,7 @@ namespace AnyMessAppWin
                 {
                     displayProfileEmployer();
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Profile loading...");
-                }
+                catch (Exception) { }
             }
             else
             {
@@ -88,21 +82,25 @@ namespace AnyMessAppWin
         private void displayProfileEmployer()
         {
 
-            Backend_Services.DatabaseConfiguration fetchEmployerData = new Backend_Services.DatabaseConfiguration();
+            try
+            {
+                Backend_Services.DatabaseConfiguration fetchEmployerData = new Backend_Services.DatabaseConfiguration();
 
-                
                 fetchEmployerData?.fetchEmployerDataDB(LoginUserForm.FirstNameUser);
                 fetchEmployerData?.fetchCreateAccountData(LoginUserForm.UserNameUser);
 
                 DataEmployer dataEmployer = Backend_Services.DatabaseConfiguration.GetDataProfileEmployer();
                 DataCreateAccount dataCreateAccount = Backend_Services.DatabaseConfiguration.GetDataCreateAccount();
 
-                labelEmployerName.Text = (dataEmployer.EmployerName).ToString();
-                labelAddress.Text = (dataEmployer.EmployerAddress).ToString();
-                labelPlace.Text = (dataEmployer.EmployerAddress).ToString();
-                labelEmail.Text = dataEmployer.EmployerAddress.ToString();
-                labelContact.Text = (dataEmployer.EmployerContactNumber).ToString();
-                labelEmail.Text = dataCreateAccount.Email.ToString();
+                labelEmployerName.Text = dataEmployer.EmployerName;
+                labelAddress.Text = dataEmployer.EmployerAddress;
+                labelPlace.Text = dataEmployer.EmployerAddress;
+                labelEmail.Text = dataEmployer.EmployerAddress;
+                labelContact.Text = dataEmployer.EmployerContactNumber;
+                labelEmail.Text = dataCreateAccount.Email;
+            }
+            catch(Exception) { }
+          
            
         }
 

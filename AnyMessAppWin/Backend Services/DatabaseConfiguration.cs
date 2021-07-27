@@ -7,9 +7,10 @@ using FireSharp.Response;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using System.Windows.Forms;
+using System.Data;
 
 namespace AnyMessAppWin.Backend_Services
-{   
+{
     public class DatabaseConfiguration
     {
         IFirebaseConfig config = new FirebaseConfig
@@ -18,9 +19,9 @@ namespace AnyMessAppWin.Backend_Services
             BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
         };
 
-        IFirebaseClient client; 
+        IFirebaseClient client;
 
-        private static string typeOfUser; 
+        private static string typeOfUser;
         // Agency
         public async void SaveDataAgency(string name, string address, string contact, string website, string agencyCode)
         {
@@ -28,7 +29,7 @@ namespace AnyMessAppWin.Backend_Services
 
             typeOfUser = "Agency";
 
-            if(name != null && address != null && address != null && contact != null && website != null && agencyCode != null)
+            if (name != null && address != null && address != null && contact != null && website != null && agencyCode != null)
             {
                 // Agency Data 
                 Data agencyData = new Data
@@ -56,7 +57,7 @@ namespace AnyMessAppWin.Backend_Services
             else
             {
                 MessageBox.Show("Invalid Data!");
-            }        
+            }
         }
 
         // Housekeeper
@@ -97,7 +98,7 @@ namespace AnyMessAppWin.Backend_Services
             else
             {
                 MessageBox.Show("Invalid Data");
-            }     
+            }
         }
 
         // Employer
@@ -131,7 +132,7 @@ namespace AnyMessAppWin.Backend_Services
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }        
+            }
         }
 
         // Login Account Save 
@@ -143,7 +144,7 @@ namespace AnyMessAppWin.Backend_Services
             if (SignUpEmployer.EmployerClicked) { typeOfUser = "Employer"; }
             if (SignUpHousekeeping.HousekeepingClicked) { typeOfUser = "Housekeeping"; }
 
-            if(username != null && firstname != null && email != null && password != null && confirmpass != null)
+            if (username != null && firstname != null && email != null && password != null && confirmpass != null)
             {
                 // Send Create Data to Firebase
                 DataCreateAccount createData = new DataCreateAccount
@@ -167,7 +168,7 @@ namespace AnyMessAppWin.Backend_Services
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }        
+            }
         }
 
         // Edit Profile to Database (Agency)
@@ -184,7 +185,7 @@ namespace AnyMessAppWin.Backend_Services
                     AddressData = addressData,
                     ImageAgencyData = imageAgencyData,
                     WebsiteData = websiteData,
-                    AgencyContact = agencyContact, 
+                    AgencyContact = agencyContact,
                     AgencyLookingFor = agencyLookingfor
                 };
 
@@ -198,7 +199,7 @@ namespace AnyMessAppWin.Backend_Services
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }         
+            }
         }
 
         // Edit Profile to Database (Employer)
@@ -224,11 +225,11 @@ namespace AnyMessAppWin.Backend_Services
 
                     MessageBox.Show("Saved Successfully!");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message); 
+                    MessageBox.Show(ex.Message);
                 }
-                
+
             }
             else
             {
@@ -261,11 +262,11 @@ namespace AnyMessAppWin.Backend_Services
 
                     MessageBox.Show("Saved Successfully!");
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
+
             }
             else
             {
@@ -278,16 +279,16 @@ namespace AnyMessAppWin.Backend_Services
         static Data dataAgencyResult;
         public async void fetchAgencyDataDB(string name)
         {
-            client = new FireSharp.FirebaseClient(config);   
+            client = new FireSharp.FirebaseClient(config);
 
-            if(name != null)
+            if (name != null)
             {
                 try
                 {
                     response = await client.GetTaskAsync("Agency Information/" + name);
                     dataAgencyResult = response.ResultAs<Data>();
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     MessageBox.Show($"{name} does not found!");
                 }
@@ -296,7 +297,7 @@ namespace AnyMessAppWin.Backend_Services
             {
                 MessageBox.Show("Invalid Name");
             }
-            
+
         }
 
         public static Data GetDataProfileAgency()
@@ -305,12 +306,12 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         // Employer
-        static DataEmployer dataEmployerResult; 
+        static DataEmployer dataEmployerResult;
         public async void fetchEmployerDataDB(string name)
         {
             client = new FireSharp.FirebaseClient(config);
 
-            if(name != null)
+            if (name != null)
             {
                 try
                 {
@@ -330,7 +331,7 @@ namespace AnyMessAppWin.Backend_Services
 
         public static DataEmployer GetDataProfileEmployer()
         {
-            return dataEmployerResult; 
+            return dataEmployerResult;
         }
 
 
@@ -341,11 +342,11 @@ namespace AnyMessAppWin.Backend_Services
         {
             client = new FireSharp.FirebaseClient(config);
 
-            if(name != null)
+            if (name != null)
             {
                 try
                 {
-                    response = await client.GetTaskAsync("Housekeeper Information/"+name);
+                    response = await client.GetTaskAsync("Housekeeper Information/" + name);
                     dataHousekeeperResult = response.ResultAs<DataHousekeeper>();
                 }
                 catch (Exception)
@@ -361,16 +362,16 @@ namespace AnyMessAppWin.Backend_Services
 
         public static DataHousekeeper GetDataProfileHk()
         {
-            return dataHousekeeperResult; 
+            return dataHousekeeperResult;
         }
 
         // Create Account
-        static DataCreateAccount createAccountResult; 
+        static DataCreateAccount createAccountResult;
         public async void fetchCreateAccountData(string username)
         {
             client = new FireSharp.FirebaseClient(config);
 
-            if(username != null)
+            if (username != null)
             {
                 try
                 {
@@ -390,17 +391,17 @@ namespace AnyMessAppWin.Backend_Services
 
         public static DataCreateAccount GetDataCreateAccount()
         {
-            return createAccountResult; 
+            return createAccountResult;
         }
 
 
         // Retrieve Edit Profile Data
-        static DataModels.EditProfileAgencyModel dataEditResultAgency; 
+        static DataModels.EditProfileAgencyModel dataEditResultAgency;
         public async void RetrieveAgencyEditData(string firstname)
         {
             client = new FireSharp.FirebaseClient(config);
-            
-            if(firstname != null)
+
+            if (firstname != null)
             {
                 try
                 {
@@ -409,31 +410,31 @@ namespace AnyMessAppWin.Backend_Services
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Name does not exist!"); 
+                    MessageBox.Show("Name does not exist!");
                 }
             }
             else
             {
-                MessageBox.Show("Invalid Name"); 
+                MessageBox.Show("Invalid Name");
             }
         }
 
         public DataModels.EditProfileAgencyModel getEditDataAgency()
         {
-            return dataEditResultAgency; 
+            return dataEditResultAgency;
         }
 
         // Retrieve Edit Profile Data
-        static DataModels.EditProfileEmployerModel dataEditResultEmployer; 
+        static DataModels.EditProfileEmployerModel dataEditResultEmployer;
         public async void RetrieveEmployerEditData(string firstname)
         {
             client = new FireSharp.FirebaseClient(config);
 
-            if(firstname != null)
+            if (firstname != null)
             {
                 try
                 {
-                    response = await client.GetTaskAsync("Edit Profile Employer/"+ firstname);
+                    response = await client.GetTaskAsync("Edit Profile Employer/" + firstname);
                     dataEditResultEmployer = response.ResultAs<DataModels.EditProfileEmployerModel>();
                 }
                 catch (Exception)
@@ -449,17 +450,17 @@ namespace AnyMessAppWin.Backend_Services
 
         public DataModels.EditProfileEmployerModel getEditDataEmployer()
         {
-            return dataEditResultEmployer; 
+            return dataEditResultEmployer;
         }
 
 
         // Retrieve Housekeeper Edit Data
-        static DataModels.EditProfileHkModel dataEditResultHk; 
+        static DataModels.EditProfileHkModel dataEditResultHk;
         public async void RetrieveHousekeeperEditData(string firstname)
         {
             client = new FireSharp.FirebaseClient(config);
 
-            if(firstname != null)
+            if (firstname != null)
             {
                 try
                 {
@@ -481,5 +482,159 @@ namespace AnyMessAppWin.Backend_Services
         {
             return dataEditResultHk;
         }
+
+        // Agency List and Housekeeping List Configuration
+
+        public async void AgencyListData(string imageData, string agencyName, string agencyAddress)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            try
+            {
+                FirebaseResponse responseID = await client.GetTaskAsync("1AgencyList/activeNodes/");
+                ActiveList_Counter.AgencyListCounter agencyId = responseID.ResultAs<ActiveList_Counter.AgencyListCounter>(); // retrieve data counter
+
+                var agencyListData = new DataModels.AgencyListData
+                {
+                    AgencyID = (Convert.ToInt32(agencyId.count) + 1).ToString(), // counter incremented
+                    AgencyName = agencyName,
+                    AgencyAddress = agencyAddress,
+                    ImageData = imageData
+                };
+
+                SetResponse reponseAgencyData = await client.SetTaskAsync("3AgencyListData/" + agencyListData.AgencyID, agencyListData);
+                var resultAgencyData = reponseAgencyData.ResultAs<DataModels.AgencyListData>();
+
+                var counter = new ActiveList_Counter.AgencyListCounter
+                {
+                    count = resultAgencyData.AgencyID
+                };
+
+                SetResponse responseCounter = await client.SetTaskAsync("1AgencyList/activeNodes/", counter);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        DataModels.HousekeepingListData resultHkData;
+        public async void HousekeepingListData(string imageData, string hkName, string categorySkill)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            try
+            {
+                FirebaseResponse responseHk = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
+                var hkId = responseHk.ResultAs<ActiveList_Counter.HousekeepingListCounter>();
+
+                var housekeepingListData = new DataModels.HousekeepingListData
+                {
+                    HousekeeperID = (Convert.ToInt32(hkId.count) + 1).ToString(),
+                    HousekeeperName = hkName,
+                    Category = categorySkill,
+                    ImageData = imageData
+                };
+
+                SetResponse responseHkData = await client.SetTaskAsync("3HousekeepingListData/" + housekeepingListData.HousekeeperID, housekeepingListData);
+
+                resultHkData = responseHkData.ResultAs<DataModels.HousekeepingListData>();
+
+                var counter = new ActiveList_Counter.HousekeepingListCounter
+                {
+                    count = resultHkData.HousekeeperID
+                };
+
+                SetResponse responseCounter = await client.SetTaskAsync("2HousekeepingList/activeNodes/", counter);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        static DataModels.HousekeepingListData resultDataHk;
+        static ActiveList_Counter.HousekeepingListCounter resultID;
+        public async void UpdateHousekeepingList(string imageData, string hkName, string hkSkill)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            FirebaseResponse responseID, responseHk;
+
+            try
+            {
+                // Housekeeping ID 
+                responseID = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
+                resultID = responseID.ResultAs<ActiveList_Counter.HousekeepingListCounter>();
+
+                // Housekeeping Data 
+                responseHk = await client.GetTaskAsync("3HousekeepingListData/" + resultID.count);
+                resultDataHk = responseHk.ResultAs<DataModels.HousekeepingListData>();
+
+                // Compare Data from user in put to firebase
+                if ((resultID.count == resultDataHk.HousekeeperID) && (hkName == resultDataHk.HousekeeperName))
+                {
+                    var hkData = new DataModels.HousekeepingListData
+                    {
+                        HousekeeperID = resultID.count,
+                        Category = hkSkill,
+                        HousekeeperName = hkName,
+                        ImageData = imageData
+
+                    };
+
+                    responseHk = await client.UpdateTaskAsync("3HousekeepingListData/" + resultID.count, hkData);
+                    resultDataHk = responseHk.ResultAs<DataModels.HousekeepingListData>();
+
+                    MessageBox.Show($"{resultDataHk.HousekeeperName} updated");
+                }
+            }
+            catch(Exception)
+            {
+                HousekeepingListData(imageData, hkName, hkSkill);
+            }
+          
+        }
+
+        static DataTable dt = new DataTable();
+        public async void GetItemsTable()
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            FirebaseResponse responseIdHkData = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
+            ActiveList_Counter.HousekeepingListCounter resultIdData = responseIdHkData.ResultAs<ActiveList_Counter.HousekeepingListCounter>();
+
+           
+            int cnt = Convert.ToInt32(resultIdData.count);
+
+            int i = 0; 
+            while (true)
+            {
+                i++;
+                if (i == cnt)
+                {
+                    break; 
+                }
+
+                try
+                {
+                    FirebaseResponse responseDataHk2 = await client.GetTaskAsync("3HousekeepingListData/" + i);
+                    DataModels.HousekeepingListData dataResultHk = responseDataHk2.ResultAs<DataModels.HousekeepingListData>();
+
+                    DataRow row = dt.NewRow();
+                    row["Name"] = dataResultHk.HousekeeperName;
+                    row["Category"] = dataResultHk.Category;
+                    row["ImageString"] = dataResultHk.ImageData;
+
+                    dt.Rows.Add(row);
+                }
+                
+                catch (Exception) { }
+                
+            }
+        }
+
+        public static DataTable getTable()
+        {
+            return dt;
+        }
     }
 }
+  

@@ -40,6 +40,7 @@ namespace AnyMessAppWin
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.MarketAgencyBtn = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
@@ -147,17 +148,36 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Black", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(24, 94);
+            this.label3.Location = new System.Drawing.Point(24, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 61);
+            this.label3.Size = new System.Drawing.Size(390, 60);
             this.label3.TabIndex = 26;
             this.label3.Text = "Agency Section";
+            // 
+            // MarketAgencyBtn
+            // 
+            this.MarketAgencyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.MarketAgencyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.MarketAgencyBtn.FlatAppearance.BorderSize = 0;
+            this.MarketAgencyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MarketAgencyBtn.Font = new System.Drawing.Font("Montserrat Black", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarketAgencyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.MarketAgencyBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MarketAgencyBtn.Location = new System.Drawing.Point(625, 112);
+            this.MarketAgencyBtn.Name = "MarketAgencyBtn";
+            this.MarketAgencyBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.MarketAgencyBtn.Size = new System.Drawing.Size(189, 42);
+            this.MarketAgencyBtn.TabIndex = 27;
+            this.MarketAgencyBtn.Text = "Market Your Agency";
+            this.MarketAgencyBtn.UseVisualStyleBackColor = false;
+            this.MarketAgencyBtn.Click += new System.EventHandler(this.MarketAgencyBtn_Click);
             // 
             // AgencyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(846, 858);
+            this.Controls.Add(this.MarketAgencyBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -191,5 +211,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button MarketAgencyBtn;
     }
 }

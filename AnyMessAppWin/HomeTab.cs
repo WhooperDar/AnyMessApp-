@@ -43,8 +43,6 @@ namespace AnyMessAppWin
 
             // For Rounded Corner Buttons
             ContactUs2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ContactUs2.Width, ContactUs2.Height, 30, 30));
-
-            MessageBox.Show($"{LoginUserForm.TypeOfDataUser} {LoginUserForm.FirstNameUser}");
         
         }
 
@@ -189,26 +187,6 @@ namespace AnyMessAppWin
             SweepingBtn.ForeColor = Color.FromArgb(239, 239, 239);
         }
         #endregion
-
-     
-
-        #region Mouse Hover Effect (Market Service)
-        // Mouse Enter Event (Market Service)
-        private void MarketServiceBtn_MouseEnter(object sender, EventArgs e)
-        {
-            MarketServiceBtn.BackColor = Color.FromArgb(255, 201, 72);
-            MarketServiceBtn.ForeColor = Color.FromArgb(5, 62, 189);
-            MarketServiceBtn.Image = Properties.Resources.plane_blue;
-        }
-        // Mouse Leave Event (Market Service)
-        private void MarketServiceBtn_MouseLeave(object sender, EventArgs e)
-        {
-            MarketServiceBtn.BackColor = Color.FromArgb(5, 62, 189);
-            MarketServiceBtn.ForeColor = Color.FromArgb(239, 239, 239);
-            MarketServiceBtn.Image = Properties.Resources.plane_white;
-        }
-        #endregion
-
 
 
         #region Mouse Hover Effect (Exit Button)

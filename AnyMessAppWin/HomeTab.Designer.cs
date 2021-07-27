@@ -50,7 +50,6 @@ namespace AnyMessAppWin
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.LaundryButton = new System.Windows.Forms.Button();
             this.CookingBtn = new System.Windows.Forms.Button();
-            this.MarketServiceBtn = new System.Windows.Forms.Button();
             this.homeExitBtn = new System.Windows.Forms.Button();
             this.SweepingBtn = new System.Windows.Forms.Button();
             this.CleaningBtn = new System.Windows.Forms.Button();
@@ -267,7 +266,6 @@ namespace AnyMessAppWin
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.LaundryButton);
             this.panel2.Controls.Add(this.CookingBtn);
-            this.panel2.Controls.Add(this.MarketServiceBtn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.homeExitBtn);
             this.panel2.Controls.Add(this.SweepingBtn);
@@ -332,25 +330,6 @@ namespace AnyMessAppWin
             this.CookingBtn.UseVisualStyleBackColor = false;
             this.CookingBtn.MouseEnter += new System.EventHandler(this.CookingBtn_MouseEnter_1);
             this.CookingBtn.MouseLeave += new System.EventHandler(this.CookingBtn_MouseLeave);
-            // 
-            // MarketServiceBtn
-            // 
-            this.MarketServiceBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.MarketServiceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.MarketServiceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MarketServiceBtn.Font = new System.Drawing.Font("Montserrat SemiBold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarketServiceBtn.ForeColor = System.Drawing.Color.White;
-            this.MarketServiceBtn.Image = ((System.Drawing.Image)(resources.GetObject("MarketServiceBtn.Image")));
-            this.MarketServiceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarketServiceBtn.Location = new System.Drawing.Point(524, 40);
-            this.MarketServiceBtn.Name = "MarketServiceBtn";
-            this.MarketServiceBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.MarketServiceBtn.Size = new System.Drawing.Size(173, 42);
-            this.MarketServiceBtn.TabIndex = 11;
-            this.MarketServiceBtn.Text = "    Market Your Service";
-            this.MarketServiceBtn.UseVisualStyleBackColor = false;
-            this.MarketServiceBtn.MouseEnter += new System.EventHandler(this.MarketServiceBtn_MouseEnter);
-            this.MarketServiceBtn.MouseLeave += new System.EventHandler(this.MarketServiceBtn_MouseLeave);
             // 
             // homeExitBtn
             // 
@@ -609,7 +588,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Button LaundryBtn;
         private System.Windows.Forms.Button SweepingBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button MarketServiceBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

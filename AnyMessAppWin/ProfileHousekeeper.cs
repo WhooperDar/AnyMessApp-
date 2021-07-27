@@ -52,6 +52,7 @@ namespace AnyMessAppWin
                 labelSkill.Text = resultHkEditData.OtherSkills;
                 tbAboutMe.Text = resultHkEditData.AboutMeHk;
                 tbOtherSkill.Text = resultHkEditData.OtherSkills;
+                labelRate.Text = $"{resultHkEditData.RateHk}/hr"; 
 
                 pbHk.Image = Backend_Services.ImageProcessor.StringToBitmap(resultHkEditData.ImageHkData);
             }
@@ -64,6 +65,7 @@ namespace AnyMessAppWin
         private void ProfileHousekeeper_Load(object sender, EventArgs e)
         {
             displayProfile();
+            UpdateProfile();
         }
         private void displayProfile()
         {
@@ -73,10 +75,7 @@ namespace AnyMessAppWin
                 {
                     displayProfileHousekeeping();
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Profile is loading...");
-                }
+                catch (Exception) { }
             }
             else
             {

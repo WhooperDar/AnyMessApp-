@@ -175,6 +175,8 @@
     <Compile Include="3SignUpAsForms.Designer.cs">
       <DependentUpon>3SignUpAsForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActiveList Counter\AgencyListCounter.cs" />
+    <Compile Include="ActiveList Counter\HousekeepingListCounter.cs" />
     <Compile Include="AgencyList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +196,11 @@
     <Compile Include="DataCreateAccount.cs" />
     <Compile Include="DataEmployer.cs" />
     <Compile Include="DataHousekeeper.cs" />
+    <Compile Include="DataModels\AgencyListData.cs" />
     <Compile Include="DataModels\EditProfileAgencyModel.cs" />
     <Compile Include="DataModels\EditProfileEmployerModel.cs" />
     <Compile Include="DataModels\EditProfileHkModel.cs" />
+    <Compile Include="DataModels\HousekeepingListData.cs" />
     <Compile Include="Dynamic User Controls\AgencyTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -256,6 +260,18 @@
     </Compile>
     <Compile Include="MainFormPage.Designer.cs">
       <DependentUpon>MainFormPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarketServices\MarketAgency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarketServices\MarketAgency.Designer.cs">
+      <DependentUpon>MarketAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarketServices\MarketHousekeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarketServices\MarketHousekeeper.Designer.cs">
+      <DependentUpon>MarketHousekeeper.cs</DependentUpon>
     </Compile>
     <Compile Include="ProfileAgencyChildForm.cs">
       <SubType>Form</SubType>
@@ -363,6 +379,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormPage.resx">
       <DependentUpon>MainFormPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketServices\MarketAgency.resx">
+      <DependentUpon>MarketAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketServices\MarketHousekeeper.resx">
+      <DependentUpon>MarketHousekeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProfileAgencyChildForm.resx">
       <DependentUpon>ProfileAgencyChildForm.cs</DependentUpon>
@@ -598,5 +620,6 @@
   <ItemGroup>
     <None Include="bin\Debug\Icons\experience.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

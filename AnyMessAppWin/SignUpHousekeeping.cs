@@ -83,7 +83,7 @@ namespace AnyMessAppWin
         }
         private void hkContactBox_Enter(object sender, EventArgs e)
         {
-            if (hkContactBox.Text == "Enter Contact")
+            if (hkContactBox.Text == "Enter Contact Number")
             {
                 hkContactBox.Text = "";
                 hkContactBox.ForeColor = Color.FromArgb(5, 62, 189);

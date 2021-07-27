@@ -43,7 +43,6 @@ namespace AnyMessAppWin
             this.usernameLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.firstNameCreate = new System.Windows.Forms.TextBox();
-            this.exitBtnCreate = new System.Windows.Forms.Button();
             this.panelCreateAccParent = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -211,18 +210,6 @@ namespace AnyMessAppWin
             this.firstNameCreate.Text = "First Name";
             this.firstNameCreate.Enter += new System.EventHandler(this.firstNameCreate_Enter);
             // 
-            // exitBtnCreate
-            // 
-            this.exitBtnCreate.FlatAppearance.BorderSize = 0;
-            this.exitBtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtnCreate.Image = ((System.Drawing.Image)(resources.GetObject("exitBtnCreate.Image")));
-            this.exitBtnCreate.Location = new System.Drawing.Point(445, 1);
-            this.exitBtnCreate.Name = "exitBtnCreate";
-            this.exitBtnCreate.Size = new System.Drawing.Size(55, 29);
-            this.exitBtnCreate.TabIndex = 41;
-            this.exitBtnCreate.UseVisualStyleBackColor = true;
-            this.exitBtnCreate.Click += new System.EventHandler(this.exitBtnCreate_Click);
-            // 
             // panelCreateAccParent
             // 
             this.panelCreateAccParent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -237,7 +224,6 @@ namespace AnyMessAppWin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(504, 673);
-            this.Controls.Add(this.exitBtnCreate);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.firstNameCreate);
             this.Controls.Add(this.usernameLabel);
@@ -277,7 +263,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox firstNameCreate;
-        private System.Windows.Forms.Button exitBtnCreate;
         private System.Windows.Forms.Panel panelCreateAccParent;
     }
 }

@@ -50,17 +50,17 @@ namespace AnyMessAppWin
 
                 var dataAgencyProfile = agencyDB?.getEditDataAgency();
 
-                labelAddress.Text = dataAgencyProfile.AddressData.ToString();
-                labelAddressName.Text = dataAgencyProfile.AddressData.ToString();
-                labelContact.Text = dataAgencyProfile.AgencyContact.ToString();
-                labelWebsite.Text = dataAgencyProfile.WebsiteData.ToString();
+                labelAddress.Text = dataAgencyProfile.AddressData;
+                labelAddressName.Text = dataAgencyProfile.AddressData;
+                labelContact.Text = dataAgencyProfile.AgencyContact;
+                labelWebsite.Text = dataAgencyProfile.WebsiteData;
+                tbLooking.Text = dataAgencyProfile.AgencyLookingFor;
+                tbAboutUs.Text = dataAgencyProfile.AboutUs;
 
                 pbAgency.Image = Backend_Services.ImageProcessor.StringToBitmap(dataAgencyProfile.ImageAgencyData);
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch(Exception) { MessageBox.Show("Profile loading..."); }
+
             
         }
 
@@ -73,11 +73,7 @@ namespace AnyMessAppWin
                 {
                     displayProfileAgency();
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Profile Loading...");
-                }
-                
+                catch (Exception) { }
             }
             else
             {
@@ -90,7 +86,6 @@ namespace AnyMessAppWin
 
         private void displayProfileAgency()
         {
-
             Backend_Services.DatabaseConfiguration fetchData = new Backend_Services.DatabaseConfiguration();
             fetchData?.fetchAgencyDataDB(LoginUserForm.FirstNameUser);
             fetchData?.fetchCreateAccountData(LoginUserForm.UserNameUser);

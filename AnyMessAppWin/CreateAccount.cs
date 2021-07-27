@@ -83,11 +83,6 @@ namespace AnyMessAppWin
             
         }
 
-        private void exitBtnCreate_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         #region Text Effects(TextBoxes)
         // Text Changed to blue
         private void firstNameCreate_Enter(object sender, EventArgs e)

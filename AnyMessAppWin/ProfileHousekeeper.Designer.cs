@@ -36,40 +36,40 @@ namespace AnyMessAppWin
             this.panel9 = new System.Windows.Forms.Panel();
             this.editProfileHk = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelHkPlace = new System.Windows.Forms.Label();
             this.labelHkName = new System.Windows.Forms.Label();
+            this.pbHk = new System.Windows.Forms.PictureBox();
             this.labelAddress = new System.Windows.Forms.Label();
             this.detailsPanel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelEmail = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelContact = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tbOtherSkill = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelSkill = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelChildAgency = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbHk = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).BeginInit();
             this.detailsPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelChildAgency.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panelChildAgency.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbAboutMe
@@ -131,7 +131,7 @@ namespace AnyMessAppWin
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.labelRate);
             this.panel2.Controls.Add(this.tbAboutMe);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel11);
@@ -146,6 +146,27 @@ namespace AnyMessAppWin
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(774, 272);
             this.panel2.TabIndex = 0;
+            // 
+            // labelRate
+            // 
+            this.labelRate.AutoSize = true;
+            this.labelRate.Font = new System.Drawing.Font("Montserrat ExtraBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.labelRate.Location = new System.Drawing.Point(613, 203);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(174, 52);
+            this.labelRate.TabIndex = 8;
+            this.labelRate.Text = "Rate/hr";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AnyMessAppWin.Properties.Resources.loc_gray;
+            this.pictureBox2.Location = new System.Drawing.Point(312, 93);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // labelHkPlace
             // 
@@ -168,6 +189,16 @@ namespace AnyMessAppWin
             this.labelHkName.Size = new System.Drawing.Size(166, 41);
             this.labelHkName.TabIndex = 1;
             this.labelHkName.Text = "Hk Name";
+            // 
+            // pbHk
+            // 
+            this.pbHk.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
+            this.pbHk.Location = new System.Drawing.Point(34, 47);
+            this.pbHk.Name = "pbHk";
+            this.pbHk.Size = new System.Drawing.Size(254, 208);
+            this.pbHk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbHk.TabIndex = 0;
+            this.pbHk.TabStop = false;
             // 
             // labelAddress
             // 
@@ -194,6 +225,16 @@ namespace AnyMessAppWin
             this.detailsPanel.Size = new System.Drawing.Size(371, 178);
             this.detailsPanel.TabIndex = 0;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(20, 128);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
@@ -205,6 +246,16 @@ namespace AnyMessAppWin
             this.labelEmail.TabIndex = 10;
             this.labelEmail.Text = "Email Address";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(20, 74);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // labelContact
             // 
             this.labelContact.AutoSize = true;
@@ -215,6 +266,16 @@ namespace AnyMessAppWin
             this.labelContact.Size = new System.Drawing.Size(176, 26);
             this.labelContact.TabIndex = 8;
             this.labelContact.Text = "Contact Number";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(20, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // tbOtherSkill
             // 
@@ -256,7 +317,7 @@ namespace AnyMessAppWin
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(429, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 32);
+            this.label9.Size = new System.Drawing.Size(159, 33);
             this.label9.TabIndex = 10;
             this.label9.Text = "Other Skills";
             // 
@@ -267,7 +328,7 @@ namespace AnyMessAppWin
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(28, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 32);
+            this.label7.Size = new System.Drawing.Size(136, 33);
             this.label7.TabIndex = 9;
             this.label7.Text = "Main Skill";
             // 
@@ -280,6 +341,16 @@ namespace AnyMessAppWin
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(371, 74);
             this.panel4.TabIndex = 2;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::AnyMessAppWin.Properties.Resources.experience;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 19);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(42, 34);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
             // 
             // panel3
             // 
@@ -303,7 +374,7 @@ namespace AnyMessAppWin
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(28, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 32);
+            this.label3.Size = new System.Drawing.Size(209, 33);
             this.label3.TabIndex = 8;
             this.label3.Text = "Contact Details";
             // 
@@ -317,77 +388,6 @@ namespace AnyMessAppWin
             this.panelChildAgency.Size = new System.Drawing.Size(774, 695);
             this.panelChildAgency.TabIndex = 1;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat ExtraBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label4.Location = new System.Drawing.Point(593, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 51);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Rate/hr";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::AnyMessAppWin.Properties.Resources.experience;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 19);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(42, 34);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(20, 128);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(20, 74);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AnyMessAppWin.Properties.Resources.loc_gray;
-            this.pictureBox2.Location = new System.Drawing.Point(312, 93);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pbHk
-            // 
-            this.pbHk.Image = global::AnyMessAppWin.Properties.Resources.defaultImage;
-            this.pbHk.Location = new System.Drawing.Point(34, 47);
-            this.pbHk.Name = "pbHk";
-            this.pbHk.Size = new System.Drawing.Size(254, 208);
-            this.pbHk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbHk.TabIndex = 0;
-            this.pbHk.TabStop = false;
-            // 
             // ProfileHousekeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -400,21 +400,21 @@ namespace AnyMessAppWin
             this.Load += new System.EventHandler(this.ProfileHousekeeper_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).EndInit();
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelChildAgency.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHk)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,6 +448,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelChildAgency;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelRate;
     }
 }

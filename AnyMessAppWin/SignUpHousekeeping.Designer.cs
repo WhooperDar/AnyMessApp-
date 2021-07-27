@@ -103,7 +103,7 @@ namespace AnyMessAppWin
             this.hkContactBox.Size = new System.Drawing.Size(411, 29);
             this.hkContactBox.TabIndex = 36;
             this.hkContactBox.TabStop = false;
-            this.hkContactBox.Text = "Enter Contact";
+            this.hkContactBox.Text = "Enter Contact Number";
             this.hkContactBox.Enter += new System.EventHandler(this.hkContactBox_Enter);
             this.hkContactBox.Leave += new System.EventHandler(this.hkContactBox_Leave);
             // 

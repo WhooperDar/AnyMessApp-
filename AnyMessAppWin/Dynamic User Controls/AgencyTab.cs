@@ -32,5 +32,39 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             // For Rounded Corners
             hireMeBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, hireMeBtn.Width, hireMeBtn.Height, 30, 30));
         }
+
+        private Image imageData;
+        private string agencyName;
+        private string placeName; 
+
+        public Image ImageData
+        {
+            get { return imageData; }
+            set
+            {
+                imageData = value;
+                pbAgency.Image = value;
+            }
+        }
+
+        public string AgencyName
+        {
+            get { return agencyName; }
+            set
+            {
+                agencyName = value;
+                labelAgencyName.Text = value;
+            }
+        }
+
+        public string PlaceName
+        {
+            get { return placeName;  }
+            set
+            {
+                placeName = value;
+                labelPlaceAgency.Text = value;
+            }
+        }
     }
 }
