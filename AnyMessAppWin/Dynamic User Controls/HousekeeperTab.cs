@@ -51,5 +51,19 @@ namespace AnyMessAppWin.Dynamic_User_Controls
         {
             InitializeComponent();
         }
+
+        private void hireMeBtnHk_MouseEnter(object sender, EventArgs e)
+        {
+            hireMeBtnHk.BackColor = Color.FromArgb(255, 201, 72);
+            hireMeBtnHk.ForeColor = Color.FromArgb(5, 62, 189);
+            panel1.BackColor = Color.FromArgb(255, 201, 72);
+        }
+
+        private void hireMeBtnHk_MouseLeave(object sender, EventArgs e)
+        {
+            hireMeBtnHk.BackColor = Color.FromArgb(5, 62, 189);
+            hireMeBtnHk.ForeColor = Color.FromArgb(239, 239, 239);
+            panel1.BackColor = Color.FromArgb(155, 173, 200);
+        }
     }
 }

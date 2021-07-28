@@ -502,6 +502,25 @@ namespace AnyMessAppWin.Backend_Services
                     ImageData = imageData
                 };
 
+                // Edit Profile update image 
+                FirebaseResponse responseUpdateImage = await client.GetTaskAsync("Edit Profile Agency/" + LoginUserForm.FirstNameUser);
+                var resultUpdateImage = responseUpdateImage.ResultAs<DataModels.EditProfileAgencyModel>();
+
+                var dataToSend = new DataModels.EditProfileAgencyModel
+                {
+                    ImageAgencyData = agencyListData.ImageData, 
+                    AboutUs = resultUpdateImage.AboutUs,
+                    AddressData = agencyListData.AgencyAddress, 
+                    AgencyContact = resultUpdateImage.AgencyContact,
+                    AgencyName = agencyListData.AgencyName, 
+                    AgencyLookingFor = resultUpdateImage.AgencyLookingFor, 
+                    
+                };
+
+                FirebaseResponse responseUpdate = await client.UpdateTaskAsync("Edit Profile Agency/" + LoginUserForm.FirstNameUser, dataToSend);
+
+                MessageBox.Show("Image Profile Updated");
+
                 SetResponse reponseAgencyData = await client.SetTaskAsync("3AgencyListData/" + agencyListData.AgencyID, agencyListData);
                 var resultAgencyData = reponseAgencyData.ResultAs<DataModels.AgencyListData>();
 
@@ -511,8 +530,9 @@ namespace AnyMessAppWin.Backend_Services
                 };
 
                 SetResponse responseCounter = await client.SetTaskAsync("1AgencyList/activeNodes/", counter);
+                MessageBox.Show("Your profile is now in agency list");
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); MessageBox.Show("Agency"); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         public async void UpdateAgencyList(string imageData, string agencyName, string placeAddress)
@@ -546,7 +566,7 @@ namespace AnyMessAppWin.Backend_Services
                     responseAgency = await client.UpdateTaskAsync("3AgencyListData/" + resultID.count, agencyData);
                     resultDataAgency = responseAgency.ResultAs<DataModels.AgencyListData>();
 
-                    MessageBox.Show($"{resultDataAgency.AgencyName} updated");
+                    MessageBox.Show($"Profile updated");
                 }
                 else
                 {
@@ -638,88 +658,8 @@ namespace AnyMessAppWin.Backend_Services
             catch(Exception)
             {
                 HousekeepingListData(imageData, hkName, hkSkill);
-            }
-          
-        }
-
-        static DataTable dt = new DataTable();
-
-        // Get Data Housekeeper
-        public async void GetItemsTable()
-        {
-            client = new FireSharp.FirebaseClient(config);
-
-            FirebaseResponse responseIdHkData = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
-            ActiveList_Counter.HousekeepingListCounter resultIdData = responseIdHkData.ResultAs<ActiveList_Counter.HousekeepingListCounter>();
-
-           
-            int cnt = Convert.ToInt32(resultIdData.count);
-
-            int i = 0; 
-            while (true)
-            {
-                i++;
-                if (i == cnt)
-                {
-                    break; 
-                }
-
-                try
-                {
-                    FirebaseResponse responseDataHk2 = await client.GetTaskAsync("3HousekeepingListData/" + i);
-                    DataModels.HousekeepingListData dataResultHk = responseDataHk2.ResultAs<DataModels.HousekeepingListData>();
-
-                    DataRow row = dt.NewRow();
-                    row["Name"] = dataResultHk.HousekeeperName;
-                    row["Category"] = dataResultHk.Category;
-                    row["ImageString"] = dataResultHk.ImageData;
-
-                    dt.Rows.Add(row);
-                }
-                
-                catch (Exception) { }
-                
-            }
-        }
-
-        // Get Data Agency
-        public async void GetItemsTableAgency()
-        {
-
-            DataTable table = new DataTable();
-            client = new FireSharp.FirebaseClient(config);
-
-            FirebaseResponse responseIdAgencyData = await client.GetTaskAsync("1AgencyList/activeNodes/");
-            ActiveList_Counter.AgencyListCounter resultIdData = responseIdAgencyData.ResultAs<ActiveList_Counter.AgencyListCounter>();
-
-
-            int cnt = Convert.ToInt32(resultIdData.count);
-
-            int i = 0;
-            while (true)
-            {
-                i++;
-                if (i == cnt)
-                {
-                    break;
-                }
-                
-                try
-                {
-                    FirebaseResponse responseDataAgency = await client.GetTaskAsync("3AgencyListData/" + i);
-                    DataModels.AgencyListData dataResultHk = responseDataAgency.ResultAs<DataModels.AgencyListData>();
-
-                    DataRow row = table.NewRow();
-                    row["name"] = dataResultHk.AgencyName;
-                    row["place"] = dataResultHk.AgencyAddress;
-                    row["imageString"] = dataResultHk.ImageData;
-
-                    dt.Rows.Add(row);
-                }
-
-                catch (Exception) { }
-
-            }
+            }   
+        
         }
     }
 }

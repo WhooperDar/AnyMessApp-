@@ -13,24 +13,11 @@ namespace AnyMessAppWin.Dynamic_User_Controls
 {
     public partial class AgencyTab : UserControl
     {
-        // For Rounded Radius Buttons
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
-        );
-
         public AgencyTab()
         {
             InitializeComponent();
 
-            // For Rounded Corners
-            hireMeBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, hireMeBtn.Width, hireMeBtn.Height, 30, 30));
+          
         }
 
         private Image imageData;
@@ -68,6 +55,20 @@ namespace AnyMessAppWin.Dynamic_User_Controls
                 placeName = value;
                 labelPlaceAgency.Text = value;
             }
+        }
+
+        private void hireMeBtn_MouseEnter(object sender, EventArgs e)
+        {
+            hireMeBtn.BackColor = Color.FromArgb(255, 201, 72);
+            hireMeBtn.ForeColor = Color.FromArgb(5, 62, 189);
+            panel1.BackColor = Color.FromArgb(255, 201, 72);
+        }
+
+        private void hireMeBtn_MouseLeave(object sender, EventArgs e)
+        {
+            hireMeBtn.BackColor = Color.FromArgb(5, 62, 189);
+            hireMeBtn.ForeColor = Color.FromArgb(239, 239, 239);
+            panel1.BackColor = Color.FromArgb(155, 173, 200);
         }
     }
 }

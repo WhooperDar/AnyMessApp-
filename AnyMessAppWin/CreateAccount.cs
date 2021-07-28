@@ -35,13 +35,6 @@ namespace AnyMessAppWin
             createAccBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, createAccBtn.Width, createAccBtn.Height, 30, 30));
         }
 
-        // Setting up configuration to DB 
-        IFirebaseConfig configCreateAccount = new FirebaseConfig
-        {
-            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
-            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // link to DB
-        };
-
         // Saving data to database
         private void createAccBtn_Click(object sender, EventArgs e)
         {
@@ -57,7 +50,6 @@ namespace AnyMessAppWin
 
                         openChildForm(new LoginUserForm());
                         HideThisContents();
-                        MessageBox.Show("Account Created Successfully!");
                     }
                     else
                     {

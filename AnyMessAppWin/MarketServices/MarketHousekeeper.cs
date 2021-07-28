@@ -54,11 +54,16 @@ namespace AnyMessAppWin.MarketServices
 
                 var dataResult = response.ResultAs<DataHousekeeper>();
 
+                response = await client.GetTaskAsync("Edit Profile Housekeeper/" + LoginUserForm.FirstNameUser);
+
+                var resultImage = response.ResultAs<DataModels.EditProfileHkModel>();
                 // Prepare data to send
 
+                Bitmap img = Backend_Services.ImageProcessor.StringToBitmap(resultImage.ImageHkData); 
 
                 labelHkName.Text = dataResult.HousekeeperName;
                 labelSkill.Text = dataResult.HousekeeperSkill;
+                pbHkService.Image = img;
             }
             catch (Exception) { MessageBox.Show("Request Processing...."); }
         }

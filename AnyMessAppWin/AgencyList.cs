@@ -76,10 +76,6 @@ namespace AnyMessAppWin
 
             DataTable dataTableAgency = new DataTable();
 
-            /*  Backend_Services.DatabaseConfiguration databasecon = new Backend_Services.DatabaseConfiguration();
-              databasecon.GetItemsTableAgency();
-  */
-
             FirebaseResponse responseIdAgencyData = await client.GetTaskAsync("1AgencyList/activeNodes/");
             ActiveList_Counter.AgencyListCounter resultIdData = responseIdAgencyData.ResultAs<ActiveList_Counter.AgencyListCounter>();
 
@@ -87,7 +83,6 @@ namespace AnyMessAppWin
             int cnt = Convert.ToInt32(resultIdData.count);
 
             // Table Columns
-
             dataTableAgency.Columns.Add("agencyID");
             dataTableAgency.Columns.Add("agencyName");
             dataTableAgency.Columns.Add("agencyPlace");
@@ -107,7 +102,6 @@ namespace AnyMessAppWin
                 
                 try
                 {
-                    MessageBox.Show($"i : {i}");
                     FirebaseResponse responseDataAgency2 = await client.GetTaskAsync("3AgencyListData/" + i);
                     DataModels.AgencyListData dataResultAgency = responseDataAgency2.ResultAs<DataModels.AgencyListData>();
 

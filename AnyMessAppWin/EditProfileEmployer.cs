@@ -49,6 +49,7 @@ namespace AnyMessAppWin
             this.Close();
         }
 
+        #region Mouse Hover Effect 
         private void browseBtn_MouseEnter(object sender, EventArgs e)
         {
             browseBtn.BackColor = Color.FromArgb(255, 201, 72);
@@ -101,6 +102,7 @@ namespace AnyMessAppWin
         {
             pbImageBoxEmployer.Image = null;
         }
+        #endregion
 
         private void browseBtn_Click(object sender, EventArgs e)
         {
@@ -148,7 +150,6 @@ namespace AnyMessAppWin
         }
 
         // Utility Functions 
-
         private void ReturnOldState()
         {
             if (CheckStateTextBox())
@@ -162,6 +163,7 @@ namespace AnyMessAppWin
                 pbImageBoxEmployer.Image = null; 
             }
         }
+
         private string BitmapToString(Image img)
         {
             MemoryStream memorystream = new MemoryStream();
@@ -174,8 +176,7 @@ namespace AnyMessAppWin
 
             return stringImg;
         }
-
-
+            
         private bool CheckStateTextBox()
         {
             return (tbAboutMe.Text != "" && tbAddress.Text != "" && tbEmail.Text != "" && tbLooking.Text != "" && tbContactNumber.Text != "");

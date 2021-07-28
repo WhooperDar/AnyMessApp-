@@ -91,7 +91,7 @@ namespace AnyMessAppWin.MarketServices
 
                         hkData.UpdateAgencyList(stringImage, labelAgencyName.Text, labelAddressPlace.Text);
 
-                        MessageBox.Show("Your profile is now in agency list");
+                        
 
                         this.Close();
                     }

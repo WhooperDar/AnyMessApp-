@@ -94,7 +94,7 @@ namespace AnyMessAppWin
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.button2.Location = new System.Drawing.Point(694, 211);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 32);
+            this.button2.Size = new System.Drawing.Size(95, 32);
             this.button2.TabIndex = 25;
             this.button2.Text = "Refresh ";
             this.button2.UseVisualStyleBackColor = false;
@@ -119,19 +119,19 @@ namespace AnyMessAppWin
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBox1.Location = new System.Drawing.Point(34, 211);
+            this.textBox1.Location = new System.Drawing.Point(61, 211);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 32);
+            this.textBox1.Size = new System.Drawing.Size(498, 32);
             this.textBox1.TabIndex = 23;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(34, 249);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(61, 249);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 581);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(728, 580);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // label2
@@ -149,7 +149,7 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Black", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(24, 96);
+            this.label3.Location = new System.Drawing.Point(51, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(390, 60);
             this.label3.TabIndex = 26;
@@ -164,7 +164,7 @@ namespace AnyMessAppWin
             this.MarketAgencyBtn.Font = new System.Drawing.Font("Montserrat Black", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarketAgencyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.MarketAgencyBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarketAgencyBtn.Location = new System.Drawing.Point(625, 112);
+            this.MarketAgencyBtn.Location = new System.Drawing.Point(600, 104);
             this.MarketAgencyBtn.Name = "MarketAgencyBtn";
             this.MarketAgencyBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.MarketAgencyBtn.Size = new System.Drawing.Size(189, 42);

@@ -215,7 +215,7 @@ namespace AnyMessAppWin
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Black", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.label3.Location = new System.Drawing.Point(26, 99);
+            this.label3.Location = new System.Drawing.Point(52, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(488, 52);
             this.label3.TabIndex = 27;

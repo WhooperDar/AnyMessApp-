@@ -51,23 +51,26 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.hireMeBtnHk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.hireMeBtnHk.FlatAppearance.BorderSize = 0;
             this.hireMeBtnHk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hireMeBtnHk.Font = new System.Drawing.Font("Montserrat Medium", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hireMeBtnHk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.hireMeBtnHk.Location = new System.Drawing.Point(187, 119);
             this.hireMeBtnHk.Name = "hireMeBtnHk";
-            this.hireMeBtnHk.Size = new System.Drawing.Size(134, 28);
+            this.hireMeBtnHk.Size = new System.Drawing.Size(144, 28);
             this.hireMeBtnHk.TabIndex = 9;
-            this.hireMeBtnHk.Text = "Hire Me";
+            this.hireMeBtnHk.Text = "View Profile";
             this.hireMeBtnHk.UseVisualStyleBackColor = false;
+            this.hireMeBtnHk.MouseEnter += new System.EventHandler(this.hireMeBtnHk_MouseEnter);
+            this.hireMeBtnHk.MouseLeave += new System.EventHandler(this.hireMeBtnHk_MouseLeave);
             // 
             // labelSkill
             // 
             this.labelSkill.AutoSize = true;
             this.labelSkill.BackColor = System.Drawing.Color.White;
-            this.labelSkill.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSkill.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSkill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.labelSkill.Location = new System.Drawing.Point(183, 67);
             this.labelSkill.Name = "labelSkill";
-            this.labelSkill.Size = new System.Drawing.Size(43, 20);
+            this.labelSkill.Size = new System.Drawing.Size(55, 26);
             this.labelSkill.TabIndex = 8;
             this.labelSkill.Text = "Skill";
             // 
@@ -75,13 +78,13 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             // 
             this.labelHkName.AutoSize = true;
             this.labelHkName.BackColor = System.Drawing.Color.White;
-            this.labelHkName.Font = new System.Drawing.Font("Montserrat ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHkName.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold);
             this.labelHkName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.labelHkName.Location = new System.Drawing.Point(183, 38);
             this.labelHkName.Name = "labelHkName";
-            this.labelHkName.Size = new System.Drawing.Size(157, 24);
+            this.labelHkName.Size = new System.Drawing.Size(111, 27);
             this.labelHkName.TabIndex = 7;
-            this.labelHkName.Text = "Applicant Name";
+            this.labelHkName.Text = "Hk Name";
             // 
             // pbHousekeeping
             // 
