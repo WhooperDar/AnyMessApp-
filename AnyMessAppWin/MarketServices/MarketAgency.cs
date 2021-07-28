@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,33 +17,44 @@ namespace AnyMessAppWin.MarketServices
 {
     public partial class MarketAgency : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
         public MarketAgency()
         {
             InitializeComponent();
             loadTextData();
+
         }
 
         private void MarketAgency_Load(object sender, EventArgs e)
         {
             loadTextData();
         }
+
         // Fetch Agency Data to Get name and place
-        Backend_Services.DatabaseConfiguration hkData = new Backend_Services.DatabaseConfiguration();
-        private void loadTextData()
+        static Backend_Services.DatabaseConfiguration hkData = new Backend_Services.DatabaseConfiguration();
+
+        private async void loadTextData()
         {
             try
             {
-                hkData?.fetchAgencyDataDB(LoginUserForm.FirstNameUser);
+                client = new FireSharp.FirebaseClient(config);
 
-                var dataAgency = Backend_Services.DatabaseConfiguration.GetDataProfileAgency();
+                FirebaseResponse response = await client.GetTaskAsync("Agency Information/" + LoginUserForm.FirstNameUser);
+
+                Data dataResult = response.ResultAs<Data>();
+
                 // Prepare data to send
-                labelAgencyName.Text = dataAgency.AgencyName;
-                labelAddressPlace.Text = dataAgency.AgencyAddress;
+                labelAgencyName.Text = dataResult.AgencyName;
+                labelAddressPlace.Text = dataResult.AgencyAddress;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception) { }
+
         }
         private void cancelBtn_Click(object sender, EventArgs e)
         {
@@ -75,7 +89,7 @@ namespace AnyMessAppWin.MarketServices
                     {
                         string stringImage = BitmapToString(pbAgencyService.Image);
 
-                        hkData.AgencyListData(stringImage, labelAgencyName.Text, labelAddressPlace.Text);
+                        hkData.UpdateAgencyList(stringImage, labelAgencyName.Text, labelAddressPlace.Text);
 
                         MessageBox.Show("Your profile is now in agency list");
 

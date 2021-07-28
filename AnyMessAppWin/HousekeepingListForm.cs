@@ -142,10 +142,10 @@ namespace AnyMessAppWin
         {
 
             DataTable dataTable = new DataTable();
-
+/*
             Backend_Services.DatabaseConfiguration databasecon = new Backend_Services.DatabaseConfiguration();
             databasecon.GetItemsTable();
-
+*/
             client = new FireSharp.FirebaseClient(config);
 
             FirebaseResponse responseIdHkData = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
@@ -154,6 +154,7 @@ namespace AnyMessAppWin
 
             int cnt = Convert.ToInt32(resultIdData.count);
 
+            // Table Columns
 
             dataTable.Columns.Add("id");
             dataTable.Columns.Add("name");

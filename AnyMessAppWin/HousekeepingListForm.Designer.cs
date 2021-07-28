@@ -61,9 +61,9 @@ namespace AnyMessAppWin
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(35, 285);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(61, 282);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 551);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(728, 551);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -94,10 +94,10 @@ namespace AnyMessAppWin
             this.MarketServiceBtn.Font = new System.Drawing.Font("Montserrat Black", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarketServiceBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.MarketServiceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarketServiceBtn.Location = new System.Drawing.Point(628, 103);
+            this.MarketServiceBtn.Location = new System.Drawing.Point(609, 103);
             this.MarketServiceBtn.Name = "MarketServiceBtn";
             this.MarketServiceBtn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.MarketServiceBtn.Size = new System.Drawing.Size(189, 42);
+            this.MarketServiceBtn.Size = new System.Drawing.Size(180, 42);
             this.MarketServiceBtn.TabIndex = 12;
             this.MarketServiceBtn.Text = "Market Your Service";
             this.MarketServiceBtn.UseVisualStyleBackColor = false;
@@ -110,10 +110,10 @@ namespace AnyMessAppWin
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.textBox1.Location = new System.Drawing.Point(35, 199);
+            this.textBox1.Location = new System.Drawing.Point(61, 199);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 32);
+            this.textBox1.Size = new System.Drawing.Size(499, 32);
             this.textBox1.TabIndex = 13;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -126,7 +126,7 @@ namespace AnyMessAppWin
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.button1.Location = new System.Drawing.Point(566, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 32);
+            this.button1.Size = new System.Drawing.Size(95, 32);
             this.button1.TabIndex = 14;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@ namespace AnyMessAppWin
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.button2.Location = new System.Drawing.Point(695, 199);
+            this.button2.Location = new System.Drawing.Point(667, 199);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 32);
             this.button2.TabIndex = 15;
@@ -150,9 +150,9 @@ namespace AnyMessAppWin
             // 
             this.cookingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cookingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
-            this.cookingBtn.Location = new System.Drawing.Point(35, 239);
+            this.cookingBtn.Location = new System.Drawing.Point(61, 239);
             this.cookingBtn.Name = "cookingBtn";
-            this.cookingBtn.Size = new System.Drawing.Size(193, 37);
+            this.cookingBtn.Size = new System.Drawing.Size(167, 37);
             this.cookingBtn.TabIndex = 17;
             this.cookingBtn.Text = "Cooking";
             this.cookingBtn.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@ namespace AnyMessAppWin
             this.sweepingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
             this.sweepingBtn.Location = new System.Drawing.Point(614, 239);
             this.sweepingBtn.Name = "sweepingBtn";
-            this.sweepingBtn.Size = new System.Drawing.Size(203, 37);
+            this.sweepingBtn.Size = new System.Drawing.Size(175, 37);
             this.sweepingBtn.TabIndex = 20;
             this.sweepingBtn.Text = "Sweeping";
             this.sweepingBtn.UseVisualStyleBackColor = true;

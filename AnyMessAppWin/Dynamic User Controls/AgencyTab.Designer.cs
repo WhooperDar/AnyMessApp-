@@ -34,6 +34,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.labelAgencyName = new System.Windows.Forms.Label();
             this.labelPlaceAgency = new System.Windows.Forms.Label();
             this.hireMeBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             // labelAgencyName
             // 
             this.labelAgencyName.AutoSize = true;
+            this.labelAgencyName.BackColor = System.Drawing.Color.White;
             this.labelAgencyName.Font = new System.Drawing.Font("Montserrat ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAgencyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.labelAgencyName.Location = new System.Drawing.Point(182, 40);
@@ -68,11 +70,12 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             // labelPlaceAgency
             // 
             this.labelPlaceAgency.AutoSize = true;
+            this.labelPlaceAgency.BackColor = System.Drawing.Color.White;
             this.labelPlaceAgency.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPlaceAgency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(173)))), ((int)(((byte)(200)))));
             this.labelPlaceAgency.Location = new System.Drawing.Point(182, 69);
             this.labelPlaceAgency.Name = "labelPlaceAgency";
-            this.labelPlaceAgency.Size = new System.Drawing.Size(50, 18);
+            this.labelPlaceAgency.Size = new System.Drawing.Size(55, 20);
             this.labelPlaceAgency.TabIndex = 4;
             this.labelPlaceAgency.Text = "Place";
             // 
@@ -89,6 +92,14 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.hireMeBtn.Text = "Hire Me";
             this.hireMeBtn.UseVisualStyleBackColor = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(355, 170);
+            this.panel2.TabIndex = 6;
+            // 
             // AgencyTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -98,6 +109,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.Controls.Add(this.labelAgencyName);
             this.Controls.Add(this.pbAgency);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AgencyTab";
             this.Size = new System.Drawing.Size(355, 170);
@@ -114,5 +126,6 @@ namespace AnyMessAppWin.Dynamic_User_Controls
         private System.Windows.Forms.Label labelAgencyName;
         private System.Windows.Forms.Label labelPlaceAgency;
         private System.Windows.Forms.Button hireMeBtn;
+        private System.Windows.Forms.Panel panel2;
     }
 }

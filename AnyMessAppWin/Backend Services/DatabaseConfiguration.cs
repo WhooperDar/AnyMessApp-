@@ -512,7 +512,52 @@ namespace AnyMessAppWin.Backend_Services
 
                 SetResponse responseCounter = await client.SetTaskAsync("1AgencyList/activeNodes/", counter);
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); MessageBox.Show("Agency"); }
+        }
+
+        public async void UpdateAgencyList(string imageData, string agencyName, string placeAddress)
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            FirebaseResponse responseID, responseAgency;
+
+            try
+            {
+                // Housekeeping ID 
+                responseID = await client.GetTaskAsync("1AgencyList/activeNodes/");
+                var resultID = responseID.ResultAs<ActiveList_Counter.AgencyListCounter>();
+
+                // Housekeeping Data 
+                responseAgency = await client.GetTaskAsync("3AgencyListData/" + resultID.count);
+                var resultDataAgency = responseAgency.ResultAs<DataModels.AgencyListData>();
+
+                // Compare Data from user in put to firebase
+                if ((resultID.count == resultDataAgency.AgencyID) && (agencyName == resultDataAgency.AgencyName))
+                {
+                    var agencyData = new DataModels.AgencyListData
+                    {
+                        AgencyID = resultID.count,
+                        AgencyAddress = placeAddress,
+                        AgencyName = agencyName,
+                        ImageData = imageData
+
+                    };
+
+                    responseAgency = await client.UpdateTaskAsync("3AgencyListData/" + resultID.count, agencyData);
+                    resultDataAgency = responseAgency.ResultAs<DataModels.AgencyListData>();
+
+                    MessageBox.Show($"{resultDataAgency.AgencyName} updated");
+                }
+                else
+                {
+                    AgencyListData(imageData, agencyName, placeAddress);
+                }
+            }
+            catch (Exception)
+            {
+                AgencyListData(imageData, agencyName, placeAddress);
+            }
+
         }
 
         DataModels.HousekeepingListData resultHkData;
@@ -585,6 +630,10 @@ namespace AnyMessAppWin.Backend_Services
 
                     MessageBox.Show($"{resultDataHk.HousekeeperName} updated");
                 }
+                else
+                {
+                    HousekeepingListData(imageData, hkName, hkSkill);
+                }
             }
             catch(Exception)
             {
@@ -594,6 +643,8 @@ namespace AnyMessAppWin.Backend_Services
         }
 
         static DataTable dt = new DataTable();
+
+        // Get Data Housekeeper
         public async void GetItemsTable()
         {
             client = new FireSharp.FirebaseClient(config);
@@ -631,9 +682,44 @@ namespace AnyMessAppWin.Backend_Services
             }
         }
 
-        public static DataTable getTable()
+        // Get Data Agency
+        public async void GetItemsTableAgency()
         {
-            return dt;
+
+            DataTable table = new DataTable();
+            client = new FireSharp.FirebaseClient(config);
+
+            FirebaseResponse responseIdAgencyData = await client.GetTaskAsync("1AgencyList/activeNodes/");
+            ActiveList_Counter.AgencyListCounter resultIdData = responseIdAgencyData.ResultAs<ActiveList_Counter.AgencyListCounter>();
+
+
+            int cnt = Convert.ToInt32(resultIdData.count);
+
+            int i = 0;
+            while (true)
+            {
+                i++;
+                if (i == cnt)
+                {
+                    break;
+                }
+                
+                try
+                {
+                    FirebaseResponse responseDataAgency = await client.GetTaskAsync("3AgencyListData/" + i);
+                    DataModels.AgencyListData dataResultHk = responseDataAgency.ResultAs<DataModels.AgencyListData>();
+
+                    DataRow row = table.NewRow();
+                    row["name"] = dataResultHk.AgencyName;
+                    row["place"] = dataResultHk.AgencyAddress;
+                    row["imageString"] = dataResultHk.ImageData;
+
+                    dt.Rows.Add(row);
+                }
+
+                catch (Exception) { }
+
+            }
         }
     }
 }

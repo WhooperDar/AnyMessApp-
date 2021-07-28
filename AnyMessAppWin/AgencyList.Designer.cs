@@ -98,6 +98,7 @@ namespace AnyMessAppWin
             this.button2.TabIndex = 25;
             this.button2.Text = "Refresh ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -192,6 +193,7 @@ namespace AnyMessAppWin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgencyList";
             this.Text = "AgencyList";
+            this.Load += new System.EventHandler(this.AgencyList_Load);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);

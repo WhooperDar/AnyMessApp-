@@ -35,8 +35,9 @@ namespace AnyMessAppWin.Dynamic_User_Controls
 
         private Image imageData;
         private string agencyName;
-        private string placeName; 
+        private string placeName;
 
+        [Category("Custom Props")]
         public Image ImageData
         {
             get { return imageData; }
@@ -47,6 +48,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             }
         }
 
+        [Category("Custom Props")]
         public string AgencyName
         {
             get { return agencyName; }
@@ -57,6 +59,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             }
         }
 
+        [Category("Custom Props")]
         public string PlaceName
         {
             get { return placeName;  }
