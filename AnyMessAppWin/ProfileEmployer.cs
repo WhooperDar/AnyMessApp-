@@ -34,6 +34,12 @@ namespace AnyMessAppWin
             displayProfile();
 
             UpdateProfile();
+
+            detailsPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, detailsPanel.Width,
+            detailsPanel.Height, 30, 30));
+
+            panelLookFor.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelLookFor.Width,
+            panelLookFor.Height, 30, 30));
         }
 
         private void ProfileEmployer_Load(object sender, EventArgs e)

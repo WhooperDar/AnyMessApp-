@@ -32,13 +32,16 @@ namespace AnyMessAppWin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileEmployer));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLookFor = new System.Windows.Forms.Panel();
             this.tbLookingFor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.detailsPanel = new System.Windows.Forms.Panel();
             this.labelAddress = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelEmail = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelContact = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tbAboutUs = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -47,29 +50,26 @@ namespace AnyMessAppWin
             this.labelPlace = new System.Windows.Forms.Label();
             this.labelEmployerName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChildAgency = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbEmployer = new System.Windows.Forms.PictureBox();
+            this.panelChildAgency = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelLookFor.SuspendLayout();
             this.detailsPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panelChildAgency.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployer)).BeginInit();
+            this.panelChildAgency.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.panelLookFor);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.detailsPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,19 +85,19 @@ namespace AnyMessAppWin
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(429, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(161, 32);
+            this.label9.Size = new System.Drawing.Size(168, 33);
             this.label9.TabIndex = 10;
             this.label9.Text = "Looking for ";
             // 
-            // panel1
+            // panelLookFor
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.tbLookingFor);
-            this.panel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(435, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 189);
-            this.panel1.TabIndex = 1;
+            this.panelLookFor.BackColor = System.Drawing.SystemColors.Control;
+            this.panelLookFor.Controls.Add(this.tbLookingFor);
+            this.panelLookFor.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelLookFor.Location = new System.Drawing.Point(435, 60);
+            this.panelLookFor.Name = "panelLookFor";
+            this.panelLookFor.Size = new System.Drawing.Size(312, 189);
+            this.panelLookFor.TabIndex = 1;
             // 
             // tbLookingFor
             // 
@@ -119,7 +119,7 @@ namespace AnyMessAppWin
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(24, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 32);
+            this.label3.Size = new System.Drawing.Size(209, 33);
             this.label3.TabIndex = 8;
             this.label3.Text = "Contact Details";
             // 
@@ -149,6 +149,16 @@ namespace AnyMessAppWin
             this.labelAddress.TabIndex = 12;
             this.labelAddress.Text = "Address";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(22, 129);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
@@ -160,6 +170,16 @@ namespace AnyMessAppWin
             this.labelEmail.TabIndex = 10;
             this.labelEmail.Text = "Email Address";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(22, 75);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // labelContact
             // 
             this.labelContact.AutoSize = true;
@@ -170,6 +190,16 @@ namespace AnyMessAppWin
             this.labelContact.Size = new System.Drawing.Size(176, 26);
             this.labelContact.TabIndex = 8;
             this.labelContact.Text = "Contact Number";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(22, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // tbAboutUs
             // 
@@ -267,47 +297,6 @@ namespace AnyMessAppWin
             this.panel2.Size = new System.Drawing.Size(774, 272);
             this.panel2.TabIndex = 0;
             // 
-            // panelChildAgency
-            // 
-            this.panelChildAgency.BackColor = System.Drawing.SystemColors.Control;
-            this.panelChildAgency.Controls.Add(this.panel3);
-            this.panelChildAgency.Controls.Add(this.panel2);
-            this.panelChildAgency.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildAgency.Location = new System.Drawing.Point(0, 0);
-            this.panelChildAgency.Name = "panelChildAgency";
-            this.panelChildAgency.Size = new System.Drawing.Size(774, 695);
-            this.panelChildAgency.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(22, 129);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(22, 75);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(22, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AnyMessAppWin.Properties.Resources.loc_gray;
@@ -328,6 +317,17 @@ namespace AnyMessAppWin
             this.pbEmployer.TabIndex = 0;
             this.pbEmployer.TabStop = false;
             // 
+            // panelChildAgency
+            // 
+            this.panelChildAgency.BackColor = System.Drawing.SystemColors.Control;
+            this.panelChildAgency.Controls.Add(this.panel3);
+            this.panelChildAgency.Controls.Add(this.panel2);
+            this.panelChildAgency.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildAgency.Location = new System.Drawing.Point(0, 0);
+            this.panelChildAgency.Name = "panelChildAgency";
+            this.panelChildAgency.Size = new System.Drawing.Size(774, 695);
+            this.panelChildAgency.TabIndex = 1;
+            // 
             // ProfileEmployer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -341,18 +341,18 @@ namespace AnyMessAppWin
             this.Load += new System.EventHandler(this.ProfileEmployer_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelLookFor.ResumeLayout(false);
+            this.panelLookFor.PerformLayout();
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panelChildAgency.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployer)).EndInit();
+            this.panelChildAgency.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -362,7 +362,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.PictureBox pbEmployer;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelLookFor;
         private System.Windows.Forms.TextBox tbLookingFor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel detailsPanel;

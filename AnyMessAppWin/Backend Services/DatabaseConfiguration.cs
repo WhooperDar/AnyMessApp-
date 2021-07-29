@@ -350,9 +350,7 @@ namespace AnyMessAppWin.Backend_Services
                     dataHousekeeperResult = response.ResultAs<DataHousekeeper>();
                 }
                 catch (Exception)
-                {
-                    MessageBox.Show($"{name} does not found!");
-                }
+                { }
             }
             else
             {
@@ -409,9 +407,7 @@ namespace AnyMessAppWin.Backend_Services
                     dataEditResultAgency = response.ResultAs<DataModels.EditProfileAgencyModel>();
                 }
                 catch (Exception)
-                {
-                    MessageBox.Show("Name does not exist!");
-                }
+                {    }
             }
             else
             {
@@ -439,7 +435,6 @@ namespace AnyMessAppWin.Backend_Services
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Name does not exist");
                 }
             }
             else
@@ -469,7 +464,6 @@ namespace AnyMessAppWin.Backend_Services
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Name does not exist");
                 }
             }
             else
@@ -532,7 +526,7 @@ namespace AnyMessAppWin.Backend_Services
                 SetResponse responseCounter = await client.SetTaskAsync("1AgencyList/activeNodes/", counter);
                 MessageBox.Show("Your profile is now in agency list");
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception) { MessageBox.Show("Please go ahead first to profile section and update your profile"); }
         }
 
         public async void UpdateAgencyList(string imageData, string agencyName, string placeAddress)
@@ -659,7 +653,6 @@ namespace AnyMessAppWin.Backend_Services
             {
                 HousekeepingListData(imageData, hkName, hkSkill);
             }   
-        
         }
     }
 }

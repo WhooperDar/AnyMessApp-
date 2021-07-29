@@ -157,5 +157,36 @@ namespace AnyMessAppWin
         {
             DynamicControls();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.AgencyTab))
+                {
+                    Dynamic_User_Controls.AgencyTab agencyProfileData = (Dynamic_User_Controls.AgencyTab)c;
+                    if (!agencyProfileData.AgencyName.ToLower().Contains(searchBoxAgency.Text.ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+
+        private void seachBoxAgency_TextChanged(object sender, EventArgs e)
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.AgencyTab))
+                {
+                    Dynamic_User_Controls.AgencyTab agencyProfileData = (Dynamic_User_Controls.AgencyTab)c;
+                    if (!agencyProfileData.AgencyName.ToLower().Contains(searchBoxAgency.Text.ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
     }
 }

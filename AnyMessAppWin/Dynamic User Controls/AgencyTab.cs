@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +16,11 @@ namespace AnyMessAppWin.Dynamic_User_Controls
 {
     public partial class AgencyTab : UserControl
     {
+
+
         public AgencyTab()
         {
             InitializeComponent();
-
-          
         }
 
         private Image imageData;
@@ -69,6 +72,12 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             hireMeBtn.BackColor = Color.FromArgb(5, 62, 189);
             hireMeBtn.ForeColor = Color.FromArgb(239, 239, 239);
             panel1.BackColor = Color.FromArgb(155, 173, 200);
+        }
+
+        private void hireMeBtn_Click(object sender, EventArgs e)
+        {
+            DisplayProfile.AgencyListProfileData agencyProfile = new DisplayProfile.AgencyListProfileData(AgencyName, ImageData);
+            agencyProfile.ShowDialog();
         }
     }
 }

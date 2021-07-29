@@ -30,13 +30,6 @@ namespace AnyMessAppWin
 
             settingAccount.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingAccount.Width, settingAccount.Height, 30, 30));
 
-            settingNotif.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingNotif.Width, settingNotif.Height, 30, 30));
-
-            settingAppearance.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingAppearance.Width, settingAppearance.Height, 30, 30));
-
-            settingSecurity.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingSecurity.Width, settingSecurity.Height, 30, 30));
-
-
             settingSupport.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingSupport.Width, settingSupport.Height, 30, 30));
 
             settingAboutUs.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, settingAboutUs.Width, settingAboutUs.Height, 30, 30));
@@ -67,50 +60,6 @@ namespace AnyMessAppWin
             settingAccount.BackColor = Color.FromArgb(5, 62, 189);
         }
         
-
-        private void settingNotif_MouseEnter(object sender, EventArgs e)
-        {
-            settingNotif.Image = Properties.Resources.notif_blue20px;
-            settingNotif.ForeColor = Color.FromArgb(5, 62, 189);
-            settingNotif.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void settingNotif_MouseLeave(object sender, EventArgs e)
-        {
-            settingNotif.Image = Properties.Resources.notif_white20;
-            settingNotif.ForeColor = Color.FromArgb(239, 239, 239);
-            settingNotif.BackColor = Color.FromArgb(5, 62, 189); 
-        }
-
-        private void settingAppearance_MouseEnter(object sender, EventArgs e)
-        {
-            settingAppearance.Image = Properties.Resources.appearance_blue20px;
-            settingAppearance.ForeColor = Color.FromArgb(5, 62, 189);
-            settingAppearance.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void settingAppearance_MouseLeave(object sender, EventArgs e)
-        {
-            settingAppearance.Image = Properties.Resources.appearance_white20;
-            settingAppearance.ForeColor = Color.FromArgb(239, 239, 239);
-            settingAppearance.BackColor = Color.FromArgb(5, 62, 189);
-        }
-
-        private void settingSecurity_MouseEnter(object sender, EventArgs e)
-        {
-            settingSecurity.Image = Properties.Resources.security_blue20px;
-            settingSecurity.ForeColor = Color.FromArgb(5, 62, 189);
-            settingSecurity.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void settingSecurity_MouseLeave(object sender, EventArgs e)
-        {
-            settingSecurity.Image = Properties.Resources.security_white20;
-            settingSecurity.ForeColor = Color.FromArgb(239, 239, 239);
-            settingSecurity.BackColor = Color.FromArgb(5, 62, 189);
-        }
-       
-
         private void settingSupport_MouseEnter(object sender, EventArgs e)
         {
             settingSupport.Image = Properties.Resources.supportme_blue20px;
@@ -149,8 +98,27 @@ namespace AnyMessAppWin
             exitSettingBtn.BackColor = Color.FromArgb(239, 239, 239);
         }
 
+
         #endregion
+        // Display Forms 
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelParentSettings.Controls.Add(childForm);
+            panelParentSettings.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
-
+        private void settingSupport_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ContentSettings.HelpAndSupport()); 
+        }
     }
 }

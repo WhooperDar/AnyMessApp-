@@ -34,6 +34,15 @@ namespace AnyMessAppWin
             displayProfile();
 
             UpdateProfile();
+
+            panelSkill.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelSkill.Width,
+            panelSkill.Height, 30, 30));
+
+            detailsPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, detailsPanel.Width,
+            detailsPanel.Height, 30, 30));
+
+            panelOther.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelOther.Width,
+            panelOther.Height, 30, 30));
         }
 
         private void UpdateProfile()
@@ -79,7 +88,6 @@ namespace AnyMessAppWin
             }
             else
             {
-                MessageBox.Show("Profile does not found"); 
             }
         }
 

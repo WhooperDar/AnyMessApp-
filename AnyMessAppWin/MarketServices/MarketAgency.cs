@@ -28,7 +28,6 @@ namespace AnyMessAppWin.MarketServices
         {
             InitializeComponent();
             loadTextData();
-
         }
 
         private void MarketAgency_Load(object sender, EventArgs e)
@@ -90,8 +89,6 @@ namespace AnyMessAppWin.MarketServices
                         string stringImage = BitmapToString(pbAgencyService.Image);
 
                         hkData.UpdateAgencyList(stringImage, labelAgencyName.Text, labelAddressPlace.Text);
-
-                        
 
                         this.Close();
                     }

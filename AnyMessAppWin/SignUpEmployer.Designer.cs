@@ -42,6 +42,8 @@ namespace AnyMessAppWin
             this.employerAddressBox = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.panelEmployerParent = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelEmployerParent.SuspendLayout();
             this.SuspendLayout();
             // 
             // NextBtnEmployer
@@ -173,7 +175,7 @@ namespace AnyMessAppWin
             this.employerAddressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.employerAddressBox.Font = new System.Drawing.Font("Montserrat SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employerAddressBox.ForeColor = System.Drawing.Color.Silver;
-            this.employerAddressBox.Location = new System.Drawing.Point(43, 515);
+            this.employerAddressBox.Location = new System.Drawing.Point(43, 517);
             this.employerAddressBox.Name = "employerAddressBox";
             this.employerAddressBox.Size = new System.Drawing.Size(411, 29);
             this.employerAddressBox.TabIndex = 29;
@@ -198,11 +200,23 @@ namespace AnyMessAppWin
             // 
             // panelEmployerParent
             // 
+            this.panelEmployerParent.Controls.Add(this.label3);
             this.panelEmployerParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEmployerParent.Location = new System.Drawing.Point(0, 0);
             this.panelEmployerParent.Name = "panelEmployerParent";
             this.panelEmployerParent.Size = new System.Drawing.Size(504, 673);
             this.panelEmployerParent.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(123)))), ((int)(((byte)(145)))));
+            this.label3.Location = new System.Drawing.Point(40, 496);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "(DOLE Agency Number)";
             // 
             // SignUpEmployer
             // 
@@ -229,6 +243,8 @@ namespace AnyMessAppWin
             this.Name = "SignUpEmployer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up Employer";
+            this.panelEmployerParent.ResumeLayout(false);
+            this.panelEmployerParent.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +264,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox employerAddressBox;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Panel panelEmployerParent;
+        private System.Windows.Forms.Label label3;
     }
 }

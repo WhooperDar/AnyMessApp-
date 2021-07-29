@@ -49,11 +49,11 @@ namespace AnyMessAppWin
             this.labelContact = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tbOtherSkill = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelOther = new System.Windows.Forms.Panel();
             this.labelSkill = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelSkill = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,8 +65,8 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelOther.SuspendLayout();
+            this.panelSkill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelChildAgency.SuspendLayout();
@@ -152,7 +152,7 @@ namespace AnyMessAppWin
             this.labelRate.AutoSize = true;
             this.labelRate.Font = new System.Drawing.Font("Montserrat ExtraBold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.labelRate.Location = new System.Drawing.Point(613, 203);
+            this.labelRate.Location = new System.Drawing.Point(582, 203);
             this.labelRate.Name = "labelRate";
             this.labelRate.Size = new System.Drawing.Size(174, 52);
             this.labelRate.TabIndex = 8;
@@ -280,9 +280,9 @@ namespace AnyMessAppWin
             // tbOtherSkill
             // 
             this.tbOtherSkill.BackColor = System.Drawing.SystemColors.Control;
-            this.tbOtherSkill.Font = new System.Drawing.Font("Montserrat Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOtherSkill.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOtherSkill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.tbOtherSkill.Location = new System.Drawing.Point(20, 23);
+            this.tbOtherSkill.Location = new System.Drawing.Point(21, 22);
             this.tbOtherSkill.Multiline = true;
             this.tbOtherSkill.Name = "tbOtherSkill";
             this.tbOtherSkill.Size = new System.Drawing.Size(270, 142);
@@ -290,14 +290,14 @@ namespace AnyMessAppWin
             this.tbOtherSkill.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
     "cididunt ut labore et dolore magna aliqua.";
             // 
-            // panel1
+            // panelOther
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.tbOtherSkill);
-            this.panel1.Location = new System.Drawing.Point(435, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 189);
-            this.panel1.TabIndex = 1;
+            this.panelOther.BackColor = System.Drawing.SystemColors.Control;
+            this.panelOther.Controls.Add(this.tbOtherSkill);
+            this.panelOther.Location = new System.Drawing.Point(435, 60);
+            this.panelOther.Name = "panelOther";
+            this.panelOther.Size = new System.Drawing.Size(312, 185);
+            this.panelOther.TabIndex = 1;
             // 
             // labelSkill
             // 
@@ -332,15 +332,15 @@ namespace AnyMessAppWin
             this.label7.TabIndex = 9;
             this.label7.Text = "Main Skill";
             // 
-            // panel4
+            // panelSkill
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.labelSkill);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Location = new System.Drawing.Point(34, 60);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(371, 74);
-            this.panel4.TabIndex = 2;
+            this.panelSkill.BackColor = System.Drawing.SystemColors.Control;
+            this.panelSkill.Controls.Add(this.labelSkill);
+            this.panelSkill.Controls.Add(this.pictureBox6);
+            this.panelSkill.Location = new System.Drawing.Point(34, 60);
+            this.panelSkill.Name = "panelSkill";
+            this.panelSkill.Size = new System.Drawing.Size(371, 74);
+            this.panelSkill.TabIndex = 2;
             // 
             // pictureBox6
             // 
@@ -357,8 +357,8 @@ namespace AnyMessAppWin
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.panelSkill);
+            this.panel3.Controls.Add(this.panelOther);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.detailsPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -407,10 +407,10 @@ namespace AnyMessAppWin
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelOther.ResumeLayout(false);
+            this.panelOther.PerformLayout();
+            this.panelSkill.ResumeLayout(false);
+            this.panelSkill.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -439,12 +439,12 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Label labelContact;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox tbOtherSkill;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelOther;
         private System.Windows.Forms.Label labelSkill;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelSkill;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelChildAgency;

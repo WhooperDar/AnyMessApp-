@@ -87,7 +87,7 @@ namespace AnyMessAppWin
                 {
                     usernameBox.Text = "";
                     passwordBox.Text = "";
-                    MessageBox.Show("Input is invalid");
+                    MessageBox.Show("Internet Connection Error");
                 }
                 
             }

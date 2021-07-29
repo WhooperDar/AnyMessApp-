@@ -71,54 +71,7 @@ namespace AnyMessAppWin
         }
 
         #region Mousehover Effects
-        private void cleaningCatBtn_MouseEnter(object sender, EventArgs e)
-        {
-            cookingBtn.BackColor = Color.FromArgb(5, 62, 189);
-            cookingBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void cleaningCatBtn_MouseLeave(object sender, EventArgs e)
-        {
-            cookingBtn.BackColor = Color.FromArgb(239, 239, 239);
-            cookingBtn.ForeColor = Color.FromArgb(119, 120, 127);
-        }
-
-        private void cleaningBtn_MouseEnter(object sender, EventArgs e)
-        {
-            cleaningBtn.BackColor = Color.FromArgb(5, 62, 189);
-            cleaningBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void cleaningBtn_MouseLeave(object sender, EventArgs e)
-        {
-            cleaningBtn.BackColor = Color.FromArgb(239, 239, 239);
-            cleaningBtn.ForeColor = Color.FromArgb(119, 120, 127);
-        }
-
-        private void laundryBtn_MouseEnter(object sender, EventArgs e)
-        {
-            laundryBtn.BackColor = Color.FromArgb(5, 62, 189);
-            laundryBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void laundryBtn_MouseLeave(object sender, EventArgs e)
-        {
-            laundryBtn.BackColor = Color.FromArgb(239, 239, 239);
-            laundryBtn.ForeColor = Color.FromArgb(119, 120, 127);
-        }
-
-        private void sweepingBtn_MouseEnter(object sender, EventArgs e)
-        {
-            sweepingBtn.BackColor = Color.FromArgb(5, 62, 189);
-            sweepingBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void sweepingBtn_MouseLeave(object sender, EventArgs e)
-        {
-            sweepingBtn.BackColor = Color.FromArgb(239, 239, 239);
-            sweepingBtn.ForeColor = Color.FromArgb(119, 120, 127);
-        }
-
+  
         private void MarketServiceBtn_MouseEnter(object sender, EventArgs e)
         {
             MarketServiceBtn.BackColor = Color.FromArgb(255, 201, 72);
@@ -142,10 +95,7 @@ namespace AnyMessAppWin
         {
 
             DataTable dataTable = new DataTable();
-/*
-            Backend_Services.DatabaseConfiguration databasecon = new Backend_Services.DatabaseConfiguration();
-            databasecon.GetItemsTable();
-*/
+
             client = new FireSharp.FirebaseClient(config);
 
             FirebaseResponse responseIdHkData = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
@@ -227,5 +177,155 @@ namespace AnyMessAppWin
         {
             DynamicControls();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach(Control c in flowLayoutPanel1.Controls)
+            {
+                if(c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.HkName.ToLower().Contains(searchBoxHk.Text.ToLower())){
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+
+        private void searchBoxHk_TextChanged(object sender, EventArgs e)
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.HkName.ToLower().Contains(searchBoxHk.Text.ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+
+        }
+
+
+        private void cookingBtn_Click_1(object sender, EventArgs e)
+        {
+            cookingBtn.BackColor = Color.FromArgb(255, 201, 72);
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.Category.ToLower().Contains("Cooking".ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+
+        private void cleaningBtn_Click_1(object sender, EventArgs e)
+        {
+            cleaningBtn.BackColor = Color.FromArgb(255, 201, 72);
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.Category.ToLower().Contains("Cleaning".ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+
+        private void laundryBtn_Click_1(object sender, EventArgs e)
+        {
+            laundryBtn.BackColor = Color.FromArgb(255, 201, 72);
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.Category.ToLower().Contains("Laundry".ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+
+        private void sweepingBtn_Click_1(object sender, EventArgs e)
+        {
+            sweepingBtn.BackColor = Color.FromArgb(255, 201, 72);
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c.GetType() == typeof(Dynamic_User_Controls.HousekeeperTab))
+                {
+                    Dynamic_User_Controls.HousekeeperTab hkProfileData = (Dynamic_User_Controls.HousekeeperTab)c;
+                    if (!hkProfileData.Category.ToLower().Contains("Sweeping".ToLower()))
+                    {
+
+                        flowLayoutPanel1.Controls.Remove(c);
+                    }
+                }
+            }
+        }
+        #region Mouse Hover Button effects
+        private void cleaningBtn_MouseEnter(object sender, EventArgs e)
+        {
+            cleaningBtn.BackColor = Color.FromArgb(255, 201, 72);
+            cleaningBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void cleaningBtn_MouseLeave(object sender, EventArgs e)
+        {
+            cleaningBtn.BackColor = Color.FromArgb(5, 62, 189);
+            cleaningBtn.ForeColor = Color.FromArgb(239, 239, 239);
+        }
+
+        private void cookingBtn_MouseEnter(object sender, EventArgs e)
+        {
+            cookingBtn.BackColor = Color.FromArgb(255, 201, 72);
+            cookingBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void cookingBtn_MouseLeave(object sender, EventArgs e)
+        {
+            cookingBtn.BackColor = Color.FromArgb(5, 62, 189);
+            cookingBtn.ForeColor = Color.FromArgb(239, 239, 239);
+        }
+
+        private void laundryBtn_MouseEnter(object sender, EventArgs e)
+        {
+            laundryBtn.BackColor = Color.FromArgb(255, 201, 72);
+            laundryBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void laundryBtn_MouseLeave(object sender, EventArgs e)
+        {
+            laundryBtn.BackColor = Color.FromArgb(5, 62, 189);
+            laundryBtn.ForeColor = Color.FromArgb(239, 239, 239);
+        }
+
+        private void sweepingBtn_MouseEnter(object sender, EventArgs e)
+        {
+            sweepingBtn.BackColor = Color.FromArgb(255, 201, 72);
+            sweepingBtn.ForeColor = Color.FromArgb(5, 62, 189);
+        }
+
+        private void sweepingBtn_MouseLeave(object sender, EventArgs e)
+        {
+            sweepingBtn.BackColor = Color.FromArgb(5, 62, 189);
+            sweepingBtn.ForeColor = Color.FromArgb(239, 239, 239);
+        }
+        #endregion
     }
 }

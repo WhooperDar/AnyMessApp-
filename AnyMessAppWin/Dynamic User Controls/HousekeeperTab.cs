@@ -65,5 +65,12 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             hireMeBtnHk.ForeColor = Color.FromArgb(239, 239, 239);
             panel1.BackColor = Color.FromArgb(155, 173, 200);
         }
+
+        private void hireMeBtnHk_Click(object sender, EventArgs e)
+        {
+
+            DisplayProfile.HousekeepingProfileData hkProfile = new DisplayProfile.HousekeepingProfileData(HkName, imageData);
+            hkProfile.ShowDialog();
+        }
     }
 }

@@ -16,6 +16,14 @@ namespace AnyMessAppWin
 {
     public partial class CreateAccount : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
+
         // For Rounded Corner Buttons
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -36,7 +44,7 @@ namespace AnyMessAppWin
         }
 
         // Saving data to database
-        private void createAccBtn_Click(object sender, EventArgs e)
+        private async void createAccBtn_Click(object sender, EventArgs e)
         {
             if(usernameBox.Text != "Username" && firstNameCreate.Text != "First Name" && emailBox.Text != "Email" && passwordBox.Text != null && confirmpassBox.Text != null)
             {
@@ -44,12 +52,22 @@ namespace AnyMessAppWin
                 {
                     if (string.Equals(passwordBox.Text, confirmpassBox.Text))
                     {
-                        Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+                        FirebaseResponse response = await client.GetTaskAsync("Login Accounts/" + usernameBox.Text);
+                        var result = response.ResultAs<DataCreateAccount>();
 
-                        databaseObj.SavaDataCreateAccount(usernameBox.Text, firstNameCreate.Text, emailBox.Text, passwordBox.Text, confirmpassBox.Text);
+                        if (result.Username != usernameBox.Text)
+                        {
+                            Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-                        openChildForm(new LoginUserForm());
-                        HideThisContents();
+                            databaseObj.SavaDataCreateAccount(usernameBox.Text, firstNameCreate.Text, emailBox.Text, passwordBox.Text, confirmpassBox.Text);
+
+                            openChildForm(new LoginUserForm());
+                            HideThisContents();
+                        } 
+                        else
+                        {
+                            MessageBox.Show("Please try again!"); 
+                        }
                     }
                     else
                     {
@@ -62,9 +80,14 @@ namespace AnyMessAppWin
                     }
                     
                 } 
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+
+                    databaseObj.SavaDataCreateAccount(usernameBox.Text, firstNameCreate.Text, emailBox.Text, passwordBox.Text, confirmpassBox.Text);
+
+                    openChildForm(new LoginUserForm());
+                    HideThisContents();
                 }
                 
             }

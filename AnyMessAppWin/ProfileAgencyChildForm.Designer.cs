@@ -34,10 +34,10 @@ namespace AnyMessAppWin
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelWebsite = new System.Windows.Forms.Panel();
             this.labelWebsite = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLook = new System.Windows.Forms.Panel();
             this.tbLooking = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.detailsPanel = new System.Windows.Forms.Panel();
@@ -59,9 +59,9 @@ namespace AnyMessAppWin
             this.pbAgency = new System.Windows.Forms.PictureBox();
             this.panelChildAgency.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelWebsite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelLook.SuspendLayout();
             this.detailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -87,8 +87,8 @@ namespace AnyMessAppWin
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.panelWebsite);
+            this.panel3.Controls.Add(this.panelLook);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.detailsPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,16 +119,16 @@ namespace AnyMessAppWin
             this.label7.TabIndex = 9;
             this.label7.Text = "Website";
             // 
-            // panel4
+            // panelWebsite
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.labelWebsite);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel4.Location = new System.Drawing.Point(30, 310);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(371, 74);
-            this.panel4.TabIndex = 2;
+            this.panelWebsite.BackColor = System.Drawing.SystemColors.Control;
+            this.panelWebsite.Controls.Add(this.labelWebsite);
+            this.panelWebsite.Controls.Add(this.pictureBox6);
+            this.panelWebsite.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelWebsite.Location = new System.Drawing.Point(30, 310);
+            this.panelWebsite.Name = "panelWebsite";
+            this.panelWebsite.Size = new System.Drawing.Size(371, 74);
+            this.panelWebsite.TabIndex = 2;
             // 
             // labelWebsite
             // 
@@ -151,15 +151,15 @@ namespace AnyMessAppWin
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
             // 
-            // panel1
+            // panelLook
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.tbLooking);
-            this.panel1.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(435, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 189);
-            this.panel1.TabIndex = 1;
+            this.panelLook.BackColor = System.Drawing.SystemColors.Control;
+            this.panelLook.Controls.Add(this.tbLooking);
+            this.panelLook.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelLook.Location = new System.Drawing.Point(435, 60);
+            this.panelLook.Name = "panelLook";
+            this.panelLook.Size = new System.Drawing.Size(312, 189);
+            this.panelLook.TabIndex = 1;
             // 
             // tbLooking
             // 
@@ -394,11 +394,11 @@ namespace AnyMessAppWin
             this.panelChildAgency.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelWebsite.ResumeLayout(false);
+            this.panelWebsite.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelLook.ResumeLayout(false);
+            this.panelLook.PerformLayout();
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -428,7 +428,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.TextBox tbAboutUs;
         private System.Windows.Forms.Panel detailsPanel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelLook;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -436,7 +436,7 @@ namespace AnyMessAppWin
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelContact;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelWebsite;
         private System.Windows.Forms.Label labelWebsite;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label9;

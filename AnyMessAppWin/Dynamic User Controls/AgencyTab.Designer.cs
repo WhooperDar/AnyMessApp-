@@ -30,13 +30,13 @@ namespace AnyMessAppWin.Dynamic_User_Controls
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbAgency = new System.Windows.Forms.PictureBox();
             this.labelAgencyName = new System.Windows.Forms.Label();
             this.labelPlaceAgency = new System.Windows.Forms.Label();
             this.hireMeBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).BeginInit();
+            this.pbAgency = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -46,15 +46,6 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(355, 24);
             this.panel1.TabIndex = 1;
-            // 
-            // pbAgency
-            // 
-            this.pbAgency.Location = new System.Drawing.Point(0, 0);
-            this.pbAgency.Name = "pbAgency";
-            this.pbAgency.Size = new System.Drawing.Size(166, 167);
-            this.pbAgency.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAgency.TabIndex = 2;
-            this.pbAgency.TabStop = false;
             // 
             // labelAgencyName
             // 
@@ -85,14 +76,15 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.hireMeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
             this.hireMeBtn.FlatAppearance.BorderSize = 0;
             this.hireMeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hireMeBtn.Font = new System.Drawing.Font("Montserrat Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hireMeBtn.Font = new System.Drawing.Font("Montserrat Medium", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hireMeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.hireMeBtn.Location = new System.Drawing.Point(186, 121);
             this.hireMeBtn.Name = "hireMeBtn";
             this.hireMeBtn.Size = new System.Drawing.Size(134, 28);
             this.hireMeBtn.TabIndex = 5;
-            this.hireMeBtn.Text = "Hire Me";
+            this.hireMeBtn.Text = "View Profile";
             this.hireMeBtn.UseVisualStyleBackColor = false;
+            this.hireMeBtn.Click += new System.EventHandler(this.hireMeBtn_Click);
             this.hireMeBtn.MouseEnter += new System.EventHandler(this.hireMeBtn_MouseEnter);
             this.hireMeBtn.MouseLeave += new System.EventHandler(this.hireMeBtn_MouseLeave);
             // 
@@ -104,6 +96,15 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 170);
             this.panel2.TabIndex = 6;
+            // 
+            // pbAgency
+            // 
+            this.pbAgency.Location = new System.Drawing.Point(0, 0);
+            this.pbAgency.Name = "pbAgency";
+            this.pbAgency.Size = new System.Drawing.Size(166, 167);
+            this.pbAgency.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAgency.TabIndex = 2;
+            this.pbAgency.TabStop = false;
             // 
             // AgencyTab
             // 
@@ -117,9 +118,9 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AgencyTab";
             this.Size = new System.Drawing.Size(355, 170);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgency)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

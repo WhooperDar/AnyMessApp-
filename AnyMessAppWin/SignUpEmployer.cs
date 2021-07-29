@@ -16,6 +16,15 @@ namespace AnyMessAppWin
 {
     public partial class SignUpEmployer : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -38,20 +47,46 @@ namespace AnyMessAppWin
         #region Database Configuration
 
         public static bool EmployerClicked { get; set; } 
-        private void NextBtnEmployer_Click(object sender, EventArgs e)
+        private async void NextBtnEmployer_Click(object sender, EventArgs e)
         {
             EmployerClicked = true; 
 
             if(employerAddressBox.Text != "Enter Address" && employerContactBox.Text != "Enter Contact Number" && employerFirstNameBox.Text != "Enter First Name" && employerMiddleNameBox.Text != "Enter Middle Name" && employerLastNameBox.Text != "Enter Last Name" && employerSexBox.Text != "Enter Sex" && employerAgeBox.Text != "Enter Age")
-            {
-                Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+            {   
+                try
+                {
+                    FirebaseResponse response = await client.GetTaskAsync("Employer Information/" + employerFirstNameBox.Text);
+                    var result = response.ResultAs<DataEmployer>();
 
-                databaseObj.SavaDataEmployer(employerFirstNameBox.Text, employerMiddleNameBox.Text, employerLastNameBox.Text, employerAddressBox.Text, employerContactBox.Text, employerAgeBox.Text, employerSexBox.Text);
+                    if(employerFirstNameBox.Text != result.EmployerName)
+                    {
+                        Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-                returnToOldStateEmp();
+                        databaseObj.SavaDataEmployer(employerFirstNameBox.Text, employerMiddleNameBox.Text, employerLastNameBox.Text, employerAddressBox.Text, employerContactBox.Text, employerAgeBox.Text, employerSexBox.Text);
 
-                HideThisContents();
-                openChildForm(new CreateAccount());
+                        returnToOldStateEmp();
+
+                        HideThisContents();
+                        openChildForm(new CreateAccount());
+                    }
+                    else
+                    {
+                        MessageBox.Show($"{employerFirstNameBox.Text} is already existed");
+                        returnToOldStateEmp();
+                    }
+                    
+                }
+                catch (Exception)
+                {
+                    Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+
+                    databaseObj.SavaDataEmployer(employerFirstNameBox.Text, employerMiddleNameBox.Text, employerLastNameBox.Text, employerAddressBox.Text, employerContactBox.Text, employerAgeBox.Text, employerSexBox.Text);
+
+                    returnToOldStateEmp();
+
+                    HideThisContents();
+                    openChildForm(new CreateAccount());
+                }         
             }
             else
             {

@@ -33,8 +33,8 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.hireMeBtnHk = new System.Windows.Forms.Button();
             this.labelSkill = new System.Windows.Forms.Label();
             this.labelHkName = new System.Windows.Forms.Label();
-            this.pbHousekeeping = new System.Windows.Forms.PictureBox();
             this.panelChild = new System.Windows.Forms.Panel();
+            this.pbHousekeeping = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHousekeeping)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.hireMeBtnHk.TabIndex = 9;
             this.hireMeBtnHk.Text = "View Profile";
             this.hireMeBtnHk.UseVisualStyleBackColor = false;
+            this.hireMeBtnHk.Click += new System.EventHandler(this.hireMeBtnHk_Click);
             this.hireMeBtnHk.MouseEnter += new System.EventHandler(this.hireMeBtnHk_MouseEnter);
             this.hireMeBtnHk.MouseLeave += new System.EventHandler(this.hireMeBtnHk_MouseLeave);
             // 
@@ -86,6 +87,14 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.labelHkName.TabIndex = 7;
             this.labelHkName.Text = "Hk Name";
             // 
+            // panelChild
+            // 
+            this.panelChild.BackColor = System.Drawing.Color.White;
+            this.panelChild.Location = new System.Drawing.Point(164, 0);
+            this.panelChild.Name = "panelChild";
+            this.panelChild.Size = new System.Drawing.Size(191, 170);
+            this.panelChild.TabIndex = 10;
+            // 
             // pbHousekeeping
             // 
             this.pbHousekeeping.Location = new System.Drawing.Point(1, -2);
@@ -94,14 +103,6 @@ namespace AnyMessAppWin.Dynamic_User_Controls
             this.pbHousekeeping.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHousekeeping.TabIndex = 6;
             this.pbHousekeeping.TabStop = false;
-            // 
-            // panelChild
-            // 
-            this.panelChild.BackColor = System.Drawing.Color.White;
-            this.panelChild.Location = new System.Drawing.Point(164, 0);
-            this.panelChild.Name = "panelChild";
-            this.panelChild.Size = new System.Drawing.Size(191, 170);
-            this.panelChild.TabIndex = 10;
             // 
             // HousekeeperTab
             // 

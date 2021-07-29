@@ -33,6 +33,15 @@ namespace AnyMessAppWin
             displayProfile();
 
             UpdateDataProfile();
+
+            detailsPanel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, detailsPanel.Width,
+            detailsPanel.Height, 30, 30));
+
+            panelLook.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelLook.Width,
+            panelLook.Height, 30, 30));
+
+            panelWebsite.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelWebsite.Width,
+            panelWebsite.Height, 30, 30));
         }
 
         private void ProfileAgencyChildForm_Load(object sender, EventArgs e)

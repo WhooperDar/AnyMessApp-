@@ -28,6 +28,14 @@ namespace AnyMessAppWin
             int nHeightEllipse // height of ellipse
         );
 
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
+
         public SignUpAgency()
         {
             InitializeComponent();
@@ -89,7 +97,7 @@ namespace AnyMessAppWin
         #endregion
 
         public static bool AgencyClicked { get; set; }
-        private void NextBtnAgency_Click(object sender, EventArgs e)
+        private async void NextBtnAgency_Click(object sender, EventArgs e)
         {
             AgencyClicked = true;
 
@@ -99,18 +107,28 @@ namespace AnyMessAppWin
             if (agencyAddressBox.Text != "Enter Address" && agencyCodeBox.Text != "Enter Agency Code" && agencyWebsiteBox.Text != "Enter Website" && agencyNameBox.Text != "Enter Agency Name")
             {
                 try
-                {
-                    databaseObj.SaveDataAgency(agencyNameBox.Text, agencyAddressBox.Text, agencyContactBox.Text, agencyWebsiteBox.Text, agencyCodeBox.Text);
+                {   
+                    FirebaseResponse reponse = await client.GetTaskAsync("Agency Information/" + agencyNameBox.Text);
+                    var result = reponse.ResultAs<Data>();
+                    if(agencyNameBox.Text != result.AgencyName)
+                    {
+                        databaseObj.SaveDataAgency(agencyNameBox.Text, agencyAddressBox.Text, agencyContactBox.Text, agencyWebsiteBox.Text, agencyCodeBox.Text);
 
-                    MessageBox.Show("Added to firebase");
-
-                    HideThisContents();
-                    openChildForm(new CreateAccount());
-
+                        HideThisContents();
+                        openChildForm(new CreateAccount());
+                    } 
+                    else
+                    {
+                        MessageBox.Show($"{agencyNameBox.Text} is already existed");
+                        returnToOldState();
+                    }
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Please Try Again");
+                    databaseObj.SaveDataAgency(agencyNameBox.Text, agencyAddressBox.Text, agencyContactBox.Text, agencyWebsiteBox.Text, agencyCodeBox.Text);
+
+                    HideThisContents();
+                    openChildForm(new CreateAccount());
                 }
             }
             else

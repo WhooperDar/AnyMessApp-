@@ -16,7 +16,15 @@ namespace AnyMessAppWin
 {
     public partial class SignUpHousekeeping : Form
     {
-         // For Corner Radius
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
+
+        // For Corner Radius
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -114,20 +122,47 @@ namespace AnyMessAppWin
         // Click Event
 
         public static bool HousekeepingClicked { get; set; }
-        private void NextBtnHk_Click(object sender, EventArgs e)
+        private async void NextBtnHk_Click(object sender, EventArgs e)
         {
             HousekeepingClicked = true;
 
             if(hkFirstNameBox.Text != "Enter First Name" && hkMiddleNameBox.Text != "Enter Middle Name" && hkLastNameBox.Text != "Enter Last Name" && hkAgeBox.Text != "Enter Age" && hkSexBox.Text != "Enter Sex" && hkContactBox.Text != "Enter Contact Number" && hkAddressBox.Text != "Enter Address" && hkSkillBox.Text != "Enter Skill")
-            {
-                Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+            {   
+                try
+                {
+                    FirebaseResponse response = await client.GetTaskAsync("Housekeeping Information/" + hkFirstNameBox.Text);
+                    var result = response.ResultAs<DataHousekeeper>();
 
-                databaseObj.SavaDataHousekeeper(hkFirstNameBox.Text, hkMiddleNameBox.Text, hkLastNameBox.Text, hkAddressBox.Text, hkAgeBox.Text, hkSexBox.Text, hkContactBox.Text, hkSkillBox.Text);
+                    if (result.HousekeeperName != hkFirstNameBox.Text)
+                    {
+                        Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
 
-                hkFieldToOldState();
+                        databaseObj.SavaDataHousekeeper(hkFirstNameBox.Text, hkMiddleNameBox.Text, hkLastNameBox.Text, hkAddressBox.Text, hkAgeBox.Text, hkSexBox.Text, hkContactBox.Text, hkSkillBox.Text);
 
-                HideThisContents();
-                openChildForm(new CreateAccount());
+                        hkFieldToOldState();
+
+                        HideThisContents();
+                        openChildForm(new CreateAccount());
+                    }
+                    else
+                    {
+                        MessageBox.Show($"{hkFirstNameBox.Text} is already existed");
+                        hkFieldToOldState();
+                    }
+                }
+                catch (Exception)
+                {
+                    Backend_Services.DatabaseConfiguration databaseObj = new Backend_Services.DatabaseConfiguration();
+
+                    databaseObj.SavaDataHousekeeper(hkFirstNameBox.Text, hkMiddleNameBox.Text, hkLastNameBox.Text, hkAddressBox.Text, hkAgeBox.Text, hkSexBox.Text, hkContactBox.Text, hkSkillBox.Text);
+
+                    hkFieldToOldState();
+
+                    HideThisContents();
+                    openChildForm(new CreateAccount());
+                }
+               
+               
             } 
             else
             {

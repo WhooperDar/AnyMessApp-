@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +16,14 @@ namespace AnyMessAppWin
 {
     public partial class HomeTabPanel : Form
     {
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "VV2PEctRnqHQ1KVcDEBlprQiD4wzSS4wYUG4FUY2", // Secret Key  
+            BasePath = "https://anymesswin-app-default-rtdb.asia-southeast1.firebasedatabase.app/" // Basekey 
+        };
+
+        IFirebaseClient client;
+
         // For Rounded Corner Buttons
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -32,208 +43,193 @@ namespace AnyMessAppWin
         {
             InitializeComponent();
 
-            // For Rounded Corner Buttons
-            hkBtnHireMe1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, hkBtnHireMe1.Width, hkBtnHireMe1.Height, 30, 30));
+            hiSaying();
 
-            // For Rounded Corner Buttons
-            hkBtnHireMe2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, hkBtnHireMe2.Width, hkBtnHireMe2.Height, 30, 30));
+            DynamicControlsHk();
 
-            // For Rounded Corner Buttons
-            ContactUs1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ContactUs1.Width, ContactUs1.Height, 30, 30));
-
-            // For Rounded Corner Buttons
-            ContactUs2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ContactUs2.Width, ContactUs2.Height, 30, 30));
-        
+            DynamicControlsAgency();
         }
 
         #endregion
 
-        #region Hover Effects Button Panels
-
-        // Mouse Enter Events
-        private void panelButton1_MouseEnter(object sender, EventArgs e)
+        private void hiSaying()
         {
-            panelButton1.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            panelButton1.BackColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void panelButton2_MouseEnter(object sender, EventArgs e)
-        {
-            panelButton2.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            panelButton2.BackColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void panelButton3_MouseEnter(object sender, EventArgs e)
-        {
-            panelButton3.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            panelButton3.BackColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void panelButton4_MouseEnter(object sender, EventArgs e)
-        {
-            panelButton4.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            panelButton4.BackColor = Color.FromArgb(239, 239, 239);
-        }// end 
-
-        // Mouse Leave Event
-        private void panelButton1_MouseLeave(object sender, EventArgs e)
-        {
-            panelButton1.FlatAppearance.BorderColor = Color.FromArgb(173, 177, 182);
-            
-        }
-        private void panelButton2_MouseLeave(object sender, EventArgs e)
-        {
-            panelButton2.FlatAppearance.BorderColor = Color.FromArgb(173, 177, 182);
-        }
-
-        private void panelButton3_MouseLeave(object sender, EventArgs e)
-        {
-            panelButton3.FlatAppearance.BorderColor = Color.FromArgb(173, 177, 182);
-        }
-        private void panelButton4_MouseLeave(object sender, EventArgs e)
-        {
-            panelButton4.FlatAppearance.BorderColor = Color.FromArgb(173, 177, 182);
-        }
-
-        #endregion
-
-
-
-        #region Mouse Hover Effects (Hire Me and Contact Us Buttons)
-        private void hkBtnHireMe1_MouseEnter(object sender, EventArgs e)
-        {
-            hkBtnHireMe1.BackColor = Color.FromArgb(255, 201, 72);
-            hkBtnHireMe1.ForeColor = Color.FromArgb(5, 62, 189); 
-        }
-        private void hkBtnHireMe1_MouseLeave(object sender, EventArgs e)
-        {
-            hkBtnHireMe1.BackColor = Color.FromArgb(5, 62, 189);
-            hkBtnHireMe1.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-        private void hkBtnHireMe2_MouseEnter(object sender, EventArgs e)
-        {
-            hkBtnHireMe2.BackColor = Color.FromArgb(255, 201, 72);
-            hkBtnHireMe2.ForeColor = Color.FromArgb(5, 62, 189);
-        }
-        private void hkBtnHireMe2_MouseLeave(object sender, EventArgs e)
-        {
-            hkBtnHireMe2.BackColor = Color.FromArgb(5, 62, 189);
-            hkBtnHireMe2.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-
-
-        #endregion
-
-
-
-        #region Mouse Hover Effects (Categories)
-        // Mouse Enter Hover (Categories)
-        private void CleaningBtn_MouseEnter(object sender, EventArgs e)
-        {
-            CleaningBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            CleaningBtn.ForeColor = Color.FromArgb(5, 62, 189);
-            CleaningBtn.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void CookingBtn_MouseEnter_1(object sender, EventArgs e)
-        {
-            CookingBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            CookingBtn.ForeColor = Color.FromArgb(5, 62, 189);
-            CookingBtn.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void LaundryButton_MouseEnter(object sender, EventArgs e)
-        {
-            LaundryButton.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            LaundryButton.ForeColor = Color.FromArgb(5, 62, 189);
-            LaundryButton.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        private void SweepingBtn_MouseEnter(object sender, EventArgs e)
-        {
-            SweepingBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            SweepingBtn.ForeColor = Color.FromArgb(5, 62, 189);
-            SweepingBtn.BackColor = Color.FromArgb(255, 201, 72);
-        }
-
-        // Mouse Leave (Category)
-        private void CookingBtn_MouseLeave(object sender, EventArgs e)
-        {
-            CookingBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            CookingBtn.BackColor = Color.FromArgb(5, 62, 189);
-            CookingBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void CleaningBtn_MouseLeave(object sender, EventArgs e)
-        {
-            CleaningBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            CleaningBtn.BackColor = Color.FromArgb(5, 62, 189);
-            CleaningBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void LaundryButton_MouseLeave(object sender, EventArgs e)
-        {
-            LaundryButton.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            LaundryButton.BackColor = Color.FromArgb(5, 62, 189);
-            LaundryButton.ForeColor = Color.FromArgb(239, 239, 239);
-
-        }
-
-        private void SweepingBtn_MouseLeave(object sender, EventArgs e)
-        {
-            SweepingBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            SweepingBtn.BackColor = Color.FromArgb(5, 62, 189);
-            SweepingBtn.ForeColor = Color.FromArgb(239, 239, 239);
-        }
-        #endregion
-
-
-        #region Mouse Hover Effect (Exit Button)
-        private void homeExitBtn_MouseEnter(object sender, EventArgs e)
-        {
-            homeExitBtn.BackColor = Color.FromArgb(5, 62, 189);
-        }
-
-        private void homeExitBtn_MouseLeave(object sender, EventArgs e)
-        {
-            homeExitBtn.FlatAppearance.BorderColor = Color.FromArgb(5, 62, 189);
-            homeExitBtn.BackColor = Color.FromArgb(239, 239, 239);
-        }
-
-        private void ContactUs1_MouseEnter(object sender, EventArgs e)
-        {
-            ContactUs1.BackColor = Color.FromArgb(255, 201, 72);
-            ContactUs1.ForeColor = Color.FromArgb(5, 62, 189);
-        }
-
-        private void ContactUs1_MouseLeave(object sender, EventArgs e)
-        {
-            ContactUs1.BackColor = Color.FromArgb(5, 62, 189);
-            ContactUs1.ForeColor = Color.White;
-        }
-
-        private void ContactUs2_MouseEnter(object sender, EventArgs e)
-        {
-            ContactUs2.BackColor = Color.FromArgb(255, 201, 72);
-            ContactUs2.ForeColor = Color.FromArgb(5, 62, 189);
-        }
-
-        private void ContactUs2_MouseLeave(object sender, EventArgs e)
-        {
-            ContactUs2.BackColor = Color.FromArgb(5, 62, 189);
-            ContactUs2.ForeColor = Color.White;
-        }
-        #endregion
-
-        private void hkBtnHireMe1_Click(object sender, EventArgs e)
-        {
-
+            labelSaying.Text = $"Hi {LoginUserForm.FirstNameUser},"; 
         }
 
         private void homeExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void DynamicControlsHk()
+        {
+
+            DataTable dataTable = new DataTable();
+
+            client = new FireSharp.FirebaseClient(config);
+
+            FirebaseResponse responseIdHkData = await client.GetTaskAsync("2HousekeepingList/activeNodes/");
+            ActiveList_Counter.HousekeepingListCounter resultIdData = responseIdHkData.ResultAs<ActiveList_Counter.HousekeepingListCounter>();
+
+
+            int cnt = Convert.ToInt32(resultIdData.count);
+
+            // Table Columns
+
+            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("name");
+            dataTable.Columns.Add("category");
+            dataTable.Columns.Add("imageString");
+
+
+            int i = 0;
+            while (true)
+            {
+
+                if (i == cnt)
+                {
+                    break;
+                }
+
+                i++;
+
+                try
+                {
+                    FirebaseResponse responseDataHk2 = await client.GetTaskAsync("3HousekeepingListData/" + i);
+                    DataModels.HousekeepingListData dataResultHk = responseDataHk2.ResultAs<DataModels.HousekeepingListData>();
+
+                    DataRow row = dataTable.NewRow();
+
+                    row["id"] = dataResultHk.HousekeeperID;
+                    row["name"] = dataResultHk.HousekeeperName;
+                    row["category"] = dataResultHk.Category;
+                    row["imageString"] = dataResultHk.ImageData;
+
+                    dataTable.Rows.Add(row);
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+            }
+
+
+            flowLayoutPanel1.Controls.Clear();
+
+            DataTable dt = new DataTable();
+
+            dt = dataTable;
+
+            if (dt != null)
+            {
+
+                if (dt.Rows.Count > 0)
+                {
+                    Dynamic_User_Controls.HousekeeperTab[] listview = new Dynamic_User_Controls.HousekeeperTab[dt.Rows.Count];
+
+                    for (int j = 0; j < 1; j++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            listview[j] = new Dynamic_User_Controls.HousekeeperTab();
+
+                            listview[j].HkName = row["name"].ToString();
+                            listview[j].Category = row["category"].ToString();
+                            Bitmap imageData = Backend_Services.ImageProcessor.StringToBitmap((string)row["imageString"]);
+
+                            listview[j].ImageData = imageData;
+
+                            flowLayoutPanel1.Controls.Add(listview[j]);
+                        }
+                    }
+                }
+            }
+        }
+
+        private async void DynamicControlsAgency()
+        {
+            client = new FireSharp.FirebaseClient(config);
+
+            DataTable dataTableAgency = new DataTable();
+
+            FirebaseResponse responseIdAgencyData = await client.GetTaskAsync("1AgencyList/activeNodes/");
+            ActiveList_Counter.AgencyListCounter resultIdData = responseIdAgencyData.ResultAs<ActiveList_Counter.AgencyListCounter>();
+
+
+            int cnt = Convert.ToInt32(resultIdData.count);
+
+            // Table Columns
+            dataTableAgency.Columns.Add("agencyID");
+            dataTableAgency.Columns.Add("agencyName");
+            dataTableAgency.Columns.Add("agencyPlace");
+            dataTableAgency.Columns.Add("imageString");
+
+
+            int i = 0;
+            while (true)
+            {
+
+                if (i == cnt)
+                {
+                    break;
+                }
+
+                i++;
+
+                try
+                {
+                    FirebaseResponse responseDataAgency2 = await client.GetTaskAsync("3AgencyListData/" + i);
+                    DataModels.AgencyListData dataResultAgency = responseDataAgency2.ResultAs<DataModels.AgencyListData>();
+
+                    DataRow row = dataTableAgency.NewRow();
+
+                    row["agencyID"] = dataResultAgency.AgencyID;
+                    row["agencyName"] = dataResultAgency.AgencyName;
+                    row["agencyPlace"] = dataResultAgency.AgencyAddress;
+                    row["imageString"] = dataResultAgency.ImageData;
+
+                    dataTableAgency.Rows.Add(row);
+                }
+                catch (Exception) { }
+            }
+
+
+            this.flowLayoutPanel2.Controls.Clear();
+
+            DataTable dataTableCopy = dataTableAgency;
+
+            if (dataTableCopy != null)
+            {
+
+                if (dataTableCopy.Rows.Count > 0)
+                {
+                    Dynamic_User_Controls.AgencyTab[] listviewAgency = new Dynamic_User_Controls.AgencyTab[dataTableCopy.Rows.Count];
+
+                    for (int j = 0; j < 1; j++)
+                    {
+                        foreach (DataRow row in dataTableCopy.Rows)
+                        {
+                            listviewAgency[j] = new Dynamic_User_Controls.AgencyTab();
+
+                            listviewAgency[j].AgencyName = row["agencyName"].ToString();
+                            listviewAgency[j].PlaceName = row["agencyPlace"].ToString();
+                            Bitmap imageData = Backend_Services.ImageProcessor.StringToBitmap((string)row["imageString"]);
+
+                            listviewAgency[j].ImageData = imageData;
+
+                            this.flowLayoutPanel2.Controls.Add(listviewAgency[j]);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void refreshBtnHk_Click(object sender, EventArgs e)
+        {
+            DynamicControlsHk();
+        }
+
+        private void refreshBtnAgency_Click(object sender, EventArgs e)
+        {
+            DynamicControlsAgency();
         }
     }
 }
