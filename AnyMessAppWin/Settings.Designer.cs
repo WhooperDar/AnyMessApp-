@@ -33,17 +33,17 @@ namespace AnyMessAppWin
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelParentSettings = new System.Windows.Forms.Panel();
-            this.settingAccount = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.settingAboutUs = new System.Windows.Forms.Button();
             this.exitSettingBtn = new System.Windows.Forms.Button();
             this.settingSupport = new System.Windows.Forms.Button();
+            this.panelParentSettings = new System.Windows.Forms.Panel();
+            this.settingAccount = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +76,16 @@ namespace AnyMessAppWin
             this.panel7.Size = new System.Drawing.Size(76, 82);
             this.panel7.TabIndex = 16;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
@@ -87,45 +97,6 @@ namespace AnyMessAppWin
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 858);
             this.panel2.TabIndex = 9;
-            // 
-            // panelParentSettings
-            // 
-            this.panelParentSettings.BackColor = System.Drawing.Color.White;
-            this.panelParentSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelParentSettings.Location = new System.Drawing.Point(317, 96);
-            this.panelParentSettings.Name = "panelParentSettings";
-            this.panelParentSettings.Size = new System.Drawing.Size(529, 762);
-            this.panelParentSettings.TabIndex = 10;
-            // 
-            // settingAccount
-            // 
-            this.settingAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
-            this.settingAccount.FlatAppearance.BorderSize = 0;
-            this.settingAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.settingAccount.Image = ((System.Drawing.Image)(resources.GetObject("settingAccount.Image")));
-            this.settingAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingAccount.Location = new System.Drawing.Point(42, 220);
-            this.settingAccount.Name = "settingAccount";
-            this.settingAccount.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.settingAccount.Size = new System.Drawing.Size(235, 51);
-            this.settingAccount.TabIndex = 2;
-            this.settingAccount.Text = "  Account";
-            this.settingAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.settingAccount.UseVisualStyleBackColor = false;
-            this.settingAccount.MouseEnter += new System.EventHandler(this.settingAccount_MouseEnter);
-            this.settingAccount.MouseLeave += new System.EventHandler(this.settingAccount_MouseLeave);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(4, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 22;
-            this.pictureBox5.TabStop = false;
             // 
             // settingAboutUs
             // 
@@ -143,6 +114,7 @@ namespace AnyMessAppWin
             this.settingAboutUs.Text = "           About Us";
             this.settingAboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.settingAboutUs.UseVisualStyleBackColor = false;
+            this.settingAboutUs.Click += new System.EventHandler(this.settingAboutUs_Click);
             this.settingAboutUs.MouseEnter += new System.EventHandler(this.settingAboutUs_MouseEnter);
             this.settingAboutUs.MouseLeave += new System.EventHandler(this.settingAboutUs_MouseLeave);
             // 
@@ -180,6 +152,35 @@ namespace AnyMessAppWin
             this.settingSupport.MouseEnter += new System.EventHandler(this.settingSupport_MouseEnter);
             this.settingSupport.MouseLeave += new System.EventHandler(this.settingSupport_MouseLeave);
             // 
+            // panelParentSettings
+            // 
+            this.panelParentSettings.BackColor = System.Drawing.Color.White;
+            this.panelParentSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelParentSettings.Location = new System.Drawing.Point(317, 96);
+            this.panelParentSettings.Name = "panelParentSettings";
+            this.panelParentSettings.Size = new System.Drawing.Size(529, 762);
+            this.panelParentSettings.TabIndex = 10;
+            // 
+            // settingAccount
+            // 
+            this.settingAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(62)))), ((int)(((byte)(189)))));
+            this.settingAccount.FlatAppearance.BorderSize = 0;
+            this.settingAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.settingAccount.Image = ((System.Drawing.Image)(resources.GetObject("settingAccount.Image")));
+            this.settingAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingAccount.Location = new System.Drawing.Point(42, 220);
+            this.settingAccount.Name = "settingAccount";
+            this.settingAccount.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.settingAccount.Size = new System.Drawing.Size(235, 51);
+            this.settingAccount.TabIndex = 2;
+            this.settingAccount.Text = "  Account";
+            this.settingAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.settingAccount.UseVisualStyleBackColor = false;
+            this.settingAccount.MouseEnter += new System.EventHandler(this.settingAccount_MouseEnter);
+            this.settingAccount.MouseLeave += new System.EventHandler(this.settingAccount_MouseLeave);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -197,9 +198,9 @@ namespace AnyMessAppWin
             this.Text = "Settings";
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

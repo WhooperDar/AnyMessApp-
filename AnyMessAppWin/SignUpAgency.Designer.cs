@@ -40,6 +40,8 @@ namespace AnyMessAppWin
             this.NextBtnAgency = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
             this.panelAgencySignUp = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelAgencySignUp.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -133,8 +135,15 @@ namespace AnyMessAppWin
             // 
             // panelAgencySignUp
             // 
+            this.panelAgencySignUp.Controls.Add(this.label3);
             resources.ApplyResources(this.panelAgencySignUp, "panelAgencySignUp");
             this.panelAgencySignUp.Name = "panelAgencySignUp";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(123)))), ((int)(((byte)(145)))));
+            this.label3.Name = "label3";
             // 
             // SignUpAgency
             // 
@@ -157,6 +166,8 @@ namespace AnyMessAppWin
             this.MaximizeBox = false;
             this.Name = "SignUpAgency";
             this.Load += new System.EventHandler(this.SignUpAgency_Load);
+            this.panelAgencySignUp.ResumeLayout(false);
+            this.panelAgencySignUp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +185,6 @@ namespace AnyMessAppWin
         private System.Windows.Forms.Button NextBtnAgency;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Panel panelAgencySignUp;
+        private System.Windows.Forms.Label label3;
     }
 }

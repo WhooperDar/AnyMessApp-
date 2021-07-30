@@ -120,5 +120,10 @@ namespace AnyMessAppWin
         {
             openChildForm(new ContentSettings.HelpAndSupport()); 
         }
+
+        private void settingAboutUs_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ContentSettings.AboutUs());
+        }
     }
 }

@@ -44,6 +44,7 @@ namespace AnyMessAppWin.DisplayProfile
                 labelHkSex.Text = resultHk.HousekeeperSex;
                 labelHkContact.Text = resultHk.HousekeeperContact;
                 labelHkAddress.Text = resultHk.HousekeeperAddress;
+                labelHkAge.Text = resultHk.HousekeeperAge;
 
                 pbHkProfile.Image = image;
                 pbHkProfile.BackgroundImageLayout = ImageLayout.Stretch;
